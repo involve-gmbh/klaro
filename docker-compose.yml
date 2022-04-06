@@ -1,0 +1,16 @@
+version: "3.5"
+services:
+  npm-watch:
+    build: docker/npm
+    working_dir: /app
+    command: run-script make-dev
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/app
+  npm:
+    build: docker/npm
+    working_dir: /app
+    command: i
+    volumes:
+      - .:/app
