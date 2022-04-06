@@ -62,6 +62,10 @@ export default class ConsentNotice extends React.Component {
         this.executeButtonClicked(true, true, 'accept');
     };
 
+    acceptLocalOnlyAndHide = () => {
+        this.executeButtonClicked(true, true, 'acceptLocalOnly');
+    };
+
     declineAndHide = () => {
         this.executeButtonClicked(true, false, 'decline');
     };
@@ -169,6 +173,16 @@ export default class ConsentNotice extends React.Component {
             </button>
         );
 
+        const acceptLocalOnly = (
+            <button
+                className="cm-btn cm-btn-success"
+                type="button"
+                onClick={this.acceptLocalOnlyAndHide}
+            >
+                Accept Local Only
+            </button>
+        );
+
         const learnMoreLink = () =>
             noticeAsModal ? (
                 <button
@@ -260,6 +274,7 @@ export default class ConsentNotice extends React.Component {
                         <div className="cn-buttons">
                             {declineButton}
                             {acceptButton}
+                            {acceptLocalOnly}
                         </div>
                     </div>
                 </div>
