@@ -120,6 +120,13 @@ to see a complete example.
 
 ## Building Klaro from scratch
 
+### Using Docker
+
+- `docker compose up npm`
+- `docker compose up -d`
+
+### Natively
+
 If you want to customize Klaro or extend it, you can build it from scratch using the following commands:
 ```sh
 npm install
