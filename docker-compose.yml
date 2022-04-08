@@ -14,3 +14,10 @@ services:
     command: i
     volumes:
       - .:/app
+  lint-staged:
+    build: docker/lint
+    command: lint-staged
+    volumes:
+      - .:/app
+    depends_on:
+      - npm
