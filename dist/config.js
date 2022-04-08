@@ -218,6 +218,8 @@ var klaroConfig = {
             // Each service should have a unique (and short) name.
             name: 'matomo',
 
+            tags: ['local'],
+
             // If "default" is set to true, the service will be enabled by default
             // Overwrites global "default" setting.
             // We recommend leaving this to "false" for services that collect
@@ -290,6 +292,7 @@ var klaroConfig = {
         {
             name: 'inlineTracker',
             title: 'Inline Tracker',
+            tags: ['local'],
             purposes: ['analytics'],
             cookies: ['inline-tracker'],
             optOut: false,
@@ -303,6 +306,7 @@ var klaroConfig = {
         {
             name: 'intercom',
             title: 'Intercom',
+            tags: ['local'],
             default: true,
             purposes: ['livechat'],
         },
@@ -321,6 +325,7 @@ var klaroConfig = {
         {
             name: 'camera',
             title: 'Surveillance Camera',
+            tags: ['local'],
             purposes: ['security'],
         },
         /*        {
