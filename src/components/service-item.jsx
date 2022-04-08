@@ -23,6 +23,7 @@ export default class ServiceItem extends React.Component {
         const required = this.props.required || false;
         const optOut = this.props.optOut || false;
         const purposes = this.props.purposes || [];
+        const tags = this.props.tags || [];
         const onChange = (e) => {
             onToggle(e.target.checked);
         };
@@ -54,6 +55,11 @@ export default class ServiceItem extends React.Component {
         ) : (
             ''
         );
+
+        const tagElements = tags.map((tag) => <span key="{tag}">{tag}</span>);
+        let tagsContent;
+        if (tags.length > 0)
+            tagsContent = <span className="cm-required">{tagElements}</span>;
 
         let purposesContent;
         if (purposes.length > 0)
@@ -104,6 +110,7 @@ export default class ServiceItem extends React.Component {
                     </span>
                     {requiredText}
                     {optOutText}
+                    {tagsContent}
                     <span className="cm-switch">
                         <div className="slider round active"></div>
                     </span>
