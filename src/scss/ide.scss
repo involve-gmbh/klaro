@@ -3,7 +3,6 @@
 @import './vars';
 
 .klaro-ide {
-
     @import './switch';
     @import './controls';
     @import './tabs';
@@ -19,7 +18,6 @@
     .cm-translations-fields,
     .cm-service-fields {
         max-width: 600px;
-
     }
 
     .cm-json {
@@ -197,7 +195,6 @@
         }
     }
 
-
     p.cm-no-cookies,
     p.cm-no-services {
         margin-top: 6px;
@@ -246,7 +243,7 @@
             display: block;
             flex-grow: 1;
         }
-        
+
         .cm-control {
             flex-shrink: 1;
             display: inline-block;
@@ -274,7 +271,6 @@
         }
 
         .cm-control-button {
-
             @include var(border-radius, border-radius);
             @include var(background-color, blue2);
             @include var(color, white1);

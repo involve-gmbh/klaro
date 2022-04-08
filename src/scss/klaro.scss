@@ -2,7 +2,6 @@
 @import './vars';
 
 .klaro {
-
     $btn-margin-right: 0.5em;
 
     @include var(font-family, font-family);
@@ -11,7 +10,7 @@
     // buttons use their own font-family setting so we need to override it explicitly...
     button {
         @include var(font-family, font-family);
-        @include var(font-size, font-size);    
+        @include var(font-size, font-size);
     }
 
     &.cm-as-context-notice {
@@ -70,7 +69,6 @@
         }
 
         .cm-btn {
-
             @include var(color, button-text-color);
             @include var(background-color, dark2);
             @include var(border-radius, border-radius);
@@ -301,7 +299,6 @@
                         }
 
                         &.cm-toggle-all {
-
                             @include var(border-top-width, border-width);
                             @include var(border-top-style, border-style);
                             @include var(border-top-color, dark2);

@@ -154,7 +154,7 @@ export default class ConsentModal extends React.Component {
                                 href={
                                     config.poweredBy ||
                                     'https://kiprotect.com/klaro'
-                                }   
+                                }
                                 rel="noopener"
                             >
                                 {t(['poweredBy'])}
@@ -166,7 +166,11 @@ export default class ConsentModal extends React.Component {
         );
 
         if (embedded)
-            return <div id="cookieScreen" className="cookie-modal cm-embedded">{innerModal}</div>;
+            return (
+                <div id="cookieScreen" className="cookie-modal cm-embedded">
+                    {innerModal}
+                </div>
+            );
 
         return (
             <div id="cookieScreen" className="cookie-modal">

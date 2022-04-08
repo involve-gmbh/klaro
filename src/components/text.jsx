@@ -1,8 +1,7 @@
 import React from 'react';
 
 const Text = ({ text, config }) => {
-    if (!(text instanceof Array))
-        text = [text]
+    if (!(text instanceof Array)) text = [text];
     if (config.htmlTexts === true) {
         let wrapped = false;
         // if the first character is an opening bracket, we assume that the
@@ -12,7 +11,10 @@ const Text = ({ text, config }) => {
         const elements = text.map((textElement, i) => {
             if (typeof textElement === 'string')
                 return (
-                    <span key={i} dangerouslySetInnerHTML={{ __html: textElement }} />
+                    <span
+                        key={i}
+                        dangerouslySetInnerHTML={{ __html: textElement }}
+                    />
                 );
             // we assume this already is a React element
             return textElement;

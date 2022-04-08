@@ -10,8 +10,17 @@ export const Input = ({ value, onChange, ...props }) => (
     />
 );
 
-export const BaseRetractingLabelInput = ({name, children, className, value, label, description, onChange, ...props}) => (
-        <div
+export const BaseRetractingLabelInput = ({
+    name,
+    children,
+    className,
+    value,
+    label,
+    description,
+    onChange,
+    ...props
+}) => (
+    <div
         className={
             'cm-retracting-label-input' + (className ? ' ' + className : '')
         }
@@ -24,19 +33,13 @@ export const BaseRetractingLabelInput = ({name, children, className, value, labe
             className="cm-input"
             placeholder=" " // Used to determine if the input is empty; needs to be a space for Chrome
         />
-        <span
-            id={name + '-label'}
-            aria-hidden="true"
-            className="cm-label"
-        >
+        <span id={name + '-label'} aria-hidden="true" className="cm-label">
             {label}
         </span>
-        <p className="cm-description">
-            {description}
-        </p>
+        <p className="cm-description">{description}</p>
         {children}
     </div>
-)
+);
 
 export const RetractingLabelInput = ({
     t,
@@ -47,7 +50,23 @@ export const RetractingLabelInput = ({
     className,
     updateConfig,
     ...props
-}) => <BaseRetractingLabelInput description={t(['fields', ...(prefix || []), field.name, 'description'])} value={config[field.name] || ''} label={t(['fields', ...(prefix || []), field.name, 'label'])} {...props} className={className} name={field.name} onChange={(value) => updateConfig([field.name], value)} children={children} />;
+}) => (
+    <BaseRetractingLabelInput
+        description={t([
+            'fields',
+            ...(prefix || []),
+            field.name,
+            'description',
+        ])}
+        value={config[field.name] || ''}
+        label={t(['fields', ...(prefix || []), field.name, 'label'])}
+        {...props}
+        className={className}
+        name={field.name}
+        onChange={(value) => updateConfig([field.name], value)}
+        children={children}
+    />
+);
 
 RetractingLabelInput.propTypes = {
     className: '',

@@ -12,7 +12,8 @@ consentModal:
   title: Serviços que gostaríamos de utilizar
 consentNotice:
   changeDescription: Houve mudanças desde sua última visita, queira renovar seu consentimento.
-  description: Olá! Poderíamos, por favor, habilitar alguns serviços adicionais para
+  description:
+    Olá! Poderíamos, por favor, habilitar alguns serviços adicionais para
     {purposes}? Você pode sempre mudar ou retirar seu consentimento mais tarde.
   imprint:
     name: imprimir
@@ -35,23 +36,27 @@ purposeItem:
   services: serviços
 purposes:
   advertising:
-    description: Esses serviços processam informações pessoais para mostrar a você
+    description:
+      Esses serviços processam informações pessoais para mostrar a você
       anúncios personalizados ou baseados em interesses.
     title: Publicidade
   functional:
-    description: 'Esses serviços são essenciais para o correto funcionamento deste
+    description:
+      'Esses serviços são essenciais para o correto funcionamento deste
       website. Você não pode desativá-los aqui, pois de outra forma o serviço
       não funcionaria corretamente.
 
       '
     title: Prestação de serviços
   marketing:
-    description: Esses serviços processam informações pessoais para mostrar a você
+    description:
+      Esses serviços processam informações pessoais para mostrar a você
       conteúdo relevante sobre produtos, serviços ou tópicos que possam ser do seu
       interesse.
     title: Marketing
   performance:
-    description: 'Esses serviços processam informações pessoais para otimizar o serviço
+    description:
+      'Esses serviços processam informações pessoais para otimizar o serviço
       que este website oferece.
 
       '

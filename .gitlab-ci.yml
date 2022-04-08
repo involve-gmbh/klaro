@@ -22,7 +22,7 @@ lint:
 deploy:
   artifacts:
     paths:
-    - dist
+      - dist
   only:
     - staging
     - tags

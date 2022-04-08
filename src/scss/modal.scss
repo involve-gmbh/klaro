@@ -1,5 +1,4 @@
 @mixin modal($centerWidth, $windowWidth) {
-
     @include var(background-color, dark1);
     @include var(color, light1);
 

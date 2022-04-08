@@ -4,9 +4,7 @@
 // <script src="klaro.js" data-config="myConfigVariableName" />
 var klaroConfig = {
     acceptAll: true,
-    translations: {
-
-    },
+    translations: {},
     services: [
         {
             name: 'google-tag-manager',
@@ -48,13 +46,13 @@ var klaroConfig = {
                 gtag('set', 'ads_data_redaction', true)
             `,
             vars: {
-                googleAnalytics: 'google-analytics'
-            }
+                googleAnalytics: 'google-analytics',
+            },
         },
         {
             // In GTM, you should define a custom event trigger named `klaro-google-analytics-accepted` which should trigger the Google Analytics integration.
             name: 'google-analytics',
             purposes: ['marketing'],
-        }
-    ]
+        },
+    ],
 };

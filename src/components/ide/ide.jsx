@@ -100,32 +100,57 @@ export default class IDE extends React.Component {
         super(props);
     }
 
-    render(){
-        const { state, setState, className, onConfigAction, configs, t, ...rest } = this.props
+    render() {
+        const {
+            state,
+            setState,
+            className,
+            onConfigAction,
+            configs,
+            t,
+            ...rest
+        } = this.props;
         const { activeConfig } = state;
-        let component
+        let component;
         const unsetConfig = () => {
-            setState({activeConfig: undefined})
-        }
+            setState({ activeConfig: undefined });
+        };
         const setConfigState = (configState) => {
-            const newState = Object.assign({}, state)
-            newState.configState = configState
-            setState(newState)
-        }
-        if (activeConfig !== undefined){
-            const config = configs.find(config => config.name === activeConfig)
-            component = <ConfigIDE state={state.configState} setState={setConfigState} t={t} unsetConfig={unsetConfig} config={config} {...rest} />
+            const newState = Object.assign({}, state);
+            newState.configState = configState;
+            setState(newState);
+        };
+        if (activeConfig !== undefined) {
+            const config = configs.find(
+                (config) => config.name === activeConfig
+            );
+            component = (
+                <ConfigIDE
+                    state={state.configState}
+                    setState={setConfigState}
+                    t={t}
+                    unsetConfig={unsetConfig}
+                    config={config}
+                    {...rest}
+                />
+            );
         } else {
-            component = <Configs onConfigAction={onConfigAction} onClick={(config) => setState({activeConfig: config.name})}configs={configs} t={t} />
+            component = (
+                <Configs
+                    onConfigAction={onConfigAction}
+                    onClick={(config) =>
+                        setState({ activeConfig: config.name })
+                    }
+                    configs={configs}
+                    t={t}
+                />
+            );
         }
-        return <div className={className || 'klaro-ide'}>
-            {component}
-        </div>
+        return <div className={className || 'klaro-ide'}>{component}</div>;
     }
 }
 
 export class ConfigIDE extends React.Component {
-
     render() {
         const {
             t,
@@ -140,16 +165,16 @@ export class ConfigIDE extends React.Component {
             updateConfig,
             deleteConfig,
         } = this.props;
-        const state = this.props.state || {tab: 'services'};
+        const state = this.props.state || { tab: 'services' };
         const { tab } = state;
         const Component = tabComponents[tab];
         const componentState = state[tab];
         const changeTab = (tab) => setState({ tab: tab });
         const setComponentState = (componentState) => {
-            const newState = Object.assign({}, state)
-            newState[tab] = componentState
-            setState(newState)
-        }
+            const newState = Object.assign({}, state);
+            newState[tab] = componentState;
+            setState(newState);
+        };
         const tabs = [
             'services',
             'globals',
@@ -165,14 +190,20 @@ export class ConfigIDE extends React.Component {
         return (
             <React.Fragment>
                 <div className="cm-config-controls">
-                    <h2><a onClick={() => unsetConfig()}>{t(['configs','title'])} &rsaquo;</a> {config.name === 'default' ? t(['configs', 'default', 'title']) : config.name}</h2>
+                    <h2>
+                        <a onClick={() => unsetConfig()}>
+                            {t(['configs', 'title'])} &rsaquo;
+                        </a>{' '}
+                        {config.name === 'default'
+                            ? t(['configs', 'default', 'title'])
+                            : config.name}
+                    </h2>
                     <fieldset>
                         <button
                             disabled={disabled || !config.modified}
                             className="cm-control-button cm-secondary"
                             onClick={(e) =>
-                                e.preventDefault() ||
-                                resetConfig(config.name)
+                                e.preventDefault() || resetConfig(config.name)
                             }
                         >
                             {t(['config', 'reset'])}
@@ -181,8 +212,7 @@ export class ConfigIDE extends React.Component {
                             disabled={disabled || !config.modified}
                             className="cm-control-button"
                             onClick={(e) =>
-                                e.preventDefault() ||
-                                saveConfig(config.name)
+                                e.preventDefault() || saveConfig(config.name)
                             }
                         >
                             {t(['config', 'save'])}

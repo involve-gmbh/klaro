@@ -21,8 +21,7 @@ var klaroI18nConfig = {
                 description:
                     'Dies ist die Beschreibung des Zustimmungs-Dialogs.',
                 privacyPolicy: {
-                    text:
-                        'Dies ist der Text mit einem Link zu Ihrer {privacyPolicy}.',
+                    text: 'Dies ist der Text mit einem Link zu Ihrer {privacyPolicy}.',
                     name: 'Datenschutzerklärung (Name)',
                 },
             },

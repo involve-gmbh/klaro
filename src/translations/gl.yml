@@ -9,7 +9,8 @@ consentModal:
   title: Servizos que nos gustaría utilizar
 consentNotice:
   changeDescription: Houbo cambios nas cookies dende a súa última visita. Debe renovar o seu consentimento.
-  description: ¡Ola! ¿Poderíamos habilitar algúns servizos adicionais para {purposes}?
+  description:
+    ¡Ola! ¿Poderíamos habilitar algúns servizos adicionais para {purposes}?
     Sempre poderá cambiar ou retirar o séu consentimento máis tarde.
   imprint:
     name: Imprimir

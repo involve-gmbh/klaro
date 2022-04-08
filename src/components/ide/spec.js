@@ -189,7 +189,7 @@ const KlaroConfigSpec = {
             name: 'hideToggleAll',
             control: 'Switch',
             validators: [],
-            default: false
+            default: false,
         },
         {
             name: 'noticeAsModal',

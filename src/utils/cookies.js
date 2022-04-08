@@ -38,8 +38,7 @@ export function setCookie(name, value, days, domain, path) {
     } else {
         expires += '; path=/';
     }
-    document.cookie =
-        name + '=' + (value || '') + expires + '; SameSite=Lax';
+    document.cookie = name + '=' + (value || '') + expires + '; SameSite=Lax';
 }
 
 export function deleteCookie(name, path, domain) {

@@ -1,3 +1,3 @@
 import React from 'react';
 
-export const Translations = () => <div />
+export const Translations = () => <div />;

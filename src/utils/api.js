@@ -134,7 +134,11 @@ export default class KlaroApi {
     loadConfig(name) {
         return this.apiRequest(
             'GET',
-            '/v1/privacy-managers/' + this.id + '/config.json?name=' + name + (this.opts.testing ? '&testing=true' : '')
+            '/v1/privacy-managers/' +
+                this.id +
+                '/config.json?name=' +
+                name +
+                (this.opts.testing ? '&testing=true' : '')
         );
     }
 
@@ -144,7 +148,10 @@ export default class KlaroApi {
     loadConfigs() {
         return this.apiRequest(
             'GET',
-            '/v1/privacy-managers/' + this.id + '/configs.json' + (this.opts.testing ? '&testing=true' : '')
+            '/v1/privacy-managers/' +
+                this.id +
+                '/configs.json' +
+                (this.opts.testing ? '&testing=true' : '')
         );
     }
 }

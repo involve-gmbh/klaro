@@ -9,7 +9,8 @@ consentModal:
     text: Aby dowiedzieć się więcej, prosimy o zapoznanie się z naszą {privacyPolicy}.
   title: Usługi, z których chcielibyśmy skorzystać
 consentNotice:
-  changeDescription: Od Twojej ostatniej wizyty nastąpiły zmiany, prosimy o odnowienie
+  changeDescription:
+    Od Twojej ostatniej wizyty nastąpiły zmiany, prosimy o odnowienie
     zgody.
   description: Czy możemy włączyć dodatkowe usługi dla {purposes}? W każdej
     chwili mogą Państwo później zmienić lub wycofać swoją zgodę.
@@ -34,22 +35,26 @@ purposeItem:
   services: usługi
 purposes:
   advertising:
-    description: Usługi te przetwarzają dane osobowe w celu pokazania Państwu spersonalizowanych
+    description:
+      Usługi te przetwarzają dane osobowe w celu pokazania Państwu spersonalizowanych
       lub opartych na zainteresowaniach reklam.
     title: Reklama
   functional:
-    description: 'Usługi te są niezbędne do prawidłowego funkcjonowania niniejszej
+    description:
+      'Usługi te są niezbędne do prawidłowego funkcjonowania niniejszej
       strony internetowej. Nie mogą Państwo ich tutaj wyłączyć, ponieważ w przeciwnym
       razie strona nie działałaby prawidłowo.
 
       '
     title: Świadczenie usług
   marketing:
-    description: Usługi te przetwarzają dane osobowe w celu pokazania Państwu istotnych
+    description:
+      Usługi te przetwarzają dane osobowe w celu pokazania Państwu istotnych
       treści dotyczących produktów, usług lub tematów, którymi mogą być Państwo zainteresowani.
     title: Marketing
   performance:
-    description: 'Usługi te przetwarzają dane osobowe w celu optymalizacji usług oferowanych
+    description:
+      'Usługi te przetwarzają dane osobowe w celu optymalizacji usług oferowanych
       przez tę stronę.
 
       '
@@ -57,7 +62,8 @@ purposes:
 save: Zapisz
 service:
   disableAll:
-    description: Za pomocą tego przełącznika można włączać lub wyłączać wszystkie
+    description:
+      Za pomocą tego przełącznika można włączać lub wyłączać wszystkie
       usługi.
     title: Włącz lub wyłącz wszystkie usługi
   optOut:

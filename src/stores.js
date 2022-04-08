@@ -1,13 +1,12 @@
-import {getCookie, setCookie, deleteCookie} from './utils/cookies'
-
+import { getCookie, setCookie, deleteCookie } from './utils/cookies';
 
 export class TestStore {
-    constructor(){
-        this.value = null
+    constructor() {
+        this.value = null;
     }
 
     get() {
-        return this.value
+        return this.value;
     }
 
     set(value) {
@@ -15,27 +14,31 @@ export class TestStore {
     }
 
     delete() {
-        this.value = null
+        this.value = null;
     }
 }
 
 export class CookieStore {
     constructor(manager) {
-        this.cookieName = manager.storageName
-        this.cookieDomain = manager.cookieDomain
-        this.cookiePath = manager.cookiePath
-        this.cookieExpiresAfterDays = manager.cookieExpiresAfterDays
+        this.cookieName = manager.storageName;
+        this.cookieDomain = manager.cookieDomain;
+        this.cookiePath = manager.cookiePath;
+        this.cookieExpiresAfterDays = manager.cookieExpiresAfterDays;
     }
 
     get() {
         const cookie = getCookie(this.cookieName);
-        return cookie
-            ? cookie.value
-            : null;
+        return cookie ? cookie.value : null;
     }
 
     set(value) {
-        return setCookie(this.cookieName, value, this.cookieExpiresAfterDays, this.cookieDomain, this.cookiePath)
+        return setCookie(
+            this.cookieName,
+            value,
+            this.cookieExpiresAfterDays,
+            this.cookieDomain,
+            this.cookiePath
+        );
     }
 
     delete() {
@@ -46,7 +49,7 @@ export class CookieStore {
 class StorageStore {
     constructor(manager, handle) {
         this.key = manager.storageName;
-        this.handle = handle
+        this.handle = handle;
     }
 
     get() {
@@ -58,11 +61,11 @@ class StorageStore {
     }
 
     set(value) {
-        return this.handle.setItem(this.key, value)
+        return this.handle.setItem(this.key, value);
     }
 
     setWithKey(key, value) {
-        return this.handle.setItem(key, value)
+        return this.handle.setItem(key, value);
     }
 
     delete() {
@@ -75,22 +78,22 @@ class StorageStore {
 }
 
 export class LocalStorageStore extends StorageStore {
-    constructor(manager){
-        super(manager, localStorage)
+    constructor(manager) {
+        super(manager, localStorage);
     }
 }
 
 export class SessionStorageStore extends StorageStore {
-    constructor(manager){
-        super(manager, sessionStorage)
+    constructor(manager) {
+        super(manager, sessionStorage);
     }
 }
 
 const stores = {
-    'cookie': CookieStore,
-    'test': TestStore,
-    'localStorage': LocalStorageStore,
-    'sessionStorage': SessionStorageStore,
-}
+    cookie: CookieStore,
+    test: TestStore,
+    localStorage: LocalStorageStore,
+    sessionStorage: SessionStorageStore,
+};
 
-export default stores
+export default stores;

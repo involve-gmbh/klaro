@@ -36,11 +36,20 @@ const format = (str, ...rest) => {
 
 export function language(config) {
     // if a langauge is given in the config we always return that
-    if (config !== undefined && config.lang !== undefined && config.lang !== 'zz') return config.lang;
+    if (
+        config !== undefined &&
+        config.lang !== undefined &&
+        config.lang !== 'zz'
+    )
+        return config.lang;
     const lang = (
         (typeof window.language === 'string' ? window.language : null) ||
         document.documentElement.lang ||
-        (config !== undefined && config.languages !== undefined && config.languages[0] !== undefined ? config.languages[0] : 'en')
+        (config !== undefined &&
+        config.languages !== undefined &&
+        config.languages[0] !== undefined
+            ? config.languages[0]
+            : 'en')
     ).toLowerCase();
     const regex = new RegExp('^([\\w]+)-([\\w]+)$');
     const result = regex.exec(lang);
@@ -61,7 +70,7 @@ function hget(d, key, defaultValue) {
             let cvn;
             if (cv instanceof Map) cvn = cv.get(kle);
             else cvn = cv[kle];
-            if (cvn !== undefined && typeof cvn === "string")
+            if (cvn !== undefined && typeof cvn === 'string')
                 // we only assign it if the value exists
                 cv = cvn;
         } else {
@@ -69,7 +78,7 @@ function hget(d, key, defaultValue) {
             else cv = cv[kl[i]];
         }
     }
-    if (cv === undefined || !(typeof cv === "string")) return defaultValue;
+    if (cv === undefined || !(typeof cv === 'string')) return defaultValue;
     // we convert empty strings to 'undefined'
     if (cv === '') return undefined;
     return cv;

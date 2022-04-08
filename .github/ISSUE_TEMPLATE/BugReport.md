@@ -4,7 +4,6 @@ about: Something isn't working as expected
 title: ''
 labels: ''
 assignees: ''
-
 ---
 
 **Klaro Config**

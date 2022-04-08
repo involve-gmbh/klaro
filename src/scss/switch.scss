@@ -98,7 +98,6 @@
     }
 
     .slider {
-
         @include var(background-color, white2);
 
         position: absolute;
@@ -114,7 +113,6 @@
     }
 
     .slider::before {
-
         @include var(background-color, white3);
 
         position: absolute;
