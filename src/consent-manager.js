@@ -90,7 +90,9 @@ export default class ConsentManager {
         this.config.services
             .filter((service) => !service.contextualConsentOnly)
             .map((service) => {
-                if (service.required || this.config.required || value) {
+                const computedValue =
+                    typeof value === 'function' ? value(service) : value;
+                if (service.required || this.config.required || computedValue) {
                     if (this.updateConsent(service.name, true))
                         changedServices++;
                 } else {
