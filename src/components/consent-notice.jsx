@@ -176,7 +176,7 @@ export default class ConsentNotice extends React.Component {
 
         const acceptLocalOnly = (
             <button
-                className="cm-btn cm-btn-success"
+                className="cm-btn cm-btn-danger cm-btn-local-only"
                 type="button"
                 onClick={this.acceptLocalOnlyAndHide}
             >
@@ -275,8 +275,8 @@ export default class ConsentNotice extends React.Component {
                         {!hideLearnMore && learnMoreLink()}
                         <div className="cn-buttons">
                             {declineButton}
-                            {acceptButton}
                             {acceptLocalOnly}
+                            {acceptButton}
                         </div>
                     </div>
                 </div>
