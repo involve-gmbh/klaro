@@ -229,6 +229,7 @@ export default class ConsentNotice extends React.Component {
                     declineAndHide={this.declineAndHide}
                     saveAndHide={this.saveAndHide}
                     acceptAndHide={this.acceptAndHide}
+                    acceptLocalAndHide={this.acceptLocalOnlyAndHide}
                     manager={manager}
                 />
             );

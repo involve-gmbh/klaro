@@ -15,6 +15,7 @@ export default class ConsentModal extends React.Component {
             confirming,
             saveAndHide,
             acceptAndHide,
+            acceptLocalAndHide,
             declineAndHide,
             config,
             manager,
@@ -81,6 +82,17 @@ export default class ConsentModal extends React.Component {
             );
         }
 
+        const acceptLocalButton = (
+            <button
+                disabled={confirming}
+                className="cm-btn cm-btn-success cm-btn-info cm-btn-accept"
+                type="button"
+                onClick={acceptLocalAndHide}
+            >
+                Accept local only
+            </button>
+        );
+
         let ppUrl;
         // to do: deprecate and remove this (also, this is duplicated from the notice)
         if (config.privacyPolicy !== undefined) {
@@ -145,6 +157,7 @@ export default class ConsentModal extends React.Component {
                     <div className="cm-footer-buttons">
                         {declineButton}
                         {acceptButton}
+                        {acceptLocalButton}
                         {acceptAllButton}
                     </div>
                     {!config.disablePoweredBy && (
