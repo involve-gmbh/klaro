@@ -85,7 +85,7 @@ export default class ConsentModal extends React.Component {
         const acceptLocalButton = (
             <button
                 disabled={confirming}
-                className="cm-btn cm-btn-success cm-btn-info cm-btn-accept"
+                className="cm-btn cm-btn-local-only cm-btn-danger"
                 type="button"
                 onClick={acceptLocalAndHide}
             >
@@ -156,8 +156,8 @@ export default class ConsentModal extends React.Component {
                 <div className="cm-footer">
                     <div className="cm-footer-buttons">
                         {declineButton}
-                        {acceptButton}
                         {acceptLocalButton}
+                        {acceptButton}
                         {acceptAllButton}
                     </div>
                     {!config.disablePoweredBy && (
