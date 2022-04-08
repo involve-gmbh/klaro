@@ -103,6 +103,19 @@ export default class ConsentManager {
         return changedServices;
     }
 
+    changeAllWithTag(value, tag) {
+        return this.changeAll((service) => {
+            if (this.hasTag(service, tag)) return value;
+            else return !value;
+        });
+    }
+
+    hasTag(service, tag) {
+        const tags = service.tags ?? [];
+        const index = tags.findIndex((current) => current === tag);
+        return index !== -1;
+    }
+
     updateConsent(name, value) {
         const changed = (this.consents[name] || false) !== value;
         this.consents[name] = value;
