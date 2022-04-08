@@ -82,16 +82,18 @@ export default class ConsentModal extends React.Component {
             );
         }
 
-        const acceptLocalButton = (
-            <button
-                disabled={confirming}
-                className="cm-btn cm-btn-local-only cm-btn-danger"
-                type="button"
-                onClick={acceptLocalAndHide}
-            >
-                Accept local only
-            </button>
-        );
+        let acceptLocalButton;
+        if (!manager.confirmed)
+            acceptLocalButton = (
+                <button
+                    disabled={confirming}
+                    className="cm-btn cm-btn-local-only cm-btn-danger"
+                    type="button"
+                    onClick={acceptLocalAndHide}
+                >
+                    Accept local only
+                </button>
+            );
 
         let ppUrl;
         // to do: deprecate and remove this (also, this is duplicated from the notice)
