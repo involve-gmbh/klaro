@@ -1,5 +1,6 @@
 # Warning, this file is partially automatically generated!
 acceptAll: Alle akzeptieren
+acceptLocalOnly: Nur EU-Anbieter akzeptieren
 acceptSelected: Ausgewählte akzeptieren
 close: Schließen
 consentModal:
@@ -79,3 +80,5 @@ service:
   required:
     description: Dieser Service ist immer erforderlich
     title: (immer erforderlich)
+  tags:
+    non-eu: Nicht-EU Anbieter

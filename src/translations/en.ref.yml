@@ -34,6 +34,7 @@ save|capitalize: save
 decline|capitalize: I decline
 close|capitalize: close
 acceptAll|capitalize: accept all
+acceptLocalOnly|capitalize: accept local only
 acceptSelected|capitalize: accept selected
 service:
   disableAll:

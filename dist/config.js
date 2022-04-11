@@ -205,12 +205,14 @@ var klaroConfig = {
     services: [
         {
             name: 'twitter',
+            tags: ['non-eu'],
             default: false,
             contextualConsentOnly: true,
             purposes: ['marketing'],
         },
         {
             name: 'youtube',
+            tags: ['non-eu'],
             default: true,
             purposes: ['marketing'],
         },
@@ -308,11 +310,13 @@ var klaroConfig = {
         },
         {
             name: 'mouseflow',
+            tags: ['non-eu'],
             title: 'Mouseflow',
             purposes: ['analytics'],
         },
         {
             name: 'adsense',
+            tags: ['non-eu'],
             // if you omit the title here Klaro will try to look it up in the
             // translations
             //title: 'Google AdSense',
@@ -325,11 +329,13 @@ var klaroConfig = {
         },
         /*        {
             name: 'googleFonts',
+            tags: ['non-eu'],
             title: 'Google Fonts',
             purposes: ['styling'],
         },*/
         {
             name: 'cloudflare',
+            tags: ['non-eu'],
             title: 'Cloudflare',
             purposes: ['security'],
             required: true,

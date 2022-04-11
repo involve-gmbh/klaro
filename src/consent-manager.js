@@ -90,7 +90,9 @@ export default class ConsentManager {
         this.config.services
             .filter((service) => !service.contextualConsentOnly)
             .map((service) => {
-                if (service.required || this.config.required || value) {
+                const computedValue =
+                    typeof value === 'function' ? value(service) : value;
+                if (service.required || this.config.required || computedValue) {
                     if (this.updateConsent(service.name, true))
                         changedServices++;
                 } else {
@@ -99,6 +101,19 @@ export default class ConsentManager {
                 }
             });
         return changedServices;
+    }
+
+    changeAllWithTag(value, tag) {
+        return this.changeAll((service) => {
+            if (this.hasTag(service, tag)) return !value;
+            else return value;
+        });
+    }
+
+    hasTag(service, tag) {
+        const tags = service.tags ?? [];
+        const index = tags.findIndex((current) => current === tag);
+        return index !== -1;
     }
 
     updateConsent(name, value) {

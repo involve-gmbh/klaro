@@ -82,7 +82,7 @@
   },
   "version": "0.7.18",
   "lint-staged": {
-    "resources/**/*.{css,scss,js,jsx,yml}": [
+    "src/**/*.{css,scss,js,jsx,yml,html}|dist/**/*.{css,scss,js,jsx,yml,html}": [
       "prettier --write"
     ]
   }
