@@ -180,7 +180,7 @@ export default class ConsentNotice extends React.Component {
                 type="button"
                 onClick={this.acceptLocalOnlyAndHide}
             >
-                Accept Local Only
+                {t(['acceptLocalOnly'])}
             </button>
         );
 

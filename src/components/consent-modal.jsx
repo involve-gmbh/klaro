@@ -91,7 +91,7 @@ export default class ConsentModal extends React.Component {
                     type="button"
                     onClick={acceptLocalAndHide}
                 >
-                    Accept local only
+                    {t(['acceptLocalOnly'])}
                 </button>
             );
 
