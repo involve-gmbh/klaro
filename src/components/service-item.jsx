@@ -56,7 +56,9 @@ export default class ServiceItem extends React.Component {
             ''
         );
 
-        const tagElements = tags.map((tag) => <span key="{tag}">{tag}</span>);
+        const tagElements = tags.map((tag) => (
+            <span key="{tag}">{t(['service', 'tags', tag])}</span>
+        ));
         let tagsContent;
         if (tags.length > 0)
             tagsContent = <span className="cm-required">{tagElements}</span>;

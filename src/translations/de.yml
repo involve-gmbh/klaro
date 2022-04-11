@@ -80,3 +80,5 @@ service:
   required:
     description: Dieser Service ist immer erforderlich
     title: (immer erforderlich)
+  tags:
+    non-eu: Nicht-EU Anbieter

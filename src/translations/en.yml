@@ -68,3 +68,5 @@ service:
   required:
     description: This services is always required
     title: (always required)
+  tags:
+    non-eu: Non-EU Provider
