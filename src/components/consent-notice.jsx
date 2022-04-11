@@ -61,7 +61,7 @@ export default class ConsentNotice extends React.Component {
     acceptLocalOnlyAndHide = () => {
         const changedServices = this.props.manager.changeAllWithTag(
             true,
-            'local'
+            'non-eu',
         );
         this.executeButtonClicked('acceptLocalOnly', changedServices);
     };

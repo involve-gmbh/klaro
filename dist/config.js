@@ -205,20 +205,20 @@ var klaroConfig = {
     services: [
         {
             name: 'twitter',
+            tags: ['non-eu'],
             default: false,
             contextualConsentOnly: true,
             purposes: ['marketing'],
         },
         {
             name: 'youtube',
+            tags: ['non-eu'],
             default: true,
             purposes: ['marketing'],
         },
         {
             // Each service should have a unique (and short) name.
             name: 'matomo',
-
-            tags: ['local'],
 
             // If "default" is set to true, the service will be enabled by default
             // Overwrites global "default" setting.
@@ -292,7 +292,6 @@ var klaroConfig = {
         {
             name: 'inlineTracker',
             title: 'Inline Tracker',
-            tags: ['local'],
             purposes: ['analytics'],
             cookies: ['inline-tracker'],
             optOut: false,
@@ -306,17 +305,18 @@ var klaroConfig = {
         {
             name: 'intercom',
             title: 'Intercom',
-            tags: ['local'],
             default: true,
             purposes: ['livechat'],
         },
         {
             name: 'mouseflow',
+            tags: ['non-eu'],
             title: 'Mouseflow',
             purposes: ['analytics'],
         },
         {
             name: 'adsense',
+            tags: ['non-eu'],
             // if you omit the title here Klaro will try to look it up in the
             // translations
             //title: 'Google AdSense',
@@ -325,16 +325,17 @@ var klaroConfig = {
         {
             name: 'camera',
             title: 'Surveillance Camera',
-            tags: ['local'],
             purposes: ['security'],
         },
         /*        {
             name: 'googleFonts',
+            tags: ['non-eu'],
             title: 'Google Fonts',
             purposes: ['styling'],
         },*/
         {
             name: 'cloudflare',
+            tags: ['non-eu'],
             title: 'Cloudflare',
             purposes: ['security'],
             required: true,

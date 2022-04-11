@@ -105,8 +105,8 @@ export default class ConsentManager {
 
     changeAllWithTag(value, tag) {
         return this.changeAll((service) => {
-            if (this.hasTag(service, tag)) return value;
-            else return !value;
+            if (this.hasTag(service, tag)) return !value;
+            else return value;
         });
     }
 
