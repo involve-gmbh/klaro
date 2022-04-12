@@ -50,7 +50,9 @@
     "src/**/*.ts",
     "src/**/*.jsx",
     "src/**/*.tsx",
-    "src/**/*.yml"
+    "src/**/*.yml",
+    "dist/**/*.css",
+    "dist/**/*.js"
   ],
   "license": "BSD-3-Clause",
   "main": "dist/klaro.js",
