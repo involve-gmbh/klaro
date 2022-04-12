@@ -67,7 +67,7 @@
                 return Object.prototype.hasOwnProperty.call(e, t);
             }),
             (i.p = ''),
-            i((i.s = 183))
+            i((i.s = 181))
         );
     })([
         function (e, t, i) {
@@ -3993,8 +3993,6 @@
                 save: 'Сохранить',
             };
         },
-        ,
-        ,
         ,
         ,
         ,
