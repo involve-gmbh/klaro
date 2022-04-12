@@ -67,17 +67,17 @@
                 return Object.prototype.hasOwnProperty.call(t, e);
             }),
             (n.p = ''),
-            n((n.s = 165))
+            n((n.s = 164))
         );
     })([
         function (t, e, n) {
-            var o = n(2),
+            var o = n(3),
                 r = n(27).f,
                 i = n(21),
                 c = n(22),
                 a = n(66),
-                l = n(101),
-                u = n(58);
+                l = n(98),
+                u = n(57);
             t.exports = function (t, e) {
                 var n,
                     s,
@@ -115,25 +115,12 @@
             };
         },
         function (t, e, n) {
-            (function (e) {
-                var n = function (t) {
-                    return t && t.Math == Math && t;
-                };
-                t.exports =
-                    n('object' == typeof globalThis && globalThis) ||
-                    n('object' == typeof window && window) ||
-                    n('object' == typeof self && self) ||
-                    n('object' == typeof e && e) ||
-                    Function('return this')();
-            }.call(this, n(135)));
-        },
-        function (t, e, n) {
-            var o = n(2),
+            var o = n(3),
                 r = n(68),
                 i = n(15),
-                c = n(55),
+                c = n(54),
                 a = n(72),
-                l = n(106),
+                l = n(103),
                 u = r('wks'),
                 s = o.Symbol,
                 f = l ? s : (s && s.withoutSetter) || c;
@@ -147,6 +134,19 @@
                 );
             };
         },
+        function (t, e, n) {
+            (function (e) {
+                var n = function (t) {
+                    return t && t.Math == Math && t;
+                };
+                t.exports =
+                    n('object' == typeof globalThis && globalThis) ||
+                    n('object' == typeof window && window) ||
+                    n('object' == typeof self && self) ||
+                    n('object' == typeof e && e) ||
+                    Function('return this')();
+            }.call(this, n(134)));
+        },
         function (t, e) {
             t.exports = function (t) {
                 return 'object' == typeof t
@@ -157,44 +157,44 @@
         function (t, e, n) {
             'use strict';
             var o = n(0),
-                r = n(2),
+                r = n(3),
                 i = n(34),
                 c = n(33),
                 a = n(8),
                 l = n(72),
-                u = n(106),
+                u = n(103),
                 s = n(1),
                 f = n(15),
-                p = n(59),
+                p = n(58),
                 d = n(4),
                 m = n(9),
                 v = n(23),
                 h = n(18),
-                y = n(53),
+                y = n(52),
                 b = n(42),
                 g = n(44),
                 k = n(45),
-                _ = n(56),
-                x = n(138),
+                _ = n(55),
+                x = n(137),
                 w = n(71),
                 S = n(27),
                 O = n(16),
-                j = n(51),
-                E = n(21),
-                A = n(22),
+                j = n(50),
+                A = n(21),
+                E = n(22),
                 P = n(68),
-                C = n(54),
+                C = n(53),
                 R = n(43),
-                T = n(55),
-                N = n(3),
-                I = n(108),
-                D = n(109),
+                T = n(54),
+                N = n(2),
+                I = n(105),
+                D = n(106),
                 M = n(46),
                 L = n(32),
-                U = n(47).forEach,
+                U = n(39).forEach,
                 q = C('hidden'),
-                F = N('toPrimitive'),
-                W = L.set,
+                W = N('toPrimitive'),
+                F = L.set,
                 z = L.getterFor('Symbol'),
                 H = Object.prototype,
                 $ = r.Symbol,
@@ -202,9 +202,9 @@
                 G = S.f,
                 V = O.f,
                 K = x.f,
-                X = j.f,
-                Y = P('symbols'),
-                J = P('op-symbols'),
+                Y = j.f,
+                J = P('symbols'),
+                X = P('op-symbols'),
                 Q = P('string-to-symbol-registry'),
                 Z = P('symbol-to-string-registry'),
                 tt = P('wks'),
@@ -232,9 +232,9 @@
                           }
                         : V,
                 rt = function (t, e) {
-                    var n = (Y[t] = g($.prototype));
+                    var n = (J[t] = g($.prototype));
                     return (
-                        W(n, { type: 'Symbol', tag: t, description: e }),
+                        F(n, { type: 'Symbol', tag: t, description: e }),
                         a || (n.description = e),
                         n
                     );
@@ -247,11 +247,11 @@
                           return Object(t) instanceof $;
                       },
                 ct = function (t, e, n) {
-                    t === H && ct(J, e, n), m(t);
+                    t === H && ct(X, e, n), m(t);
                     var o = y(e, !0);
                     return (
                         m(n),
-                        f(Y, o)
+                        f(J, o)
                             ? (n.enumerable
                                   ? (f(t, q) && t[q][o] && (t[q][o] = !1),
                                     (n = g(n, { enumerable: b(0, !1) })))
@@ -274,13 +274,13 @@
                 },
                 lt = function (t) {
                     var e = y(t, !0),
-                        n = X.call(this, e);
+                        n = Y.call(this, e);
                     return (
-                        !(this === H && f(Y, e) && !f(J, e)) &&
+                        !(this === H && f(J, e) && !f(X, e)) &&
                         (!(
                             n ||
                             !f(this, e) ||
-                            !f(Y, e) ||
+                            !f(J, e) ||
                             (f(this, q) && this[q][e])
                         ) ||
                             n)
@@ -289,11 +289,11 @@
                 ut = function (t, e) {
                     var n = h(t),
                         o = y(e, !0);
-                    if (n !== H || !f(Y, o) || f(J, o)) {
+                    if (n !== H || !f(J, o) || f(X, o)) {
                         var r = G(n, o);
                         return (
                             !r ||
-                                !f(Y, o) ||
+                                !f(J, o) ||
                                 (f(n, q) && n[q][o]) ||
                                 (r.enumerable = !0),
                             r
@@ -305,24 +305,24 @@
                         n = [];
                     return (
                         U(e, function (t) {
-                            f(Y, t) || f(R, t) || n.push(t);
+                            f(J, t) || f(R, t) || n.push(t);
                         }),
                         n
                     );
                 },
                 ft = function (t) {
                     var e = t === H,
-                        n = K(e ? J : h(t)),
+                        n = K(e ? X : h(t)),
                         o = [];
                     return (
                         U(n, function (t) {
-                            !f(Y, t) || (e && !f(H, t)) || o.push(Y[t]);
+                            !f(J, t) || (e && !f(H, t)) || o.push(J[t]);
                         }),
                         o
                     );
                 };
             (l ||
-                (A(
+                (E(
                     ($ = function () {
                         if (this instanceof $)
                             throw TypeError('Symbol is not a constructor');
@@ -332,7 +332,7 @@
                                     : void 0,
                             e = T(t),
                             n = function (t) {
-                                this === H && n.call(J, t),
+                                this === H && n.call(X, t),
                                     f(this, q) &&
                                         f(this[q], e) &&
                                         (this[q][e] = !1),
@@ -348,7 +348,7 @@
                         return z(this).tag;
                     }
                 ),
-                A($, 'withoutSetter', function (t) {
+                E($, 'withoutSetter', function (t) {
                     return rt(T(t), t);
                 }),
                 (j.f = lt),
@@ -366,7 +366,7 @@
                             return z(this).description;
                         },
                     }),
-                    c || A(H, 'propertyIsEnumerable', lt, { unsafe: !0 }))),
+                    c || E(H, 'propertyIsEnumerable', lt, { unsafe: !0 }))),
             o({ global: !0, wrap: !0, forced: !l, sham: !l }, { Symbol: $ }),
             U(k(tt), function (t) {
                 D(t);
@@ -458,17 +458,17 @@
                         },
                     }
                 );
-            $.prototype[F] || E($.prototype, F, $.prototype.valueOf),
+            $.prototype[W] || A($.prototype, W, $.prototype.valueOf),
                 M($, 'Symbol'),
                 (R[q] = !0);
         },
         function (t, e, n) {
             'use strict';
             var o = n(18),
-                r = n(75),
-                i = n(49),
+                r = n(61),
+                i = n(48),
                 c = n(32),
-                a = n(79),
+                a = n(77),
                 l = c.set,
                 u = c.getterFor('Array Iterator');
             (t.exports = a(
@@ -503,9 +503,9 @@
                 r('entries');
         },
         function (t, e, n) {
-            var o = n(77),
+            var o = n(75),
                 r = n(22),
-                i = n(144);
+                i = n(143);
             o || r(Object.prototype, 'toString', i, { unsafe: !0 });
         },
         function (t, e, n) {
@@ -532,11 +532,11 @@
             'use strict';
             var o = n(0),
                 r = n(8),
-                i = n(2),
+                i = n(3),
                 c = n(15),
                 a = n(4),
                 l = n(16).f,
-                u = n(101),
+                u = n(98),
                 s = i.Symbol;
             if (
                 r &&
@@ -577,14 +577,14 @@
             }
         },
         function (t, e, n) {
-            n(109)('iterator');
+            n(106)('iterator');
         },
         function (t, e, n) {
             'use strict';
             var o = n(22),
                 r = n(9),
                 i = n(1),
-                c = n(88),
+                c = n(85),
                 a = RegExp.prototype,
                 l = a.toString,
                 u = i(function () {
@@ -617,9 +617,9 @@
         },
         function (t, e, n) {
             'use strict';
-            var o = n(124).charAt,
+            var o = n(123).charAt,
                 r = n(32),
-                i = n(79),
+                i = n(77),
                 c = r.set,
                 a = r.getterFor('String Iterator');
             i(
@@ -646,11 +646,11 @@
             );
         },
         function (t, e, n) {
-            var o = n(2),
-                r = n(126),
+            var o = n(3),
+                r = n(125),
                 i = n(6),
                 c = n(21),
-                a = n(3),
+                a = n(2),
                 l = a('iterator'),
                 u = a('toStringTag'),
                 s = i.values;
@@ -683,9 +683,9 @@
         },
         function (t, e, n) {
             var o = n(8),
-                r = n(99),
+                r = n(96),
                 i = n(9),
-                c = n(53),
+                c = n(52),
                 a = Object.defineProperty;
             e.f = o
                 ? a
@@ -719,14 +719,14 @@
                 });
         },
         function (t, e, n) {
-            var o = n(52),
+            var o = n(51),
                 r = n(26);
             t.exports = function (t) {
                 return o(r(t));
             };
         },
         function (t, e, n) {
-            var o = n(57),
+            var o = n(56),
                 r = Math.min;
             t.exports = function (t) {
                 return t > 0 ? r(o(t), 9007199254740991) : 0;
@@ -736,14 +736,14 @@
             'use strict';
             var o = n(0),
                 r = n(4),
-                i = n(59),
-                c = n(105),
+                i = n(58),
+                c = n(102),
                 a = n(19),
                 l = n(18),
-                u = n(60),
-                s = n(3),
-                f = n(61),
-                p = n(36),
+                u = n(59),
+                s = n(2),
+                f = n(60),
+                p = n(29),
                 d = f('slice'),
                 m = p('slice', { ACCESSORS: !0, 0: 0, 1: 2 }),
                 v = s('species'),
@@ -794,7 +794,7 @@
                   };
         },
         function (t, e, n) {
-            var o = n(2),
+            var o = n(3),
                 r = n(21),
                 i = n(15),
                 c = n(66),
@@ -828,12 +828,12 @@
         },
         function (t, e, n) {
             var o = n(0),
-                r = n(140);
+                r = n(139);
             o(
                 {
                     target: 'Array',
                     stat: !0,
-                    forced: !n(78)(function (t) {
+                    forced: !n(76)(function (t) {
                         Array.from(t);
                     }),
                 },
@@ -843,9 +843,9 @@
         function (t, e, n) {
             'use strict';
             var o = n(0),
-                r = n(47).map,
-                i = n(61),
-                c = n(36),
+                r = n(39).map,
+                i = n(60),
+                c = n(29),
                 a = i('map'),
                 l = c('map');
             o(
@@ -869,12 +869,12 @@
         },
         function (t, e, n) {
             var o = n(8),
-                r = n(51),
+                r = n(50),
                 i = n(42),
                 c = n(18),
-                a = n(53),
+                a = n(52),
                 l = n(15),
-                u = n(99),
+                u = n(96),
                 s = Object.getOwnPropertyDescriptor;
             e.f = o
                 ? s
@@ -893,11 +893,37 @@
             };
         },
         function (t, e, n) {
+            var o = n(8),
+                r = n(1),
+                i = n(15),
+                c = Object.defineProperty,
+                a = {},
+                l = function (t) {
+                    throw t;
+                };
+            t.exports = function (t, e) {
+                if (i(a, t)) return a[t];
+                e || (e = {});
+                var n = [][t],
+                    u = !!i(e, 'ACCESSORS') && e.ACCESSORS,
+                    s = i(e, 0) ? e[0] : l,
+                    f = i(e, 1) ? e[1] : void 0;
+                return (a[t] =
+                    !!n &&
+                    !r(function () {
+                        if (u && !o) return !0;
+                        var t = { length: -1 };
+                        u ? c(t, 1, { enumerable: !0, get: l }) : (t[1] = 1),
+                            n.call(t, s, f);
+                    }));
+            };
+        },
+        function (t, e, n) {
             var o = n(0),
                 r = n(1),
                 i = n(23),
-                c = n(80),
-                a = n(117);
+                c = n(78),
+                a = n(115);
             o(
                 {
                     target: 'Object',
@@ -915,16 +941,13 @@
             );
         },
         function (t, e, n) {
-            n(0)({ target: 'Object', stat: !0 }, { setPrototypeOf: n(81) });
-        },
-        function (t, e, n) {
             var o = n(0),
                 r = n(34),
                 i = n(35),
                 c = n(9),
                 a = n(4),
                 l = n(44),
-                u = n(145),
+                u = n(144),
                 s = n(1),
                 f = r('Reflect', 'construct'),
                 p = s(function () {
@@ -970,12 +993,12 @@
             var o,
                 r,
                 i,
-                c = n(136),
-                a = n(2),
+                c = n(135),
+                a = n(3),
                 l = n(4),
                 u = n(21),
                 s = n(15),
-                f = n(54),
+                f = n(53),
                 p = n(43),
                 d = a.WeakMap;
             if (c) {
@@ -1028,8 +1051,8 @@
             t.exports = !1;
         },
         function (t, e, n) {
-            var o = n(103),
-                r = n(2),
+            var o = n(100),
+                r = n(3),
                 i = function (t) {
                     return 'function' == typeof t ? t : void 0;
                 };
@@ -1044,32 +1067,6 @@
                 if ('function' != typeof t)
                     throw TypeError(String(t) + ' is not a function');
                 return t;
-            };
-        },
-        function (t, e, n) {
-            var o = n(8),
-                r = n(1),
-                i = n(15),
-                c = Object.defineProperty,
-                a = {},
-                l = function (t) {
-                    throw t;
-                };
-            t.exports = function (t, e) {
-                if (i(a, t)) return a[t];
-                e || (e = {});
-                var n = [][t],
-                    u = !!i(e, 'ACCESSORS') && e.ACCESSORS,
-                    s = i(e, 0) ? e[0] : l,
-                    f = i(e, 1) ? e[1] : void 0;
-                return (a[t] =
-                    !!n &&
-                    !r(function () {
-                        if (u && !o) return !0;
-                        var t = { length: -1 };
-                        u ? c(t, 1, { enumerable: !0, get: l }) : (t[1] = 1),
-                            n.call(t, s, f);
-                    }));
             };
         },
         function (t, e, n) {
@@ -1103,7 +1100,7 @@
         function (t, e, n) {
             'use strict';
             var o = n(0),
-                r = n(52),
+                r = n(51),
                 i = n(18),
                 c = n(62),
                 a = [].join,
@@ -1119,173 +1116,11 @@
             );
         },
         function (t, e, n) {
-            'use strict';
-            var o = n(0),
-                r = n(1),
-                i = n(59),
-                c = n(4),
-                a = n(23),
-                l = n(19),
-                u = n(60),
-                s = n(110),
-                f = n(61),
-                p = n(3),
-                d = n(73),
-                m = p('isConcatSpreadable'),
-                v =
-                    d >= 51 ||
-                    !r(function () {
-                        var t = [];
-                        return (t[m] = !1), t.concat()[0] !== t;
-                    }),
-                h = f('concat'),
-                y = function (t) {
-                    if (!c(t)) return !1;
-                    var e = t[m];
-                    return void 0 !== e ? !!e : i(t);
-                };
-            o(
-                { target: 'Array', proto: !0, forced: !v || !h },
-                {
-                    concat: function (t) {
-                        var e,
-                            n,
-                            o,
-                            r,
-                            i,
-                            c = a(this),
-                            f = s(c, 0),
-                            p = 0;
-                        for (e = -1, o = arguments.length; e < o; e++)
-                            if (y((i = -1 === e ? c : arguments[e]))) {
-                                if (p + (r = l(i.length)) > 9007199254740991)
-                                    throw TypeError(
-                                        'Maximum allowed index exceeded'
-                                    );
-                                for (n = 0; n < r; n++, p++)
-                                    n in i && u(f, p, i[n]);
-                            } else {
-                                if (p >= 9007199254740991)
-                                    throw TypeError(
-                                        'Maximum allowed index exceeded'
-                                    );
-                                u(f, p++, i);
-                            }
-                        return (f.length = p), f;
-                    },
-                }
-            );
-        },
-        function (t, e, n) {
-            'use strict';
-            var o = n(0),
-                r = n(47).filter,
-                i = n(61),
-                c = n(36),
-                a = i('filter'),
-                l = c('filter');
-            o(
-                { target: 'Array', proto: !0, forced: !a || !l },
-                {
-                    filter: function (t) {
-                        return r(
-                            this,
-                            t,
-                            arguments.length > 1 ? arguments[1] : void 0
-                        );
-                    },
-                }
-            );
-        },
-        function (t, e) {
-            t.exports = function (t, e) {
-                return {
-                    enumerable: !(1 & t),
-                    configurable: !(2 & t),
-                    writable: !(4 & t),
-                    value: e,
-                };
-            };
-        },
-        function (t, e) {
-            t.exports = {};
-        },
-        function (t, e, n) {
-            var o,
-                r = n(9),
-                i = n(137),
-                c = n(70),
-                a = n(43),
-                l = n(107),
-                u = n(65),
-                s = n(54),
-                f = s('IE_PROTO'),
-                p = function () {},
-                d = function (t) {
-                    return '<script>' + t + '</script>';
-                },
-                m = function () {
-                    try {
-                        o = document.domain && new ActiveXObject('htmlfile');
-                    } catch (t) {}
-                    var t, e;
-                    m = o
-                        ? (function (t) {
-                              t.write(d('')), t.close();
-                              var e = t.parentWindow.Object;
-                              return (t = null), e;
-                          })(o)
-                        : (((e = u('iframe')).style.display = 'none'),
-                          l.appendChild(e),
-                          (e.src = String('javascript:')),
-                          (t = e.contentWindow.document).open(),
-                          t.write(d('document.F=Object')),
-                          t.close(),
-                          t.F);
-                    for (var n = c.length; n--; ) delete m.prototype[c[n]];
-                    return m();
-                };
-            (a[f] = !0),
-                (t.exports =
-                    Object.create ||
-                    function (t, e) {
-                        var n;
-                        return (
-                            null !== t
-                                ? ((p.prototype = r(t)),
-                                  (n = new p()),
-                                  (p.prototype = null),
-                                  (n[f] = t))
-                                : (n = m()),
-                            void 0 === e ? n : i(n, e)
-                        );
-                    });
-        },
-        function (t, e, n) {
-            var o = n(104),
-                r = n(70);
-            t.exports =
-                Object.keys ||
-                function (t) {
-                    return o(t, r);
-                };
-        },
-        function (t, e, n) {
-            var o = n(16).f,
-                r = n(15),
-                i = n(3)('toStringTag');
-            t.exports = function (t, e, n) {
-                t &&
-                    !r((t = n ? t : t.prototype), i) &&
-                    o(t, i, { configurable: !0, value: e });
-            };
-        },
-        function (t, e, n) {
-            var o = n(48),
-                r = n(52),
+            var o = n(47),
+                r = n(51),
                 i = n(23),
                 c = n(19),
-                a = n(110),
+                a = n(107),
                 l = [].push,
                 u = function (t) {
                     var e = 1 == t,
@@ -1336,6 +1171,168 @@
             };
         },
         function (t, e, n) {
+            'use strict';
+            var o = n(0),
+                r = n(1),
+                i = n(58),
+                c = n(4),
+                a = n(23),
+                l = n(19),
+                u = n(59),
+                s = n(107),
+                f = n(60),
+                p = n(2),
+                d = n(73),
+                m = p('isConcatSpreadable'),
+                v =
+                    d >= 51 ||
+                    !r(function () {
+                        var t = [];
+                        return (t[m] = !1), t.concat()[0] !== t;
+                    }),
+                h = f('concat'),
+                y = function (t) {
+                    if (!c(t)) return !1;
+                    var e = t[m];
+                    return void 0 !== e ? !!e : i(t);
+                };
+            o(
+                { target: 'Array', proto: !0, forced: !v || !h },
+                {
+                    concat: function (t) {
+                        var e,
+                            n,
+                            o,
+                            r,
+                            i,
+                            c = a(this),
+                            f = s(c, 0),
+                            p = 0;
+                        for (e = -1, o = arguments.length; e < o; e++)
+                            if (y((i = -1 === e ? c : arguments[e]))) {
+                                if (p + (r = l(i.length)) > 9007199254740991)
+                                    throw TypeError(
+                                        'Maximum allowed index exceeded'
+                                    );
+                                for (n = 0; n < r; n++, p++)
+                                    n in i && u(f, p, i[n]);
+                            } else {
+                                if (p >= 9007199254740991)
+                                    throw TypeError(
+                                        'Maximum allowed index exceeded'
+                                    );
+                                u(f, p++, i);
+                            }
+                        return (f.length = p), f;
+                    },
+                }
+            );
+        },
+        function (t, e, n) {
+            'use strict';
+            var o = n(0),
+                r = n(39).filter,
+                i = n(60),
+                c = n(29),
+                a = i('filter'),
+                l = c('filter');
+            o(
+                { target: 'Array', proto: !0, forced: !a || !l },
+                {
+                    filter: function (t) {
+                        return r(
+                            this,
+                            t,
+                            arguments.length > 1 ? arguments[1] : void 0
+                        );
+                    },
+                }
+            );
+        },
+        function (t, e) {
+            t.exports = function (t, e) {
+                return {
+                    enumerable: !(1 & t),
+                    configurable: !(2 & t),
+                    writable: !(4 & t),
+                    value: e,
+                };
+            };
+        },
+        function (t, e) {
+            t.exports = {};
+        },
+        function (t, e, n) {
+            var o,
+                r = n(9),
+                i = n(136),
+                c = n(70),
+                a = n(43),
+                l = n(104),
+                u = n(65),
+                s = n(53),
+                f = s('IE_PROTO'),
+                p = function () {},
+                d = function (t) {
+                    return '<script>' + t + '</script>';
+                },
+                m = function () {
+                    try {
+                        o = document.domain && new ActiveXObject('htmlfile');
+                    } catch (t) {}
+                    var t, e;
+                    m = o
+                        ? (function (t) {
+                              t.write(d('')), t.close();
+                              var e = t.parentWindow.Object;
+                              return (t = null), e;
+                          })(o)
+                        : (((e = u('iframe')).style.display = 'none'),
+                          l.appendChild(e),
+                          (e.src = String('javascript:')),
+                          (t = e.contentWindow.document).open(),
+                          t.write(d('document.F=Object')),
+                          t.close(),
+                          t.F);
+                    for (var n = c.length; n--; ) delete m.prototype[c[n]];
+                    return m();
+                };
+            (a[f] = !0),
+                (t.exports =
+                    Object.create ||
+                    function (t, e) {
+                        var n;
+                        return (
+                            null !== t
+                                ? ((p.prototype = r(t)),
+                                  (n = new p()),
+                                  (p.prototype = null),
+                                  (n[f] = t))
+                                : (n = m()),
+                            void 0 === e ? n : i(n, e)
+                        );
+                    });
+        },
+        function (t, e, n) {
+            var o = n(101),
+                r = n(70);
+            t.exports =
+                Object.keys ||
+                function (t) {
+                    return o(t, r);
+                };
+        },
+        function (t, e, n) {
+            var o = n(16).f,
+                r = n(15),
+                i = n(2)('toStringTag');
+            t.exports = function (t, e, n) {
+                t &&
+                    !r((t = n ? t : t.prototype), i) &&
+                    o(t, i, { configurable: !0, value: e });
+            };
+        },
+        function (t, e, n) {
             var o = n(35);
             t.exports = function (t, e, n) {
                 if ((o(t), void 0 === e)) return t;
@@ -1367,7 +1364,7 @@
         },
         function (t, e, n) {
             var o = n(0),
-                r = n(149);
+                r = n(147);
             o(
                 { target: 'Object', stat: !0, forced: Object.assign !== r },
                 { assign: r }
@@ -1421,7 +1418,7 @@
         },
         function (t, e, n) {
             var o = n(68),
-                r = n(55),
+                r = n(54),
                 i = o('keys');
             t.exports = function (t) {
                 return i[t] || (i[t] = r(t));
@@ -1440,7 +1437,7 @@
             };
         },
         function (t, e, n) {
-            var o = n(104),
+            var o = n(101),
                 r = n(70).concat('length', 'prototype');
             e.f =
                 Object.getOwnPropertyNames ||
@@ -1483,7 +1480,7 @@
         },
         function (t, e, n) {
             'use strict';
-            var o = n(53),
+            var o = n(52),
                 r = n(16),
                 i = n(42);
             t.exports = function (t, e, n) {
@@ -1493,7 +1490,7 @@
         },
         function (t, e, n) {
             var o = n(1),
-                r = n(3),
+                r = n(2),
                 i = n(73),
                 c = r('species');
             t.exports = function (t) {
@@ -1510,6 +1507,17 @@
                     })
                 );
             };
+        },
+        function (t, e, n) {
+            var o = n(2),
+                r = n(44),
+                i = n(16),
+                c = o('unscopables'),
+                a = Array.prototype;
+            null == a[c] && i.f(a, c, { configurable: !0, value: r(null) }),
+                (t.exports = function (t) {
+                    a[c][t] = !0;
+                });
         },
         function (t, e, n) {
             'use strict';
@@ -1535,8 +1543,8 @@
             'use strict';
             var o,
                 r,
-                i = n(88),
-                c = n(123),
+                i = n(85),
+                c = n(122),
                 a = RegExp.prototype.exec,
                 l = String.prototype.replace,
                 u = a,
@@ -1600,19 +1608,19 @@
         },
         function (t, e, n) {
             var o = n(8),
-                r = n(2),
-                i = n(58),
-                c = n(120),
+                r = n(3),
+                i = n(57),
+                c = n(119),
                 a = n(16).f,
-                l = n(56).f,
-                u = n(91),
-                s = n(88),
-                f = n(123),
+                l = n(55).f,
+                u = n(88),
+                s = n(85),
+                f = n(122),
                 p = n(22),
                 d = n(1),
                 m = n(32).set,
-                v = n(85),
-                h = n(3)('match'),
+                v = n(82),
+                h = n(2)('match'),
                 y = r.RegExp,
                 b = y.prototype,
                 g = /a/g,
@@ -1677,7 +1685,7 @@
             v('RegExp');
         },
         function (t, e, n) {
-            var o = n(2),
+            var o = n(3),
                 r = n(4),
                 i = o.document,
                 c = r(i) && r(i.createElement);
@@ -1686,7 +1694,7 @@
             };
         },
         function (t, e, n) {
-            var o = n(2),
+            var o = n(3),
                 r = n(21);
             t.exports = function (t, e) {
                 try {
@@ -1698,7 +1706,7 @@
             };
         },
         function (t, e, n) {
-            var o = n(100),
+            var o = n(97),
                 r = Function.toString;
             'function' != typeof o.inspectSource &&
                 (o.inspectSource = function (t) {
@@ -1708,7 +1716,7 @@
         },
         function (t, e, n) {
             var o = n(33),
-                r = n(100);
+                r = n(97);
             (t.exports = function (t, e) {
                 return r[t] || (r[t] = void 0 !== e ? e : {});
             })('versions', []).push({
@@ -1720,7 +1728,7 @@
         function (t, e, n) {
             var o = n(18),
                 r = n(19),
-                i = n(105),
+                i = n(102),
                 c = function (t) {
                     return function (e, n, c) {
                         var a,
@@ -1763,8 +1771,8 @@
         function (t, e, n) {
             var o,
                 r,
-                i = n(2),
-                c = n(74),
+                i = n(3),
+                c = n(108),
                 a = i.process,
                 l = a && a.versions,
                 u = l && l.v8;
@@ -1777,24 +1785,9 @@
                 (t.exports = r && +r);
         },
         function (t, e, n) {
-            var o = n(34);
-            t.exports = o('navigator', 'userAgent') || '';
-        },
-        function (t, e, n) {
-            var o = n(3),
-                r = n(44),
-                i = n(16),
-                c = o('unscopables'),
-                a = Array.prototype;
-            null == a[c] && i.f(a, c, { configurable: !0, value: r(null) }),
-                (t.exports = function (t) {
-                    a[c][t] = !0;
-                });
-        },
-        function (t, e, n) {
             'use strict';
             var o = n(0),
-                r = n(111);
+                r = n(109);
             o(
                 { target: 'Array', proto: !0, forced: [].forEach != r },
                 { forEach: r }
@@ -1802,11 +1795,11 @@
         },
         function (t, e, n) {
             var o = {};
-            (o[n(3)('toStringTag')] = 'z'),
+            (o[n(2)('toStringTag')] = 'z'),
                 (t.exports = '[object z]' === String(o));
         },
         function (t, e, n) {
-            var o = n(3)('iterator'),
+            var o = n(2)('iterator'),
                 r = !1;
             try {
                 var i = 0,
@@ -1845,16 +1838,16 @@
         function (t, e, n) {
             'use strict';
             var o = n(0),
-                r = n(141),
-                i = n(80),
-                c = n(81),
+                r = n(140),
+                i = n(78),
+                c = n(116),
                 a = n(46),
                 l = n(21),
                 u = n(22),
-                s = n(3),
+                s = n(2),
                 f = n(33),
-                p = n(49),
-                d = n(116),
+                p = n(48),
+                d = n(114),
                 m = d.IteratorPrototype,
                 v = d.BUGGY_SAFARI_ITERATORS,
                 h = s('iterator'),
@@ -1867,7 +1860,7 @@
                     _,
                     x,
                     w = function (t) {
-                        if (t === d && A) return A;
+                        if (t === d && E) return E;
                         if (!v && t in j) return j[t];
                         switch (t) {
                             case 'keys':
@@ -1884,9 +1877,9 @@
                     S = e + ' Iterator',
                     O = !1,
                     j = t.prototype,
-                    E = j[h] || j['@@iterator'] || (d && j[d]),
-                    A = (!v && E) || w(d),
-                    P = ('Array' == e && j.entries) || E;
+                    A = j[h] || j['@@iterator'] || (d && j[d]),
+                    E = (!v && A) || w(d),
+                    P = ('Array' == e && j.entries) || A;
                 if (
                     (P &&
                         ((k = i(P.call(new t()))),
@@ -1900,20 +1893,20 @@
                             a(k, S, !0, !0),
                             f && (p[S] = y))),
                     'values' == d &&
-                        E &&
-                        'values' !== E.name &&
+                        A &&
+                        'values' !== A.name &&
                         ((O = !0),
-                        (A = function () {
-                            return E.call(this);
+                        (E = function () {
+                            return A.call(this);
                         })),
-                    (f && !g) || j[h] === A || l(j, h, A),
-                    (p[e] = A),
+                    (f && !g) || j[h] === E || l(j, h, E),
+                    (p[e] = E),
                     d)
                 )
                     if (
                         ((_ = {
                             values: w('values'),
-                            keys: b ? A : w('keys'),
+                            keys: b ? E : w('keys'),
                             entries: w('entries'),
                         }),
                         g)
@@ -1926,8 +1919,8 @@
         function (t, e, n) {
             var o = n(15),
                 r = n(23),
-                i = n(54),
-                c = n(117),
+                i = n(53),
+                c = n(115),
                 a = i('IE_PROTO'),
                 l = Object.prototype;
             t.exports = c
@@ -1947,37 +1940,9 @@
                   };
         },
         function (t, e, n) {
-            var o = n(9),
-                r = n(142);
-            t.exports =
-                Object.setPrototypeOf ||
-                ('__proto__' in {}
-                    ? (function () {
-                          var t,
-                              e = !1,
-                              n = {};
-                          try {
-                              (t = Object.getOwnPropertyDescriptor(
-                                  Object.prototype,
-                                  '__proto__'
-                              ).set).call(n, []),
-                                  (e = n instanceof Array);
-                          } catch (t) {}
-                          return function (n, i) {
-                              return (
-                                  o(n),
-                                  r(i),
-                                  e ? t.call(n, i) : (n.__proto__ = i),
-                                  n
-                              );
-                          };
-                      })()
-                    : void 0);
-        },
-        function (t, e, n) {
             'use strict';
-            var o = n(118),
-                r = n(121);
+            var o = n(117),
+                r = n(120);
             t.exports = o(
                 'Map',
                 function (t) {
@@ -1993,11 +1958,11 @@
         },
         function (t, e, n) {
             var o = n(9),
-                r = n(113),
+                r = n(111),
                 i = n(19),
-                c = n(48),
-                a = n(114),
-                l = n(112),
+                c = n(47),
+                a = n(112),
+                l = n(110),
                 u = function (t, e) {
                     (this.stopped = t), (this.result = e);
                 };
@@ -2050,7 +2015,7 @@
             'use strict';
             var o = n(34),
                 r = n(16),
-                i = n(3),
+                i = n(2),
                 c = n(8),
                 a = i('species');
             t.exports = function (t) {
@@ -2088,10 +2053,10 @@
         function (t, e, n) {
             var o = n(0),
                 r = n(8),
-                i = n(102),
+                i = n(99),
                 c = n(18),
                 a = n(27),
-                l = n(60);
+                l = n(59);
             o(
                 { target: 'Object', stat: !0, sham: !r },
                 {
@@ -2132,14 +2097,14 @@
         },
         function (t, e, n) {
             'use strict';
-            var o = n(90),
-                r = n(91),
+            var o = n(87),
+                r = n(88),
                 i = n(9),
                 c = n(26),
-                a = n(125),
-                l = n(92),
+                a = n(124),
+                l = n(89),
                 u = n(19),
-                s = n(93),
+                s = n(90),
                 f = n(63),
                 p = n(1),
                 d = [].push,
@@ -2272,10 +2237,10 @@
         },
         function (t, e, n) {
             'use strict';
-            n(38);
+            n(37);
             var o = n(22),
                 r = n(1),
-                i = n(3),
+                i = n(2),
                 c = n(63),
                 a = n(21),
                 l = i('species'),
@@ -2375,7 +2340,7 @@
         function (t, e, n) {
             var o = n(4),
                 r = n(28),
-                i = n(3)('match');
+                i = n(2)('match');
             t.exports = function (t) {
                 var e;
                 return o(t) && (void 0 !== (e = t[i]) ? !!e : 'RegExp' == r(t));
@@ -2383,7 +2348,7 @@
         },
         function (t, e, n) {
             'use strict';
-            var o = n(124).charAt;
+            var o = n(123).charAt;
             t.exports = function (t, e, n) {
                 return e + (n ? o(t, e).length : 1);
             };
@@ -2409,9 +2374,9 @@
             };
         },
         function (t, e, n) {
-            var o = n(2),
-                r = n(126),
-                i = n(111),
+            var o = n(3),
+                r = n(125),
+                i = n(109),
                 c = n(21);
             for (var a in r) {
                 var l = o[a],
@@ -2425,7 +2390,7 @@
             }
         },
         function (t, e, n) {
-            var o = n(91);
+            var o = n(88);
             t.exports = function (t) {
                 if (o(t))
                     throw TypeError(
@@ -2435,7 +2400,7 @@
             };
         },
         function (t, e, n) {
-            var o = n(3)('match');
+            var o = n(2)('match');
             t.exports = function (t) {
                 var e = /./;
                 try {
@@ -2450,7 +2415,7 @@
         },
         function (t, e, n) {
             var o = n(0),
-                r = n(152).entries;
+                r = n(151).entries;
             o(
                 { target: 'Object', stat: !0 },
                 {
@@ -2466,9 +2431,9 @@
                 r = n(0),
                 i = n(27).f,
                 c = n(19),
-                a = n(95),
+                a = n(92),
                 l = n(26),
-                u = n(96),
+                u = n(93),
                 s = n(33),
                 f = ''.startsWith,
                 p = Math.min,
@@ -2523,14 +2488,14 @@
                 });
         },
         function (t, e, n) {
-            var o = n(2),
+            var o = n(3),
                 r = n(66),
                 i = o['__core-js_shared__'] || r('__core-js_shared__', {});
             t.exports = i;
         },
         function (t, e, n) {
             var o = n(15),
-                r = n(102),
+                r = n(99),
                 i = n(27),
                 c = n(16);
             t.exports = function (t, e) {
@@ -2542,7 +2507,7 @@
         },
         function (t, e, n) {
             var o = n(34),
-                r = n(56),
+                r = n(55),
                 i = n(71),
                 c = n(9);
             t.exports =
@@ -2554,7 +2519,7 @@
                 };
         },
         function (t, e, n) {
-            var o = n(2);
+            var o = n(3);
             t.exports = o;
         },
         function (t, e, n) {
@@ -2574,7 +2539,7 @@
             };
         },
         function (t, e, n) {
-            var o = n(57),
+            var o = n(56),
                 r = Math.max,
                 i = Math.min;
             t.exports = function (t, e) {
@@ -2591,13 +2556,13 @@
             t.exports = o('document', 'documentElement');
         },
         function (t, e, n) {
-            var o = n(3);
+            var o = n(2);
             e.f = o;
         },
         function (t, e, n) {
-            var o = n(103),
+            var o = n(100),
                 r = n(15),
-                i = n(108),
+                i = n(105),
                 c = n(16).f;
             t.exports = function (t) {
                 var e = o.Symbol || (o.Symbol = {});
@@ -2606,8 +2571,8 @@
         },
         function (t, e, n) {
             var o = n(4),
-                r = n(59),
-                i = n(3)('species');
+                r = n(58),
+                i = n(2)('species');
             t.exports = function (t, e) {
                 var n;
                 return (
@@ -2621,10 +2586,14 @@
             };
         },
         function (t, e, n) {
+            var o = n(34);
+            t.exports = o('navigator', 'userAgent') || '';
+        },
+        function (t, e, n) {
             'use strict';
-            var o = n(47).forEach,
+            var o = n(39).forEach,
                 r = n(62),
-                i = n(36),
+                i = n(29),
                 c = r('forEach'),
                 a = i('forEach');
             t.exports =
@@ -2650,8 +2619,8 @@
             };
         },
         function (t, e, n) {
-            var o = n(3),
-                r = n(49),
+            var o = n(2),
+                r = n(48),
                 i = o('iterator'),
                 c = Array.prototype;
             t.exports = function (t) {
@@ -2659,17 +2628,17 @@
             };
         },
         function (t, e, n) {
-            var o = n(115),
-                r = n(49),
-                i = n(3)('iterator');
+            var o = n(113),
+                r = n(48),
+                i = n(2)('iterator');
             t.exports = function (t) {
                 if (null != t) return t[i] || t['@@iterator'] || r[o(t)];
             };
         },
         function (t, e, n) {
-            var o = n(77),
+            var o = n(75),
                 r = n(28),
-                i = n(3)('toStringTag'),
+                i = n(2)('toStringTag'),
                 c =
                     'Arguments' ==
                     r(
@@ -2705,10 +2674,10 @@
             var o,
                 r,
                 i,
-                c = n(80),
+                c = n(78),
                 a = n(21),
                 l = n(15),
-                u = n(3),
+                u = n(2),
                 s = n(33),
                 f = u('iterator'),
                 p = !1;
@@ -2738,19 +2707,47 @@
             });
         },
         function (t, e, n) {
+            var o = n(9),
+                r = n(141);
+            t.exports =
+                Object.setPrototypeOf ||
+                ('__proto__' in {}
+                    ? (function () {
+                          var t,
+                              e = !1,
+                              n = {};
+                          try {
+                              (t = Object.getOwnPropertyDescriptor(
+                                  Object.prototype,
+                                  '__proto__'
+                              ).set).call(n, []),
+                                  (e = n instanceof Array);
+                          } catch (t) {}
+                          return function (n, i) {
+                              return (
+                                  o(n),
+                                  r(i),
+                                  e ? t.call(n, i) : (n.__proto__ = i),
+                                  n
+                              );
+                          };
+                      })()
+                    : void 0);
+        },
+        function (t, e, n) {
             'use strict';
             var o = n(0),
-                r = n(2),
-                i = n(58),
+                r = n(3),
+                i = n(57),
                 c = n(22),
-                a = n(119),
-                l = n(83),
-                u = n(84),
+                a = n(118),
+                l = n(80),
+                u = n(81),
                 s = n(4),
                 f = n(1),
-                p = n(78),
+                p = n(76),
                 d = n(46),
-                m = n(120);
+                m = n(119);
             t.exports = function (t, e, n) {
                 var v = -1 !== t.indexOf('Map'),
                     h = -1 !== t.indexOf('Weak'),
@@ -2820,7 +2817,7 @@
                         j = p(function (t) {
                             new b(t);
                         }),
-                        E =
+                        A =
                             !h &&
                             f(function () {
                                 for (var t = new b(), e = 5; e--; ) t[y](e, e);
@@ -2833,8 +2830,8 @@
                             return null != n && l(n, o[y], o, v), o;
                         })).prototype = g),
                         (g.constructor = k)),
-                        (O || E) && (x('delete'), x('has'), v && x('get')),
-                        (E || S) && x(y),
+                        (O || A) && (x('delete'), x('has'), v && x('get')),
+                        (A || S) && x(y),
                         h && g.clear && delete g.clear;
                 }
                 return (
@@ -2851,8 +2848,8 @@
                 r = n(4),
                 i = n(15),
                 c = n(16).f,
-                a = n(55),
-                l = n(143),
+                a = n(54),
+                l = n(142),
                 u = a('meta'),
                 s = 0,
                 f =
@@ -2893,7 +2890,7 @@
         },
         function (t, e, n) {
             var o = n(4),
-                r = n(81);
+                r = n(116);
             t.exports = function (t, e, n) {
                 var i, c;
                 return (
@@ -2911,14 +2908,14 @@
             'use strict';
             var o = n(16).f,
                 r = n(44),
-                i = n(122),
-                c = n(48),
-                a = n(84),
-                l = n(83),
-                u = n(79),
-                s = n(85),
+                i = n(121),
+                c = n(47),
+                a = n(81),
+                l = n(80),
+                u = n(77),
+                s = n(82),
                 f = n(8),
-                p = n(119).fastKey,
+                p = n(118).fastKey,
                 d = n(32),
                 m = d.set,
                 v = d.getterFor;
@@ -3122,7 +3119,7 @@
                 }));
         },
         function (t, e, n) {
-            var o = n(57),
+            var o = n(56),
                 r = n(26),
                 i = function (t) {
                     return function (e, n) {
@@ -3153,7 +3150,7 @@
         function (t, e, n) {
             var o = n(9),
                 r = n(35),
-                i = n(3)('species');
+                i = n(2)('species');
             t.exports = function (t, e) {
                 var n,
                     c = o(t).constructor;
@@ -3200,7 +3197,7 @@
             var o = n(0),
                 r = n(69).indexOf,
                 i = n(62),
-                c = n(36),
+                c = n(29),
                 a = [].indexOf,
                 l = !!a && 1 / [1].indexOf(1, -0) < 0,
                 u = i('indexOf'),
@@ -3249,8 +3246,8 @@
         },
         function (t, e, n) {
             'use strict';
-            var o = n(118),
-                r = n(121);
+            var o = n(117),
+                r = n(120);
             t.exports = o(
                 'Set',
                 function (t) {
@@ -3266,14 +3263,14 @@
         },
         function (t, e, n) {
             'use strict';
-            var o = n(90),
+            var o = n(87),
                 r = n(9),
                 i = n(23),
                 c = n(19),
-                a = n(57),
+                a = n(56),
                 l = n(26),
-                u = n(92),
-                s = n(93),
+                u = n(89),
+                s = n(90),
                 f = Math.max,
                 p = Math.min,
                 d = Math.floor,
@@ -3318,8 +3315,8 @@
                         for (var w, S = '', O = 0, j = 0; j < _.length; j++) {
                             x = _[j];
                             for (
-                                var E = String(x[0]),
-                                    A = f(p(a(x.index), d.length), 0),
+                                var A = String(x[0]),
+                                    E = f(p(a(x.index), d.length), 0),
                                     P = [],
                                     C = 1;
                                 C < x.length;
@@ -3328,12 +3325,12 @@
                                 P.push(void 0 === (w = x[C]) ? w : String(w));
                             var R = x.groups;
                             if (m) {
-                                var T = [E].concat(P, A, d);
+                                var T = [A].concat(P, E, d);
                                 void 0 !== R && T.push(R);
                                 var N = String(o.apply(void 0, T));
-                            } else N = g(E, d, A, P, R, o);
-                            A >= O &&
-                                ((S += d.slice(O, A) + N), (O = A + E.length));
+                            } else N = g(A, d, E, P, R, o);
+                            E >= O &&
+                                ((S += d.slice(O, E) + N), (O = E + A.length));
                         }
                         return S + d.slice(O);
                     },
@@ -3383,13 +3380,13 @@
             var o,
                 r,
                 i,
-                c = n(2),
+                c = n(3),
                 a = n(1),
                 l = n(28),
-                u = n(48),
-                s = n(107),
+                u = n(47),
+                s = n(104),
                 f = n(65),
-                p = n(132),
+                p = n(131),
                 d = c.location,
                 m = c.setImmediate,
                 v = c.clearImmediate,
@@ -3466,7 +3463,7 @@
                 (t.exports = { set: m, clear: v });
         },
         function (t, e, n) {
-            var o = n(74);
+            var o = n(108);
             t.exports = /(iphone|ipod|ipad).*applewebkit/i.test(o);
         },
         function (t, e, n) {
@@ -3487,7 +3484,7 @@
             };
         },
         function (t, e, n) {
-            t.exports = n(147)();
+            t.exports = n(145)();
         },
         function (t, e) {
             var n;
@@ -3502,7 +3499,7 @@
             t.exports = n;
         },
         function (t, e, n) {
-            var o = n(2),
+            var o = n(3),
                 r = n(67),
                 i = o.WeakMap;
             t.exports = 'function' == typeof i && /native code/.test(r(i));
@@ -3523,7 +3520,7 @@
         },
         function (t, e, n) {
             var o = n(18),
-                r = n(56).f,
+                r = n(55).f,
                 i = {}.toString,
                 c =
                     'object' == typeof window &&
@@ -3546,9 +3543,9 @@
         function (t, e, n) {
             'use strict';
             var o = n(0),
-                r = n(47).find,
-                i = n(75),
-                c = n(36),
+                r = n(39).find,
+                i = n(61),
+                c = n(29),
                 a = !0,
                 l = c('find');
             'find' in [] &&
@@ -3571,13 +3568,13 @@
         },
         function (t, e, n) {
             'use strict';
-            var o = n(48),
+            var o = n(47),
                 r = n(23),
-                i = n(112),
-                c = n(113),
+                i = n(110),
+                c = n(111),
                 a = n(19),
-                l = n(60),
-                u = n(114);
+                l = n(59),
+                u = n(112);
             t.exports = function (t) {
                 var e,
                     n,
@@ -3611,11 +3608,11 @@
         },
         function (t, e, n) {
             'use strict';
-            var o = n(116).IteratorPrototype,
+            var o = n(114).IteratorPrototype,
                 r = n(44),
                 i = n(42),
                 c = n(46),
-                a = n(49),
+                a = n(48),
                 l = function () {
                     return this;
                 };
@@ -3647,8 +3644,8 @@
         },
         function (t, e, n) {
             'use strict';
-            var o = n(77),
-                r = n(115);
+            var o = n(75),
+                r = n(113);
             t.exports = o
                 ? {}.toString
                 : function () {
@@ -3687,35 +3684,8 @@
                 };
         },
         function (t, e, n) {
-            var o = n(0),
-                r = n(2),
-                i = n(74),
-                c = [].slice,
-                a = function (t) {
-                    return function (e, n) {
-                        var o = arguments.length > 2,
-                            r = o ? c.call(arguments, 2) : void 0;
-                        return t(
-                            o
-                                ? function () {
-                                      ('function' == typeof e
-                                          ? e
-                                          : Function(e)
-                                      ).apply(this, r);
-                                  }
-                                : e,
-                            n
-                        );
-                    };
-                };
-            o(
-                { global: !0, bind: !0, forced: /MSIE .\./.test(i) },
-                { setTimeout: a(r.setTimeout), setInterval: a(r.setInterval) }
-            );
-        },
-        function (t, e, n) {
             'use strict';
-            var o = n(148);
+            var o = n(146);
             function r() {}
             function i() {}
             (i.resetWarningCache = r),
@@ -3767,9 +3737,9 @@
                 r = n(1),
                 i = n(45),
                 c = n(71),
-                a = n(51),
+                a = n(50),
                 l = n(23),
-                u = n(52),
+                u = n(51),
                 s = Object.assign,
                 f = Object.defineProperty;
             t.exports =
@@ -3838,9 +3808,9 @@
                 r = n(0),
                 i = n(27).f,
                 c = n(19),
-                a = n(95),
+                a = n(92),
                 l = n(26),
-                u = n(96),
+                u = n(93),
                 s = n(33),
                 f = ''.endsWith,
                 p = Math.min,
@@ -3874,12 +3844,12 @@
         },
         function (t, e, n) {
             'use strict';
-            var o = n(90),
+            var o = n(87),
                 r = n(9),
                 i = n(19),
                 c = n(26),
-                a = n(92),
-                l = n(93);
+                a = n(89),
+                l = n(90);
             o('match', 1, function (t, e, n) {
                 return [
                     function (e) {
@@ -3910,10 +3880,36 @@
             });
         },
         function (t, e, n) {
+            'use strict';
+            var o = n(0),
+                r = n(39).findIndex,
+                i = n(61),
+                c = n(29),
+                a = !0,
+                l = c('findIndex');
+            'findIndex' in [] &&
+                Array(1).findIndex(function () {
+                    a = !1;
+                }),
+                o(
+                    { target: 'Array', proto: !0, forced: a || !l },
+                    {
+                        findIndex: function (t) {
+                            return r(
+                                this,
+                                t,
+                                arguments.length > 1 ? arguments[1] : void 0
+                            );
+                        },
+                    }
+                ),
+                i('findIndex');
+        },
+        function (t, e, n) {
             var o = n(8),
                 r = n(45),
                 i = n(18),
-                c = n(51).f,
+                c = n(50).f,
                 a = function (t) {
                     return function (e) {
                         for (
@@ -3938,12 +3934,12 @@
             'use strict';
             var o = n(0),
                 r = n(69).includes,
-                i = n(75);
+                i = n(61);
             o(
                 {
                     target: 'Array',
                     proto: !0,
-                    forced: !n(36)('indexOf', { ACCESSORS: !0, 1: 0 }),
+                    forced: !n(29)('indexOf', { ACCESSORS: !0, 1: 0 }),
                 },
                 {
                     includes: function (t) {
@@ -3960,10 +3956,10 @@
         function (t, e, n) {
             'use strict';
             var o = n(0),
-                r = n(95),
+                r = n(92),
                 i = n(26);
             o(
-                { target: 'String', proto: !0, forced: !n(96)('includes') },
+                { target: 'String', proto: !0, forced: !n(93)('includes') },
                 {
                     includes: function (t) {
                         return !!~String(i(this)).indexOf(
@@ -3982,30 +3978,30 @@
                 c,
                 a = n(0),
                 l = n(33),
-                u = n(2),
+                u = n(3),
                 s = n(34),
-                f = n(156),
+                f = n(155),
                 p = n(22),
-                d = n(122),
+                d = n(121),
                 m = n(46),
-                v = n(85),
+                v = n(82),
                 h = n(4),
                 y = n(35),
-                b = n(84),
+                b = n(81),
                 g = n(28),
                 k = n(67),
-                _ = n(83),
-                x = n(78),
-                w = n(125),
-                S = n(131).set,
-                O = n(157),
-                j = n(158),
-                E = n(159),
-                A = n(133),
-                P = n(160),
+                _ = n(80),
+                x = n(76),
+                w = n(124),
+                S = n(130).set,
+                O = n(156),
+                j = n(157),
+                A = n(158),
+                E = n(132),
+                P = n(159),
                 C = n(32),
-                R = n(58),
-                T = n(3),
+                R = n(57),
+                T = n(2),
                 N = n(73),
                 I = T('species'),
                 D = 'Promise',
@@ -4013,14 +4009,14 @@
                 L = C.set,
                 U = C.getterFor(D),
                 q = f,
-                F = u.TypeError,
-                W = u.document,
+                W = u.TypeError,
+                F = u.document,
                 z = u.process,
                 H = s('fetch'),
-                $ = A.f,
+                $ = E.f,
                 B = $,
                 G = 'process' == g(z),
-                V = !!(W && W.createEvent && u.dispatchEvent),
+                V = !!(F && F.createEvent && u.dispatchEvent),
                 K = R(D, function () {
                     if (!(k(q) !== String(q))) {
                         if (66 === N) return !0;
@@ -4041,16 +4037,16 @@
                         !(t.then(function () {}) instanceof e)
                     );
                 }),
-                X =
+                Y =
                     K ||
                     !x(function (t) {
                         q.all(t).catch(function () {});
                     }),
-                Y = function (t) {
+                J = function (t) {
                     var e;
                     return !(!h(t) || 'function' != typeof (e = t.then)) && e;
                 },
-                J = function (t, e, n) {
+                X = function (t, e, n) {
                     if (!e.notified) {
                         e.notified = !0;
                         var o = e.reactions;
@@ -4079,8 +4075,8 @@
                                                 (a = f(r)),
                                                 m && (m.exit(), (u = !0))),
                                           a === s.promise
-                                              ? d(F('Promise-chain cycle'))
-                                              : (l = Y(a))
+                                              ? d(W('Promise-chain cycle'))
+                                              : (l = J(a))
                                               ? l.call(a, p, d)
                                               : p(a))
                                         : d(r);
@@ -4097,7 +4093,7 @@
                 Q = function (t, e, n) {
                     var o, r;
                     V
-                        ? (((o = W.createEvent('Event')).promise = e),
+                        ? (((o = F.createEvent('Event')).promise = e),
                           (o.reason = n),
                           o.initEvent(t, !1, !0),
                           u.dispatchEvent(o))
@@ -4105,7 +4101,7 @@
                         (r = u['on' + t])
                             ? r(o)
                             : 'unhandledrejection' === t &&
-                              E('Unhandled promise rejection', n);
+                              A('Unhandled promise rejection', n);
                 },
                 Z = function (t, e) {
                     S.call(u, function () {
@@ -4145,15 +4141,15 @@
                         o && (e = o),
                         (e.value = n),
                         (e.state = 2),
-                        J(t, e, !0));
+                        X(t, e, !0));
                 },
                 rt = function (t, e, n, o) {
                     if (!e.done) {
                         (e.done = !0), o && (e = o);
                         try {
                             if (t === n)
-                                throw F("Promise can't be resolved itself");
-                            var r = Y(n);
+                                throw W("Promise can't be resolved itself");
+                            var r = J(n);
                             r
                                 ? O(function () {
                                       var o = { done: !1 };
@@ -4167,7 +4163,7 @@
                                           ot(t, o, n, e);
                                       }
                                   })
-                                : ((e.value = n), (e.state = 1), J(t, e, !1));
+                                : ((e.value = n), (e.state = 1), X(t, e, !1));
                         } catch (n) {
                             ot(t, { done: !1 }, n, e);
                         }
@@ -4204,7 +4200,7 @@
                             (o.domain = G ? z.domain : void 0),
                             (n.parent = !0),
                             n.reactions.push(o),
-                            0 != n.state && J(this, n, !1),
+                            0 != n.state && X(this, n, !1),
                             o.promise
                         );
                     },
@@ -4219,7 +4215,7 @@
                         (this.resolve = nt(rt, t, e)),
                         (this.reject = nt(ot, t, e));
                 }),
-                (A.f = $ =
+                (E.f = $ =
                     function (t) {
                         return t === q || t === i ? new r(t) : B(t);
                     }),
@@ -4268,7 +4264,7 @@
                     }
                 ),
                 a(
-                    { target: D, stat: !0, forced: X },
+                    { target: D, stat: !0, forced: Y },
                     {
                         all: function (t) {
                             var e = this,
@@ -4312,7 +4308,7 @@
                 );
         },
         function (t, e, n) {
-            var o = n(2);
+            var o = n(3);
             t.exports = o.Promise;
         },
         function (t, e, n) {
@@ -4324,11 +4320,11 @@
                 l,
                 u,
                 s,
-                f = n(2),
+                f = n(3),
                 p = n(27).f,
                 d = n(28),
-                m = n(131).set,
-                v = n(132),
+                m = n(130).set,
+                v = n(131),
                 h = f.MutationObserver || f.WebKitMutationObserver,
                 y = f.process,
                 b = f.Promise,
@@ -4378,7 +4374,7 @@
         function (t, e, n) {
             var o = n(9),
                 r = n(4),
-                i = n(133);
+                i = n(132);
             t.exports = function (t, e) {
                 if ((o(t), r(e) && e.constructor === t)) return e;
                 var n = i.f(t);
@@ -4386,7 +4382,7 @@
             };
         },
         function (t, e, n) {
-            var o = n(2);
+            var o = n(3);
             t.exports = function (t, e) {
                 var n = o.console;
                 n &&
@@ -4404,8 +4400,8 @@
             };
         },
         function (t, e, n) {
-            var o = n(162),
-                r = n(163);
+            var o = n(161),
+                r = n(162);
             'string' == typeof (r = r.__esModule ? r.default : r) &&
                 (r = [[t.i, r, '']]);
             var i = {
@@ -4608,9 +4604,9 @@
             };
         },
         function (t, e, n) {
-            (e = n(164)(!1)).push([
+            (e = n(163)(!1)).push([
                 t.i,
-                ".klaro{font-family:inherit;font-family:var(--font-family, inherit);font-size:14px;font-size:var(--font-size, 14px)}.klaro button{font-family:inherit;font-family:var(--font-family, inherit);font-size:14px;font-size:var(--font-size, 14px)}.klaro.cm-as-context-notice{height:100%;padding-bottom:12px;padding-top:12px}.klaro .cookie-modal .cm-switch-container,.klaro .context-notice .cm-switch-container,.klaro .cookie-notice .cm-switch-container{border-bottom-style:solid;border-bottom-style:var(--border-style, solid);border-bottom-width:1px;border-bottom-width:var(--border-width, 1px);border-bottom-color:#c8c8c8;border-bottom-color:var(--light2, #c8c8c8);display:block;position:relative;padding:10px;padding-left:66px;line-height:20px;vertical-align:middle;min-height:40px}.klaro .cookie-modal .cm-switch-container:last-child,.klaro .context-notice .cm-switch-container:last-child,.klaro .cookie-notice .cm-switch-container:last-child{border-bottom:0}.klaro .cookie-modal .cm-switch-container:first-child,.klaro .context-notice .cm-switch-container:first-child,.klaro .cookie-notice .cm-switch-container:first-child{margin-top:0}.klaro .cookie-modal .cm-switch-container p,.klaro .context-notice .cm-switch-container p,.klaro .cookie-notice .cm-switch-container p{margin-top:0}.klaro .cookie-modal .cm-switch,.klaro .context-notice .cm-switch,.klaro .cookie-notice .cm-switch{position:relative;display:inline-block;width:50px;height:30px}.klaro .cookie-modal .cm-list-input:checked+.cm-list-label .slider,.klaro .context-notice .cm-list-input:checked+.cm-list-label .slider,.klaro .cookie-notice .cm-list-input:checked+.cm-list-label .slider{background-color:#1a936f;background-color:var(--green1, #1a936f)}.klaro .cookie-modal .cm-list-input.half-checked:checked+.cm-list-label .slider,.klaro .context-notice .cm-list-input.half-checked:checked+.cm-list-label .slider,.klaro .cookie-notice .cm-list-input.half-checked:checked+.cm-list-label .slider{background-color:#1a936f;background-color:var(--green1, #1a936f);opacity:0.6}.klaro .cookie-modal .cm-list-input.half-checked:checked+.cm-list-label .slider::before,.klaro .context-notice .cm-list-input.half-checked:checked+.cm-list-label .slider::before,.klaro .cookie-notice .cm-list-input.half-checked:checked+.cm-list-label .slider::before{-ms-transform:translateX(10px);transform:translateX(10px)}.klaro .cookie-modal .cm-list-input.only-required+.cm-list-label .slider,.klaro .context-notice .cm-list-input.only-required+.cm-list-label .slider,.klaro .cookie-notice .cm-list-input.only-required+.cm-list-label .slider{background-color:#24cc9a;background-color:var(--green2, #24cc9a);opacity:0.8}.klaro .cookie-modal .cm-list-input.only-required+.cm-list-label .slider::before,.klaro .context-notice .cm-list-input.only-required+.cm-list-label .slider::before,.klaro .cookie-notice .cm-list-input.only-required+.cm-list-label .slider::before{-ms-transform:translateX(10px);transform:translateX(10px)}.klaro .cookie-modal .cm-list-input.required:checked+.cm-list-label .slider,.klaro .context-notice .cm-list-input.required:checked+.cm-list-label .slider,.klaro .cookie-notice .cm-list-input.required:checked+.cm-list-label .slider{background-color:#24cc9a;background-color:var(--green2, #24cc9a);opacity:0.8;cursor:not-allowed}.klaro .cookie-modal .slider,.klaro .context-notice .slider,.klaro .cookie-notice .slider{box-shadow:0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19)}.klaro .cookie-modal .cm-list-input,.klaro .context-notice .cm-list-input,.klaro .cookie-notice .cm-list-input{position:absolute;top:0;left:0;opacity:0;width:50px;height:30px}.klaro .cookie-modal .cm-list-title,.klaro .context-notice .cm-list-title,.klaro .cookie-notice .cm-list-title{font-size:0.9em;font-weight:600}.klaro .cookie-modal .cm-list-description,.klaro .context-notice .cm-list-description,.klaro .cookie-notice .cm-list-description{color:#7c7c7c;color:var(--dark3, #7c7c7c);font-size:0.9em;padding-top:4px}.klaro .cookie-modal .cm-list-label .cm-switch,.klaro .context-notice .cm-list-label .cm-switch,.klaro .cookie-notice .cm-list-label .cm-switch{position:absolute;left:0}.klaro .cookie-modal .cm-list-label .slider,.klaro .context-notice .cm-list-label .slider,.klaro .cookie-notice .cm-list-label .slider{background-color:#f2f2f2;background-color:var(--white2, #f2f2f2);position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;transition:0.4s;width:50px;display:inline-block}.klaro .cookie-modal .cm-list-label .slider::before,.klaro .context-notice .cm-list-label .slider::before,.klaro .cookie-notice .cm-list-label .slider::before{background-color:#e6e6e6;background-color:var(--white3, #e6e6e6);position:absolute;content:'';height:20px;width:20px;left:5px;bottom:5px;transition:0.4s}.klaro .cookie-modal .cm-list-label .slider.round,.klaro .context-notice .cm-list-label .slider.round,.klaro .cookie-notice .cm-list-label .slider.round{border-radius:30px}.klaro .cookie-modal .cm-list-label .slider.round::before,.klaro .context-notice .cm-list-label .slider.round::before,.klaro .cookie-notice .cm-list-label .slider.round::before{border-radius:50%}.klaro .cookie-modal .cm-list-label input:focus+.slider,.klaro .context-notice .cm-list-label input:focus+.slider,.klaro .cookie-notice .cm-list-label input:focus+.slider{box-shadow-color:#48dfb2;box-shadow-color:var(--green3, #48dfb2);box-shadow:0 0 1px var(color, green3)}.klaro .cookie-modal .cm-list-label input:checked+.slider::before,.klaro .context-notice .cm-list-label input:checked+.slider::before,.klaro .cookie-notice .cm-list-label input:checked+.slider::before{-ms-transform:translateX(20px);transform:translateX(20px)}.klaro .cookie-modal .cm-list-input:focus+.cm-list-label .slider,.klaro .context-notice .cm-list-input:focus+.cm-list-label .slider,.klaro .cookie-notice .cm-list-input:focus+.cm-list-label .slider{box-shadow:0 4px 6px 0 rgba(125,125,125,0.2),5px 5px 10px 0 rgba(125,125,125,0.19)}.klaro .cookie-modal .cm-list-input:checked+.cm-list-label .slider::before,.klaro .context-notice .cm-list-input:checked+.cm-list-label .slider::before,.klaro .cookie-notice .cm-list-input:checked+.cm-list-label .slider::before{-ms-transform:translateX(20px);transform:translateX(20px)}.klaro .cookie-modal .slider,.klaro .context-notice .slider,.klaro .cookie-notice .slider{box-shadow:0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19)}.klaro .cookie-modal a,.klaro .context-notice a,.klaro .cookie-notice a{color:#1a936f;color:var(--green1, #1a936f);text-decoration:none}.klaro .cookie-modal p,.klaro .cookie-modal strong,.klaro .cookie-modal h1,.klaro .cookie-modal h2,.klaro .cookie-modal ul,.klaro .cookie-modal li,.klaro .context-notice p,.klaro .context-notice strong,.klaro .context-notice h1,.klaro .context-notice h2,.klaro .context-notice ul,.klaro .context-notice li,.klaro .cookie-notice p,.klaro .cookie-notice strong,.klaro .cookie-notice h1,.klaro .cookie-notice h2,.klaro .cookie-notice ul,.klaro .cookie-notice li{color:#fafafa;color:var(--light1, #fafafa)}.klaro .cookie-modal p,.klaro .cookie-modal h1,.klaro .cookie-modal h2,.klaro .cookie-modal ul,.klaro .cookie-modal li,.klaro .context-notice p,.klaro .context-notice h1,.klaro .context-notice h2,.klaro .context-notice ul,.klaro .context-notice li,.klaro .cookie-notice p,.klaro .cookie-notice h1,.klaro .cookie-notice h2,.klaro .cookie-notice ul,.klaro .cookie-notice li{display:block;text-align:left;margin:0;padding:0;margin-top:0.7em}.klaro .cookie-modal h1,.klaro .cookie-modal h2,.klaro .cookie-modal h3,.klaro .cookie-modal h4,.klaro .cookie-modal h5,.klaro .cookie-modal h6,.klaro .context-notice h1,.klaro .context-notice h2,.klaro .context-notice h3,.klaro .context-notice h4,.klaro .context-notice h5,.klaro .context-notice h6,.klaro .cookie-notice h1,.klaro .cookie-notice h2,.klaro .cookie-notice h3,.klaro .cookie-notice h4,.klaro .cookie-notice h5,.klaro .cookie-notice h6{font-family:inherit;font-family:var(--title-font-family, inherit)}.klaro .cookie-modal .cm-link,.klaro .context-notice .cm-link,.klaro .cookie-notice .cm-link{margin-right:0.5em;vertical-align:middle}.klaro .cookie-modal .cm-btn,.klaro .context-notice .cm-btn,.klaro .cookie-notice .cm-btn{color:#fff;color:var(--button-text-color, #fff);background-color:#5c5c5c;background-color:var(--dark2, #5c5c5c);border-radius:4px;border-radius:var(--border-radius, 4px);padding:6px 10px;margin-right:.5em;border-style:none;padding:0.4em;font-size:1em;cursor:pointer}.klaro .cookie-modal .cm-btn:disabled,.klaro .context-notice .cm-btn:disabled,.klaro .cookie-notice .cm-btn:disabled{opacity:0.5}.klaro .cookie-modal .cm-btn.cm-btn-close,.klaro .context-notice .cm-btn.cm-btn-close,.klaro .cookie-notice .cm-btn.cm-btn-close{background-color:#c8c8c8;background-color:var(--light2, #c8c8c8)}.klaro .cookie-modal .cm-btn.cm-btn-success,.klaro .context-notice .cm-btn.cm-btn-success,.klaro .cookie-notice .cm-btn.cm-btn-success{background-color:#1a936f;background-color:var(--green1, #1a936f)}.klaro .cookie-modal .cm-btn.cm-btn-success-var,.klaro .context-notice .cm-btn.cm-btn-success-var,.klaro .cookie-notice .cm-btn.cm-btn-success-var{background-color:#24cc9a;background-color:var(--green2, #24cc9a)}.klaro .cookie-modal .cm-btn.cm-btn-info,.klaro .context-notice .cm-btn.cm-btn-info,.klaro .cookie-notice .cm-btn.cm-btn-info{background-color:#2581c4;background-color:var(--blue1, #2581c4)}.klaro .context-notice{border-radius:4px;border-radius:var(--border-radius, 4px);border-style:solid;border-style:var(--border-style, solid);border-width:1px;border-width:var(--border-width, 1px);border-color:#c8c8c8;border-color:var(--light2, #c8c8c8);background-color:#fafafa;background-color:var(--light1, #fafafa);display:flex;flex-direction:column;flex-wrap:wrap;align-items:center;justify-content:center;padding:12px;height:100%}.klaro .context-notice.cm-dark{background-color:#333;background-color:var(--dark1, #333);border-color:#5c5c5c;border-color:var(--dark2, #5c5c5c)}.klaro .context-notice.cm-dark p{color:#fafafa;color:var(--light1, #fafafa)}.klaro .context-notice.cm-dark p a{color:#459cdc;color:var(--blue2, #459cdc)}.klaro .context-notice p{color:#333;color:var(--dark1, #333);flex-grow:0;text-align:center;padding-top:0;margin-top:0}.klaro .context-notice p a{color:#24cc9a;color:var(--green2, #24cc9a)}.klaro .context-notice p.cm-buttons{margin-top:12px}.klaro .cookie-modal{width:100%;height:100%;position:fixed;overflow:hidden;left:0;top:0;z-index:1000}.klaro .cookie-modal.cm-embedded{position:relative;height:inherit;width:inherit;left:inherit;right:inherit;z-index:0}.klaro .cookie-modal.cm-embedded .cm-modal.cm-klaro{position:relative;-ms-transform:none;transform:none}.klaro .cookie-modal .cm-bg{background:rgba(0,0,0,0.5);height:100%;width:100%;position:fixed;top:0;left:0}.klaro .cookie-modal .cm-modal.cm-klaro{background-color:#333;background-color:var(--dark1, #333);color:#fafafa;color:var(--light1, #fafafa);z-index:1001;box-shadow:0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19);width:100%;max-height:98%;top:50%;-ms-transform:translateY(-50%);transform:translateY(-50%);position:fixed;overflow:auto}@media (min-width: 660px){.klaro .cookie-modal .cm-modal.cm-klaro{border-radius:4px;border-radius:var(--border-radius, 4px);position:relative;margin:0 auto;max-width:640px;height:auto;width:auto}}.klaro .cookie-modal .cm-modal .hide{border-style:none;background:none;cursor:pointer;position:absolute;top:20px;right:20px;z-index:1}.klaro .cookie-modal .cm-modal .hide svg{stroke:#fafafa;stroke:var(--light1, #fafafa)}.klaro .cookie-modal .cm-modal .cm-footer{border-top-color:#5c5c5c;border-top-color:var(--dark2, #5c5c5c);border-top-width:1px;border-top-width:var(--border-width, 1px);border-top-style:solid;border-top-style:var(--border-style, solid);padding:1em}.klaro .cookie-modal .cm-modal .cm-footer-buttons{display:flex;flex-flow:row;justify-content:space-between}.klaro .cookie-modal .cm-modal .cm-footer .cm-powered-by{font-size:0.8em;padding-top:4px;text-align:right;padding-right:8px}.klaro .cookie-modal .cm-modal .cm-footer .cm-powered-by a{color:#5c5c5c;color:var(--dark2, #5c5c5c)}.klaro .cookie-modal .cm-modal .cm-header{border-bottom-width:1px;border-bottom-width:var(--border-width, 1px);border-bottom-style:solid;border-bottom-style:var(--border-style, solid);border-bottom-color:#5c5c5c;border-bottom-color:var(--dark2, #5c5c5c);padding:1em;padding-right:24px}.klaro .cookie-modal .cm-modal .cm-header h1{margin:0;font-size:2em;display:block}.klaro .cookie-modal .cm-modal .cm-header h1.title{padding-right:20px}.klaro .cookie-modal .cm-modal .cm-body{padding:1em}.klaro .cookie-modal .cm-modal .cm-body ul{display:block}.klaro .cookie-modal .cm-modal .cm-body span{display:inline-block;width:auto}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes{padding:0;margin:0}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose .cm-services .cm-caret,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose .cm-services .cm-caret{color:#a0a0a0;color:var(--light3, #a0a0a0)}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose .cm-services .cm-content,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose .cm-services .cm-content{margin-left:-40px;display:none}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose .cm-services .cm-content.expanded,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose .cm-services .cm-content.expanded{margin-top:10px;display:block}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose{position:relative;line-height:20px;vertical-align:middle;padding-left:60px;min-height:40px}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service:first-child,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose:first-child,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service:first-child,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose:first-child{margin-top:0}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service p,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose p,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service p,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose p{margin-top:0}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service p.purposes,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose p.purposes,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service p.purposes,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose p.purposes{color:#a0a0a0;color:var(--light3, #a0a0a0);font-size:0.8em}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service.cm-toggle-all,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose.cm-toggle-all,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service.cm-toggle-all,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose.cm-toggle-all{border-top-width:1px;border-top-width:var(--border-width, 1px);border-top-style:solid;border-top-style:var(--border-style, solid);border-top-color:#5c5c5c;border-top-color:var(--dark2, #5c5c5c);padding-top:1em}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service span.cm-list-title,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose span.cm-list-title,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service span.cm-list-title,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose span.cm-list-title{font-weight:600}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service span.cm-opt-out,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service span.cm-required,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose span.cm-opt-out,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose span.cm-required,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service span.cm-opt-out,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service span.cm-required,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose span.cm-opt-out,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose span.cm-required{color:#5c5c5c;color:var(--dark2, #5c5c5c);padding-left:0.2em;font-size:0.8em}.klaro .cookie-notice:not(.cookie-modal-notice){background-color:#333;background-color:var(--dark1, #333);z-index:999;position:fixed;width:100%;bottom:0;right:0}@media (min-width: 1024px){.klaro .cookie-notice:not(.cookie-modal-notice){border-radius:4px;border-radius:var(--border-radius, 4px);position:fixed;position:var(--notice-position, fixed);right:20px;right:var(--notice-right, 20px);left:auto;left:var(--notice-left, auto);bottom:20px;bottom:var(--notice-bottom, 20px);top:auto;top:var(--notice-top, auto);max-width:400px;max-width:var(--notice-max-width, 400px);box-shadow:0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19)}}@media (max-width: 1023px){.klaro .cookie-notice:not(.cookie-modal-notice){border-style:none;border-radius:0}}.klaro .cookie-notice:not(.cookie-modal-notice).cn-embedded{position:relative;height:inherit;width:inherit;left:inherit;right:inherit;bottom:inherit;z-index:0}.klaro .cookie-notice:not(.cookie-modal-notice).cn-embedded .cn-body{padding-top:0.5em}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body{margin-bottom:0;margin-right:0;bottom:0;padding:1em;padding-top:0}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body p{margin-bottom:0.5em}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body p.cn-changes{text-decoration:underline}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-learn-more{display:inline-block;flex-grow:1}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-buttons{display:inline-block;margin-top:-0.5em}@media (max-width: 384px){.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-buttons{width:100%}}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-buttons button.cm-btn{margin-top:0.5em}@media (max-width: 384px){.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-buttons button.cm-btn{width:calc(50% - .5em)}}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-ok{margin-top:-0.5em;display:flex;flex-flow:row;flex-wrap:wrap;justify-content:right;align-items:baseline}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-ok a,.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-ok div{margin-top:0.5em}.klaro .cookie-modal-notice{background-color:#333;background-color:var(--dark1, #333);color:#fafafa;color:var(--light1, #fafafa);z-index:1001;box-shadow:0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19);width:100%;max-height:98%;top:50%;-ms-transform:translateY(-50%);transform:translateY(-50%);position:fixed;overflow:auto;padding:1em;padding-top:0.2em}@media (min-width: 400px){.klaro .cookie-modal-notice{border-radius:4px;border-radius:var(--border-radius, 4px);position:relative;margin:0 auto;max-width:400px;height:auto;width:auto}}.klaro .cookie-modal-notice .cn-ok{display:flex;flex-flow:row;justify-content:space-between;align-items:center;margin-top:1em}.klaro .cookie-notice-hidden{display:none !important}\n",
+                ".klaro{font-family:inherit;font-family:var(--font-family, inherit);font-size:14px;font-size:var(--font-size, 14px)}.klaro button{font-family:inherit;font-family:var(--font-family, inherit);font-size:14px;font-size:var(--font-size, 14px)}.klaro.cm-as-context-notice{height:100%;padding-bottom:12px;padding-top:12px}.klaro .cookie-modal .cm-switch-container,.klaro .context-notice .cm-switch-container,.klaro .cookie-notice .cm-switch-container{border-bottom-style:solid;border-bottom-style:var(--border-style, solid);border-bottom-width:1px;border-bottom-width:var(--border-width, 1px);border-bottom-color:#c8c8c8;border-bottom-color:var(--light2, #c8c8c8);display:block;position:relative;padding:10px;padding-left:66px;line-height:20px;vertical-align:middle;min-height:40px}.klaro .cookie-modal .cm-switch-container:last-child,.klaro .context-notice .cm-switch-container:last-child,.klaro .cookie-notice .cm-switch-container:last-child{border-bottom:0}.klaro .cookie-modal .cm-switch-container:first-child,.klaro .context-notice .cm-switch-container:first-child,.klaro .cookie-notice .cm-switch-container:first-child{margin-top:0}.klaro .cookie-modal .cm-switch-container p,.klaro .context-notice .cm-switch-container p,.klaro .cookie-notice .cm-switch-container p{margin-top:0}.klaro .cookie-modal .cm-switch,.klaro .context-notice .cm-switch,.klaro .cookie-notice .cm-switch{position:relative;display:inline-block;width:50px;height:30px}.klaro .cookie-modal .cm-list-input:checked+.cm-list-label .slider,.klaro .context-notice .cm-list-input:checked+.cm-list-label .slider,.klaro .cookie-notice .cm-list-input:checked+.cm-list-label .slider{background-color:#1a936f;background-color:var(--green1, #1a936f)}.klaro .cookie-modal .cm-list-input.half-checked:checked+.cm-list-label .slider,.klaro .context-notice .cm-list-input.half-checked:checked+.cm-list-label .slider,.klaro .cookie-notice .cm-list-input.half-checked:checked+.cm-list-label .slider{background-color:#1a936f;background-color:var(--green1, #1a936f);opacity:0.6}.klaro .cookie-modal .cm-list-input.half-checked:checked+.cm-list-label .slider::before,.klaro .context-notice .cm-list-input.half-checked:checked+.cm-list-label .slider::before,.klaro .cookie-notice .cm-list-input.half-checked:checked+.cm-list-label .slider::before{transform:translateX(10px)}.klaro .cookie-modal .cm-list-input.only-required+.cm-list-label .slider,.klaro .context-notice .cm-list-input.only-required+.cm-list-label .slider,.klaro .cookie-notice .cm-list-input.only-required+.cm-list-label .slider{background-color:#24cc9a;background-color:var(--green2, #24cc9a);opacity:0.8}.klaro .cookie-modal .cm-list-input.only-required+.cm-list-label .slider::before,.klaro .context-notice .cm-list-input.only-required+.cm-list-label .slider::before,.klaro .cookie-notice .cm-list-input.only-required+.cm-list-label .slider::before{transform:translateX(10px)}.klaro .cookie-modal .cm-list-input.required:checked+.cm-list-label .slider,.klaro .context-notice .cm-list-input.required:checked+.cm-list-label .slider,.klaro .cookie-notice .cm-list-input.required:checked+.cm-list-label .slider{background-color:#24cc9a;background-color:var(--green2, #24cc9a);opacity:0.8;cursor:not-allowed}.klaro .cookie-modal .slider,.klaro .context-notice .slider,.klaro .cookie-notice .slider{box-shadow:0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19)}.klaro .cookie-modal .cm-list-input,.klaro .context-notice .cm-list-input,.klaro .cookie-notice .cm-list-input{position:absolute;top:0;left:0;opacity:0;width:50px;height:30px}.klaro .cookie-modal .cm-list-title,.klaro .context-notice .cm-list-title,.klaro .cookie-notice .cm-list-title{font-size:0.9em;font-weight:600}.klaro .cookie-modal .cm-list-description,.klaro .context-notice .cm-list-description,.klaro .cookie-notice .cm-list-description{color:#7c7c7c;color:var(--dark3, #7c7c7c);font-size:0.9em;padding-top:4px}.klaro .cookie-modal .cm-list-label .cm-switch,.klaro .context-notice .cm-list-label .cm-switch,.klaro .cookie-notice .cm-list-label .cm-switch{position:absolute;left:0}.klaro .cookie-modal .cm-list-label .slider,.klaro .context-notice .cm-list-label .slider,.klaro .cookie-notice .cm-list-label .slider{background-color:#f2f2f2;background-color:var(--white2, #f2f2f2);position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;transition:0.4s;width:50px;display:inline-block}.klaro .cookie-modal .cm-list-label .slider::before,.klaro .context-notice .cm-list-label .slider::before,.klaro .cookie-notice .cm-list-label .slider::before{background-color:#e6e6e6;background-color:var(--white3, #e6e6e6);position:absolute;content:'';height:20px;width:20px;left:5px;bottom:5px;transition:0.4s}.klaro .cookie-modal .cm-list-label .slider.round,.klaro .context-notice .cm-list-label .slider.round,.klaro .cookie-notice .cm-list-label .slider.round{border-radius:30px}.klaro .cookie-modal .cm-list-label .slider.round::before,.klaro .context-notice .cm-list-label .slider.round::before,.klaro .cookie-notice .cm-list-label .slider.round::before{border-radius:50%}.klaro .cookie-modal .cm-list-label input:focus+.slider,.klaro .context-notice .cm-list-label input:focus+.slider,.klaro .cookie-notice .cm-list-label input:focus+.slider{box-shadow-color:#48dfb2;box-shadow-color:var(--green3, #48dfb2);box-shadow:0 0 1px var(color, green3)}.klaro .cookie-modal .cm-list-label input:checked+.slider::before,.klaro .context-notice .cm-list-label input:checked+.slider::before,.klaro .cookie-notice .cm-list-label input:checked+.slider::before{transform:translateX(20px)}.klaro .cookie-modal .cm-list-input:focus+.cm-list-label .slider,.klaro .context-notice .cm-list-input:focus+.cm-list-label .slider,.klaro .cookie-notice .cm-list-input:focus+.cm-list-label .slider{box-shadow:0 4px 6px 0 rgba(125,125,125,0.2),5px 5px 10px 0 rgba(125,125,125,0.19)}.klaro .cookie-modal .cm-list-input:checked+.cm-list-label .slider::before,.klaro .context-notice .cm-list-input:checked+.cm-list-label .slider::before,.klaro .cookie-notice .cm-list-input:checked+.cm-list-label .slider::before{transform:translateX(20px)}.klaro .cookie-modal .slider,.klaro .context-notice .slider,.klaro .cookie-notice .slider{box-shadow:0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19)}.klaro .cookie-modal a,.klaro .context-notice a,.klaro .cookie-notice a{color:#1a936f;color:var(--green1, #1a936f);text-decoration:none}.klaro .cookie-modal p,.klaro .cookie-modal strong,.klaro .cookie-modal h1,.klaro .cookie-modal h2,.klaro .cookie-modal ul,.klaro .cookie-modal li,.klaro .context-notice p,.klaro .context-notice strong,.klaro .context-notice h1,.klaro .context-notice h2,.klaro .context-notice ul,.klaro .context-notice li,.klaro .cookie-notice p,.klaro .cookie-notice strong,.klaro .cookie-notice h1,.klaro .cookie-notice h2,.klaro .cookie-notice ul,.klaro .cookie-notice li{color:#fafafa;color:var(--light1, #fafafa)}.klaro .cookie-modal p,.klaro .cookie-modal h1,.klaro .cookie-modal h2,.klaro .cookie-modal ul,.klaro .cookie-modal li,.klaro .context-notice p,.klaro .context-notice h1,.klaro .context-notice h2,.klaro .context-notice ul,.klaro .context-notice li,.klaro .cookie-notice p,.klaro .cookie-notice h1,.klaro .cookie-notice h2,.klaro .cookie-notice ul,.klaro .cookie-notice li{display:block;text-align:left;margin:0;padding:0;margin-top:0.7em}.klaro .cookie-modal h1,.klaro .cookie-modal h2,.klaro .cookie-modal h3,.klaro .cookie-modal h4,.klaro .cookie-modal h5,.klaro .cookie-modal h6,.klaro .context-notice h1,.klaro .context-notice h2,.klaro .context-notice h3,.klaro .context-notice h4,.klaro .context-notice h5,.klaro .context-notice h6,.klaro .cookie-notice h1,.klaro .cookie-notice h2,.klaro .cookie-notice h3,.klaro .cookie-notice h4,.klaro .cookie-notice h5,.klaro .cookie-notice h6{font-family:inherit;font-family:var(--title-font-family, inherit)}.klaro .cookie-modal .cm-link,.klaro .context-notice .cm-link,.klaro .cookie-notice .cm-link{margin-right:0.5em;vertical-align:middle}.klaro .cookie-modal .cm-btn,.klaro .context-notice .cm-btn,.klaro .cookie-notice .cm-btn{color:#fff;color:var(--button-text-color, #fff);background-color:#5c5c5c;background-color:var(--dark2, #5c5c5c);border-radius:4px;border-radius:var(--border-radius, 4px);padding:6px 10px;margin-right:.5em;border-style:none;padding:0.4em;font-size:1em;cursor:pointer}.klaro .cookie-modal .cm-btn:disabled,.klaro .context-notice .cm-btn:disabled,.klaro .cookie-notice .cm-btn:disabled{opacity:0.5}.klaro .cookie-modal .cm-btn.cm-btn-close,.klaro .context-notice .cm-btn.cm-btn-close,.klaro .cookie-notice .cm-btn.cm-btn-close{background-color:#c8c8c8;background-color:var(--light2, #c8c8c8)}.klaro .cookie-modal .cm-btn.cm-btn-success,.klaro .context-notice .cm-btn.cm-btn-success,.klaro .cookie-notice .cm-btn.cm-btn-success{background-color:#1a936f;background-color:var(--green1, #1a936f)}.klaro .cookie-modal .cm-btn.cm-btn-success-var,.klaro .context-notice .cm-btn.cm-btn-success-var,.klaro .cookie-notice .cm-btn.cm-btn-success-var{background-color:#24cc9a;background-color:var(--green2, #24cc9a)}.klaro .cookie-modal .cm-btn.cm-btn-info,.klaro .context-notice .cm-btn.cm-btn-info,.klaro .cookie-notice .cm-btn.cm-btn-info{background-color:#2581c4;background-color:var(--blue1, #2581c4)}.klaro .context-notice{border-radius:4px;border-radius:var(--border-radius, 4px);border-style:solid;border-style:var(--border-style, solid);border-width:1px;border-width:var(--border-width, 1px);border-color:#c8c8c8;border-color:var(--light2, #c8c8c8);background-color:#fafafa;background-color:var(--light1, #fafafa);display:flex;flex-direction:column;flex-wrap:wrap;align-items:center;justify-content:center;padding:12px;height:100%}.klaro .context-notice.cm-dark{background-color:#333;background-color:var(--dark1, #333);border-color:#5c5c5c;border-color:var(--dark2, #5c5c5c)}.klaro .context-notice.cm-dark p{color:#fafafa;color:var(--light1, #fafafa)}.klaro .context-notice.cm-dark p a{color:#459cdc;color:var(--blue2, #459cdc)}.klaro .context-notice p{color:#333;color:var(--dark1, #333);flex-grow:0;text-align:center;padding-top:0;margin-top:0}.klaro .context-notice p a{color:#24cc9a;color:var(--green2, #24cc9a)}.klaro .context-notice p.cm-buttons{margin-top:12px}.klaro .cookie-modal{width:100%;height:100%;position:fixed;overflow:hidden;left:0;top:0;z-index:1000}.klaro .cookie-modal.cm-embedded{position:relative;height:inherit;width:inherit;left:inherit;right:inherit;z-index:0}.klaro .cookie-modal.cm-embedded .cm-modal.cm-klaro{position:relative;transform:none}.klaro .cookie-modal .cm-bg{background:rgba(0,0,0,0.5);height:100%;width:100%;position:fixed;top:0;left:0}.klaro .cookie-modal .cm-modal.cm-klaro{background-color:#333;background-color:var(--dark1, #333);color:#fafafa;color:var(--light1, #fafafa);z-index:1001;box-shadow:0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19);width:100%;max-height:98%;top:50%;transform:translateY(-50%);position:fixed;overflow:auto}@media (min-width: 660px){.klaro .cookie-modal .cm-modal.cm-klaro{border-radius:4px;border-radius:var(--border-radius, 4px);position:relative;margin:0 auto;max-width:640px;height:auto;width:auto}}.klaro .cookie-modal .cm-modal .hide{border-style:none;background:none;cursor:pointer;position:absolute;top:20px;right:20px;z-index:1}.klaro .cookie-modal .cm-modal .hide svg{stroke:#fafafa;stroke:var(--light1, #fafafa)}.klaro .cookie-modal .cm-modal .cm-footer{border-top-color:#5c5c5c;border-top-color:var(--dark2, #5c5c5c);border-top-width:1px;border-top-width:var(--border-width, 1px);border-top-style:solid;border-top-style:var(--border-style, solid);padding:1em}.klaro .cookie-modal .cm-modal .cm-footer-buttons{display:flex;flex-flow:row;justify-content:space-between}.klaro .cookie-modal .cm-modal .cm-footer .cm-powered-by{font-size:0.8em;padding-top:4px;text-align:right;padding-right:8px}.klaro .cookie-modal .cm-modal .cm-footer .cm-powered-by a{color:#5c5c5c;color:var(--dark2, #5c5c5c)}.klaro .cookie-modal .cm-modal .cm-header{border-bottom-width:1px;border-bottom-width:var(--border-width, 1px);border-bottom-style:solid;border-bottom-style:var(--border-style, solid);border-bottom-color:#5c5c5c;border-bottom-color:var(--dark2, #5c5c5c);padding:1em;padding-right:24px}.klaro .cookie-modal .cm-modal .cm-header h1{margin:0;font-size:2em;display:block}.klaro .cookie-modal .cm-modal .cm-header h1.title{padding-right:20px}.klaro .cookie-modal .cm-modal .cm-body{padding:1em}.klaro .cookie-modal .cm-modal .cm-body ul{display:block}.klaro .cookie-modal .cm-modal .cm-body span{display:inline-block;width:auto}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes{padding:0;margin:0}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose .cm-services .cm-caret,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose .cm-services .cm-caret{color:#a0a0a0;color:var(--light3, #a0a0a0)}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose .cm-services .cm-content,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose .cm-services .cm-content{margin-left:-40px;display:none}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose .cm-services .cm-content.expanded,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose .cm-services .cm-content.expanded{margin-top:10px;display:block}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose{position:relative;line-height:20px;vertical-align:middle;padding-left:60px;min-height:40px}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service:first-child,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose:first-child,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service:first-child,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose:first-child{margin-top:0}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service p,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose p,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service p,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose p{margin-top:0}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service p.purposes,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose p.purposes,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service p.purposes,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose p.purposes{color:#a0a0a0;color:var(--light3, #a0a0a0);font-size:0.8em}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service.cm-toggle-all,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose.cm-toggle-all,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service.cm-toggle-all,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose.cm-toggle-all{border-top-width:1px;border-top-width:var(--border-width, 1px);border-top-style:solid;border-top-style:var(--border-style, solid);border-top-color:#5c5c5c;border-top-color:var(--dark2, #5c5c5c);padding-top:1em}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service span.cm-list-title,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose span.cm-list-title,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service span.cm-list-title,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose span.cm-list-title{font-weight:600}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service span.cm-opt-out,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service span.cm-required,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose span.cm-opt-out,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose span.cm-required,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service span.cm-opt-out,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service span.cm-required,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose span.cm-opt-out,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose span.cm-required{color:#5c5c5c;color:var(--dark2, #5c5c5c);padding-left:0.2em;font-size:0.8em}.klaro .cookie-notice:not(.cookie-modal-notice){background-color:#333;background-color:var(--dark1, #333);z-index:999;position:fixed;width:100%;bottom:0;right:0}@media (min-width: 1024px){.klaro .cookie-notice:not(.cookie-modal-notice){border-radius:4px;border-radius:var(--border-radius, 4px);position:fixed;position:var(--notice-position, fixed);right:20px;right:var(--notice-right, 20px);left:auto;left:var(--notice-left, auto);bottom:20px;bottom:var(--notice-bottom, 20px);top:auto;top:var(--notice-top, auto);max-width:400px;max-width:var(--notice-max-width, 400px);box-shadow:0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19)}}@media (max-width: 1023px){.klaro .cookie-notice:not(.cookie-modal-notice){border-style:none;border-radius:0}}.klaro .cookie-notice:not(.cookie-modal-notice).cn-embedded{position:relative;height:inherit;width:inherit;left:inherit;right:inherit;bottom:inherit;z-index:0}.klaro .cookie-notice:not(.cookie-modal-notice).cn-embedded .cn-body{padding-top:0.5em}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body{margin-bottom:0;margin-right:0;bottom:0;padding:1em;padding-top:0}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body p{margin-bottom:0.5em}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body p.cn-changes{text-decoration:underline}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-learn-more{display:inline-block;flex-grow:1}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-buttons{display:inline-block;margin-top:-0.5em}@media (max-width: 384px){.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-buttons{width:100%}}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-buttons button.cm-btn{margin-top:0.5em}@media (max-width: 384px){.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-buttons button.cm-btn{width:calc(50% - .5em)}}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-ok{margin-top:-0.5em;display:flex;flex-flow:row;flex-wrap:wrap;justify-content:right;align-items:baseline}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-ok a,.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-ok div{margin-top:0.5em}.klaro .cookie-modal-notice{background-color:#333;background-color:var(--dark1, #333);color:#fafafa;color:var(--light1, #fafafa);z-index:1001;box-shadow:0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19);width:100%;max-height:98%;top:50%;transform:translateY(-50%);position:fixed;overflow:auto;padding:1em;padding-top:0.2em}@media (min-width: 400px){.klaro .cookie-modal-notice{border-radius:4px;border-radius:var(--border-radius, 4px);position:relative;margin:0 auto;max-width:400px;height:auto;width:auto}}.klaro .cookie-modal-notice .cn-ok{display:flex;flex-flow:row;justify-content:space-between;align-items:center;margin-top:1em}.klaro .cookie-notice-hidden{display:none !important}\n",
                 '',
             ]),
                 (t.exports = e);
@@ -4687,13 +4683,13 @@
                     return we;
                 }),
                 n.d(e, 'getElementID', function () {
-                    return Xn;
-                }),
-                n.d(e, 'getElement', function () {
                     return Yn;
                 }),
-                n.d(e, 'addEventListener', function () {
+                n.d(e, 'getElement', function () {
                     return Jn;
+                }),
+                n.d(e, 'addEventListener', function () {
+                    return Xn;
                 }),
                 n.d(e, 'getConfigTranslations', function () {
                     return Zn;
@@ -4723,7 +4719,7 @@
                     return so;
                 }),
                 n.d(e, 'language', function () {
-                    return Et;
+                    return At;
                 }),
                 n.d(e, 'defaultConfig', function () {
                     return Ln;
@@ -4736,23 +4732,23 @@
                 n(11),
                 n(40),
                 n(41),
-                n(139),
-                n(76),
+                n(138),
+                n(74),
                 n(24),
                 n(6),
                 n(25),
                 n(20),
                 n(17),
-                n(82),
-                n(86),
-                n(87),
-                n(37),
+                n(79),
+                n(83),
+                n(84),
+                n(36),
                 n(7),
-                n(38),
+                n(37),
                 n(12),
                 n(13),
-                n(89),
-                n(94),
+                n(86),
+                n(91),
                 n(14);
             var o,
                 r,
@@ -4850,7 +4846,7 @@
                                 (a = e.__P) &&
                                     ((n = []),
                                     ((o = f({}, i)).__v = o),
-                                    (r = A(
+                                    (r = E(
                                         a,
                                         i,
                                         o,
@@ -4913,7 +4909,7 @@
                                 }
                                 b = null;
                             }
-                        (k = A(t, g, (b = b || l), r, i, c, a, s, f)),
+                        (k = E(t, g, (b = b || l), r, i, c, a, s, f)),
                             (h = g.ref) &&
                                 b.ref != h &&
                                 (x || (x = []),
@@ -5027,7 +5023,7 @@
             function j(t) {
                 this.l[t.type](o.event ? o.event(t) : t);
             }
-            function E(t, e, n) {
+            function A(t, e, n) {
                 var o, r;
                 for (o = 0; o < t.__k.length; o++)
                     (r = t.__k[o]) &&
@@ -5035,11 +5031,11 @@
                         r.__e &&
                             ('function' == typeof r.type &&
                                 r.__k.length > 1 &&
-                                E(r, e, n),
+                                A(r, e, n),
                             (e = w(n, r, r, t.__k, null, r.__e, e)),
                             'function' == typeof t.type && (t.__d = e)));
             }
-            function A(t, e, n, r, i, c, a, l, u) {
+            function E(t, e, n, r, i, c, a, l, u) {
                 var s,
                     p,
                     d,
@@ -5106,7 +5102,7 @@
                                     (e.__e = n.__e),
                                     (e.__k = n.__k),
                                     p.__h.length && a.push(p),
-                                    E(e, l, t);
+                                    A(e, l, t);
                                 break t;
                             }
                             null != p.componentWillUpdate &&
@@ -5303,7 +5299,7 @@
                     (i = (r = n === a) ? null : (n && n.__k) || e.__k),
                     (t = d(v, null, [t])),
                     (c = []),
-                    A(
+                    E(
                         e,
                         ((r ? e : n || e).__k = t),
                         i || l,
@@ -5378,8 +5374,8 @@
                 L,
                 U = 0,
                 q = [],
-                F = o.__r,
-                W = o.diffed,
+                W = o.__r,
+                F = o.diffed,
                 z = o.__c,
                 H = o.unmount;
             function $(t, e) {
@@ -5417,8 +5413,8 @@
                 q.some(function (t) {
                     if (t.__P)
                         try {
-                            t.__H.__h.forEach(Y),
-                                t.__H.__h.forEach(J),
+                            t.__H.__h.forEach(J),
+                                t.__H.__h.forEach(X),
                                 (t.__H.__h = []);
                         } catch (e) {
                             return (t.__H.__h = []), o.__e(e, t.__v), !0;
@@ -5427,12 +5423,12 @@
                     (q = []);
             }
             (o.__r = function (t) {
-                F && F(t), (D = 0);
+                W && W(t), (D = 0);
                 var e = (M = t.__c).__H;
-                e && (e.__h.forEach(Y), e.__h.forEach(J), (e.__h = []));
+                e && (e.__h.forEach(J), e.__h.forEach(X), (e.__h = []));
             }),
                 (o.diffed = function (t) {
-                    W && W(t);
+                    F && F(t);
                     var e = t.__c;
                     e &&
                         e.__H &&
@@ -5444,20 +5440,20 @@
                                     var e,
                                         n = function () {
                                             clearTimeout(o),
-                                                X && cancelAnimationFrame(e),
+                                                Y && cancelAnimationFrame(e),
                                                 setTimeout(t);
                                         },
                                         o = setTimeout(n, 100);
-                                    X && (e = requestAnimationFrame(n));
+                                    Y && (e = requestAnimationFrame(n));
                                 }
                             )(K));
                 }),
                 (o.__c = function (t, e) {
                     e.some(function (t) {
                         try {
-                            t.__h.forEach(Y),
+                            t.__h.forEach(J),
                                 (t.__h = t.__h.filter(function (t) {
-                                    return !t.__ || J(t);
+                                    return !t.__ || X(t);
                                 }));
                         } catch (n) {
                             e.some(function (t) {
@@ -5474,16 +5470,16 @@
                     var e = t.__c;
                     if (e && e.__H)
                         try {
-                            e.__H.__.forEach(Y);
+                            e.__H.__.forEach(J);
                         } catch (t) {
                             o.__e(t, e.__v);
                         }
                 });
-            var X = 'function' == typeof requestAnimationFrame;
-            function Y(t) {
+            var Y = 'function' == typeof requestAnimationFrame;
+            function J(t) {
                 'function' == typeof t.u && t.u();
             }
-            function J(t) {
+            function X(t) {
                 t.u = t.__();
             }
             function Q(t, e) {
@@ -5802,15 +5798,7 @@
             var yt = d,
                 bt = v,
                 gt = h,
-                kt =
-                    (n(29),
-                    n(30),
-                    n(31),
-                    n(127),
-                    n(39),
-                    n(128),
-                    n(146),
-                    n(134)),
+                kt = (n(30), n(31), n(126), n(38), n(127), n(133)),
                 _t = function (t) {
                     var e = t.t;
                     return yt(
@@ -5841,7 +5829,7 @@
                     );
                 };
             _t.propTypes = { t: n.n(kt).a.func };
-            n(50);
+            n(49);
             function xt(t) {
                 return t
                     .split('-')
@@ -5850,7 +5838,7 @@
                     })
                     .join(' ');
             }
-            n(64), n(150), n(151);
+            n(64), n(148), n(149);
             function wt(t) {
                 return (
                     (function (t) {
@@ -5933,7 +5921,7 @@
                 }
                 return c;
             };
-            function Et(t) {
+            function At(t) {
                 if (void 0 !== t && void 0 !== t.lang && 'zz' !== t.lang)
                     return t.lang;
                 var e = (
@@ -5950,7 +5938,7 @@
                     n = new RegExp('^([\\w]+)-([\\w]+)$').exec(e);
                 return null === n ? e : n[1];
             }
-            function At(t, e, n) {
+            function Et(t, e, n) {
                 var o = e;
                 Array.isArray(o) || (o = [o]);
                 for (var r = t, i = 0; i < o.length; i++) {
@@ -5974,11 +5962,11 @@
                     i = !1;
                 '!' === r[0] && ((r = r.slice(1)), (i = !0)),
                     Array.isArray(r) || (r = [r]);
-                var c = At(t, [e].concat(wt(r)));
+                var c = Et(t, [e].concat(wt(r)));
                 if (
                     (void 0 === c &&
                         void 0 !== n &&
-                        (c = At(t, [n].concat(wt(r)))),
+                        (c = Et(t, [n].concat(wt(r)))),
                     void 0 === c)
                 ) {
                     if (i) return;
@@ -6139,25 +6127,29 @@
                             key: 'render',
                             value: function () {
                                 var t,
-                                    e = this.props,
-                                    n = e.checked,
-                                    o = e.onlyRequiredEnabled,
-                                    r = e.onToggle,
-                                    i = e.name,
-                                    c = e.lang,
-                                    a = e.config,
-                                    l = e.translations,
-                                    u = e.title,
-                                    s = e.description,
-                                    f = e.t,
-                                    p = this.props.required || !1,
-                                    d = this.props.optOut || !1,
-                                    m = this.props.purposes || [],
-                                    v = 'service-item-'.concat(i),
-                                    h = m
+                                    e,
+                                    n = this.props,
+                                    o = n.checked,
+                                    r = n.onlyRequiredEnabled,
+                                    i = n.onToggle,
+                                    c = n.name,
+                                    a = n.lang,
+                                    l = n.config,
+                                    u = n.translations,
+                                    s = n.title,
+                                    f = n.description,
+                                    p = n.visible,
+                                    d = n.t,
+                                    m = this.props.required || !1,
+                                    v = this.props.optOut || !1,
+                                    h = this.props.purposes || [],
+                                    y = this.props.tags || [],
+                                    b = 'service-item-'.concat(c),
+                                    g = ''.concat(b, '-title'),
+                                    k = h
                                         .map(function (t) {
                                             return (
-                                                f([
+                                                d([
                                                     '!',
                                                     'purposes',
                                                     t,
@@ -6166,100 +6158,118 @@
                                             );
                                         })
                                         .join(', '),
-                                    y = d
+                                    _ = v
                                         ? yt(
                                               'span',
                                               {
                                                   className: 'cm-opt-out',
-                                                  title: f([
+                                                  title: d([
                                                       'service',
                                                       'optOut',
                                                       'description',
                                                   ]),
                                               },
-                                              f(['service', 'optOut', 'title'])
+                                              d(['service', 'optOut', 'title'])
                                           )
                                         : '',
-                                    b = p
+                                    x = m
                                         ? yt(
                                               'span',
                                               {
                                                   className: 'cm-required',
-                                                  title: f([
+                                                  title: d([
                                                       'service',
                                                       'required',
                                                       'description',
                                                   ]),
                                               },
-                                              f([
+                                              d([
                                                   'service',
                                                   'required',
                                                   'title',
                                               ])
                                           )
-                                        : '';
-                                m.length > 0 &&
+                                        : '',
+                                    w = y.map(function (t) {
+                                        return yt(
+                                            'span',
+                                            { key: '{tag}' },
+                                            d(['service', 'tags', t])
+                                        );
+                                    });
+                                y.length > 0 &&
                                     (t = yt(
-                                        'p',
-                                        { className: 'purposes' },
-                                        f([
-                                            'service',
-                                            m.length > 1
-                                                ? 'purposes'
-                                                : 'purpose',
-                                        ]),
-                                        ':',
-                                        ' ',
-                                        h
-                                    ));
-                                var g =
-                                    s ||
-                                    Pt(l, c, 'zz', ['!', 'description']) ||
-                                    f(['!', i, 'description?']);
+                                        'span',
+                                        { className: 'cm-required' },
+                                        w
+                                    )),
+                                    h.length > 0 &&
+                                        (e = yt(
+                                            'p',
+                                            { className: 'purposes' },
+                                            d([
+                                                'service',
+                                                h.length > 1
+                                                    ? 'purposes'
+                                                    : 'purpose',
+                                            ]),
+                                            ': ',
+                                            k
+                                        ));
+                                var S =
+                                    f ||
+                                    Pt(u, a, 'zz', ['!', 'description']) ||
+                                    d(['!', c, 'description?']);
                                 return yt(
                                     'div',
                                     null,
                                     yt('input', {
-                                        id: v,
+                                        id: b,
                                         className:
                                             'cm-list-input' +
-                                            (p ? ' required' : '') +
-                                            (o
+                                            (m ? ' required' : '') +
+                                            (r
                                                 ? ' half-checked only-required'
                                                 : ''),
+                                        'aria-labelledby': ''.concat(g),
                                         'aria-describedby': ''.concat(
-                                            v,
+                                            b,
                                             '-description'
                                         ),
-                                        disabled: p,
-                                        checked: n || p,
+                                        disabled: m,
+                                        checked: o || m,
+                                        tabIndex: p ? '0' : '-1',
                                         type: 'checkbox',
                                         onChange: function (t) {
-                                            r(t.target.checked);
+                                            i(t.target.checked);
                                         },
                                     }),
                                     yt(
                                         'label',
                                         Tt(
                                             {
-                                                htmlFor: v,
+                                                htmlFor: b,
                                                 className: 'cm-list-label',
                                             },
-                                            p ? { tabIndex: '0' } : {}
+                                            m ? { tabIndex: '0' } : {}
                                         ),
                                         yt(
                                             'span',
-                                            { className: 'cm-list-title' },
-                                            u ||
-                                                Pt(l, c, 'zz', [
+                                            {
+                                                className: 'cm-list-title',
+                                                id: ''.concat(g),
+                                            },
+                                            s ||
+                                                Pt(u, a, 'zz', [
                                                     '!',
                                                     'title',
                                                 ]) ||
-                                                f(['!', i, 'title?']) ||
-                                                xt(i)
+                                                d(['!', c, 'title?']) ||
+                                                xt(c)
                                         ),
-                                        b,
-                                        y,
+                                        x,
+                                        _,
+                                        t,
                                         yt(
                                             'span',
                                             { className: 'cm-switch' },
@@ -6271,17 +6281,17 @@
                                     ),
                                     yt(
                                         'div',
-                                        { id: ''.concat(v, '-description') },
-                                        g &&
+                                        { id: ''.concat(b, '-description') },
+                                        S &&
                                             yt(
                                                 'p',
                                                 {
                                                     className:
                                                         'cm-list-description',
                                                 },
-                                                yt(Ct, { config: a, text: g })
+                                                yt(Ct, { config: l, text: S })
                                             ),
-                                        t
+                                        e
                                     )
                                 );
                             },
@@ -6291,8 +6301,8 @@
                     i
                 );
             })(gt);
-            function Ft(t) {
-                return (Ft =
+            function Wt(t) {
+                return (Wt =
                     'function' == typeof Symbol &&
                     'symbol' == typeof Symbol.iterator
                         ? function (t) {
@@ -6307,7 +6317,7 @@
                                   : typeof t;
                           })(t);
             }
-            function Wt(t, e) {
+            function Ft(t, e) {
                 for (var n = 0; n < e.length; n++) {
                     var o = e[n];
                     (o.enumerable = o.enumerable || !1),
@@ -6351,7 +6361,7 @@
                 };
             }
             function $t(t, e) {
-                return !e || ('object' !== Ft(e) && 'function' != typeof e)
+                return !e || ('object' !== Wt(e) && 'function' != typeof e)
                     ? Bt(t)
                     : e;
             }
@@ -6388,7 +6398,8 @@
                         o = t.consents,
                         r = t.lang,
                         i = t.toggle,
-                        c = t.t;
+                        c = t.visible,
+                        a = t.t;
                     return e.map(function (t) {
                         var e = o[t.name];
                         return yt(
@@ -6404,7 +6415,8 @@
                                         },
                                         config: n,
                                         lang: r,
-                                        t: c,
+                                        visible: c,
+                                        t: a,
                                     },
                                     t
                                 )
@@ -6412,7 +6424,7 @@
                         );
                     });
                 },
-                Xt = (function (t) {
+                Yt = (function (t) {
                     !(function (t, e) {
                         if ('function' != typeof e && null !== e)
                             throw new TypeError(
@@ -6540,13 +6552,13 @@
                                     );
                                 },
                             },
-                        ]) && Wt(e.prototype, n),
-                        o && Wt(e, o),
+                        ]) && Ft(e.prototype, n),
+                        o && Ft(e, o),
                         i
                     );
                 })(gt);
-            function Yt(t) {
-                return (Yt =
+            function Jt(t) {
+                return (Jt =
                     'function' == typeof Symbol &&
                     'symbol' == typeof Symbol.iterator
                         ? function (t) {
@@ -6561,8 +6573,8 @@
                                   : typeof t;
                           })(t);
             }
-            function Jt() {
-                return (Jt =
+            function Xt() {
+                return (Xt =
                     Object.assign ||
                     function (t) {
                         for (var e = 1; e < arguments.length; e++) {
@@ -6618,7 +6630,7 @@
                 };
             }
             function ee(t, e) {
-                return !e || ('object' !== Yt(e) && 'function' != typeof e)
+                return !e || ('object' !== Jt(e) && 'function' != typeof e)
                     ? (function (t) {
                           if (void 0 === t)
                               throw new ReferenceError(
@@ -6693,7 +6705,8 @@
                                     y = this.props.required || !1,
                                     b = this.props.purposes || [],
                                     g = 'purpose-item-'.concat(u),
-                                    k = b
+                                    k = ''.concat(g, '-title'),
+                                    _ = b
                                         .map(function (t) {
                                             return (
                                                 v([
@@ -6705,7 +6718,7 @@
                                             );
                                         })
                                         .join(', '),
-                                    _ = y
+                                    x = y
                                         ? yt(
                                               'span',
                                               {
@@ -6736,9 +6749,22 @@
                                                 : 'purpose',
                                         ]),
                                         ': ',
-                                        k
+                                        _
                                     ));
-                                var x = yt(Kt, {
+                                var w = function (t) {
+                                        t.preventDefault();
+                                        var n =
+                                            'false' !==
+                                            t.currentTarget.getAttribute(
+                                                'aria-expanded'
+                                            );
+                                        t.currentTarget.setAttribute(
+                                            'aria-expanded',
+                                            !n
+                                        ),
+                                            e.setState({ servicesVisible: !h });
+                                    },
+                                    S = yt(Kt, {
                                         config: a,
                                         lang: s,
                                         services: c,
@@ -6749,9 +6775,10 @@
                                             });
                                         },
                                         consents: p,
+                                        visible: h,
                                         t: v,
                                     }),
-                                    w =
+                                    O =
                                         m ||
                                         v(['!', 'purposes', u, 'description']);
                                 return yt(
@@ -6767,6 +6794,7 @@
                                                 : r
                                                 ? ' only-required'
                                                 : ' half-checked'),
+                                        'aria-labelledby': ''.concat(k),
                                         'aria-describedby': ''.concat(
                                             g,
                                             '-description'
@@ -6780,7 +6808,7 @@
                                     }),
                                     yt(
                                         'label',
-                                        Jt(
+                                        Xt(
                                             {
                                                 htmlFor: g,
                                                 className: 'cm-list-label',
@@ -6789,7 +6817,10 @@
                                         ),
                                         yt(
                                             'span',
-                                            { className: 'cm-list-title' },
+                                            {
+                                                className: 'cm-list-title',
+                                                id: ''.concat(k),
+                                            },
                                             d ||
                                                 v([
                                                     '!',
@@ -6799,7 +6830,7 @@
                                                 ]) ||
                                                 xt(u)
                                         ),
-                                        _,
+                                        x,
                                         yt(
                                             'span',
                                             { className: 'cm-switch' },
@@ -6812,14 +6843,14 @@
                                     yt(
                                         'div',
                                         { id: ''.concat(g, '-description') },
-                                        w &&
+                                        O &&
                                             yt(
                                                 'p',
                                                 {
                                                     className:
                                                         'cm-list-description',
                                                 },
-                                                yt(Ct, { config: a, text: w })
+                                                yt(Ct, { config: a, text: O })
                                             ),
                                         t
                                     ),
@@ -6834,12 +6865,16 @@
                                                     'a',
                                                     {
                                                         href: '#',
-                                                        onClick: function (t) {
-                                                            t.preventDefault(),
-                                                                e.setState({
-                                                                    servicesVisible:
-                                                                        !h,
-                                                                });
+                                                        'aria-haspopup': 'true',
+                                                        'aria-expanded':
+                                                            'false',
+                                                        tabIndex: '0',
+                                                        onClick: w,
+                                                        onKeyDown: function (
+                                                            t
+                                                        ) {
+                                                            32 === t.keyCode &&
+                                                                w(t);
                                                         },
                                                     },
                                                     (h &&
@@ -6867,7 +6902,7 @@
                                                         'cm-content' +
                                                         (h ? ' expanded' : ''),
                                                 },
-                                                x
+                                                S
                                             )
                                         )
                                 );
@@ -7376,111 +7411,137 @@
                     (e = i),
                     (n = [
                         {
+                            key: 'componentDidMount',
+                            value: function () {
+                                this.consentModalRef.focus();
+                            },
+                        },
+                        {
                             key: 'render',
                             value: function () {
                                 var t,
                                     e,
                                     n,
-                                    o = this.props,
-                                    r = o.hide,
-                                    i = o.confirming,
-                                    c = o.saveAndHide,
-                                    a = o.acceptAndHide,
-                                    l = o.declineAndHide,
-                                    u = o.config,
-                                    s = o.manager,
-                                    f = o.lang,
-                                    p = o.t,
-                                    d = u.embedded,
-                                    m =
-                                        void 0 === u.groupByPurpose ||
-                                        u.groupByPurpose;
-                                u.mustConsent ||
+                                    o = this,
+                                    r = this.props,
+                                    i = r.hide,
+                                    c = r.confirming,
+                                    a = r.saveAndHide,
+                                    l = r.acceptAndHide,
+                                    u = r.acceptLocalAndHide,
+                                    s = r.declineAndHide,
+                                    f = r.config,
+                                    p = r.manager,
+                                    d = r.lang,
+                                    m = r.t,
+                                    v = f.embedded,
+                                    h =
+                                        void 0 === f.groupByPurpose ||
+                                        f.groupByPurpose;
+                                f.mustConsent ||
                                     (t = yt(
                                         'button',
                                         {
-                                            title: p(['close']),
+                                            title: m(['close']),
+                                            'aria-label': m(['close']),
                                             className: 'hide',
                                             type: 'button',
-                                            onClick: r,
+                                            onClick: i,
+                                            tabIndex: '0',
+                                            ref: function (t) {
+                                                o.consentModalRef = t;
+                                            },
                                         },
-                                        yt(_t, { t: p })
+                                        yt(_t, { t: m })
                                     )),
-                                    u.hideDeclineAll ||
-                                        s.confirmed ||
+                                    f.hideDeclineAll ||
+                                        p.confirmed ||
                                         (e = yt(
                                             'button',
                                             {
-                                                disabled: i,
+                                                disabled: c,
                                                 className:
                                                     'cm-btn cm-btn-decline cm-btn-danger cn-decline',
                                                 type: 'button',
-                                                onClick: l,
+                                                onClick: s,
                                             },
-                                            p(['decline'])
+                                            m(['decline'])
                                         ));
-                                var v,
-                                    h,
-                                    y,
-                                    b = yt(
+                                var y,
+                                    b,
+                                    g,
+                                    k,
+                                    _ = yt(
                                         'button',
                                         {
-                                            disabled: i,
+                                            disabled: c,
                                             className:
                                                 'cm-btn cm-btn-success cm-btn-info cm-btn-accept',
                                             type: 'button',
-                                            onClick: c,
+                                            onClick: a,
                                         },
-                                        p([
-                                            s.confirmed
+                                        m([
+                                            p.confirmed
                                                 ? 'save'
                                                 : 'acceptSelected',
                                         ])
                                     );
-                                u.acceptAll &&
-                                    !s.confirmed &&
+                                f.acceptAll &&
+                                    !p.confirmed &&
                                     (n = yt(
                                         'button',
                                         {
-                                            disabled: i,
+                                            disabled: c,
                                             className:
                                                 'cm-btn cm-btn-success cm-btn-accept-all',
                                             type: 'button',
-                                            onClick: a,
+                                            onClick: l,
                                         },
-                                        p(['acceptAll'])
+                                        m(['acceptAll'])
                                     )),
-                                    void 0 !== u.privacyPolicy
-                                        ? 'string' == typeof u.privacyPolicy
-                                            ? (v = u.privacyPolicy)
+                                    p.confirmed ||
+                                        (y = yt(
+                                            'button',
+                                            {
+                                                disabled: c,
+                                                className:
+                                                    'cm-btn cm-btn-local-only cm-btn-danger',
+                                                type: 'button',
+                                                onClick: u,
+                                            },
+                                            m(['acceptLocalOnly'])
+                                        )),
+                                    void 0 !== f.privacyPolicy
+                                        ? 'string' == typeof f.privacyPolicy
+                                            ? (b = f.privacyPolicy)
                                             : 'object' ===
-                                                  me(u.privacyPolicy) &&
-                                              (v =
-                                                  u.privacyPolicy[f] ||
-                                                  u.privacyPolicy.default)
+                                                  me(f.privacyPolicy) &&
+                                              (b =
+                                                  f.privacyPolicy[d] ||
+                                                  f.privacyPolicy.default)
                                         : void 0 !==
-                                              (v = p(
+                                              (b = m(
                                                   ['!', 'privacyPolicyUrl'],
-                                                  { lang: f }
-                                              )) && (v = v.join('')),
-                                    void 0 !== v &&
-                                        (h = yt(
+                                                  { lang: d }
+                                              )) && (b = b.join('')),
+                                    void 0 !== b &&
+                                        (g = yt(
                                             'a',
                                             {
                                                 key: 'ppLink',
-                                                href: v,
+                                                href: b,
                                                 target: '_blank',
                                                 rel: 'noopener',
                                             },
-                                            p(['privacyPolicy', 'name'])
+                                            m(['privacyPolicy', 'name'])
                                         )),
-                                    (y = yt(m ? de : Xt, {
-                                        t: p,
-                                        config: u,
-                                        manager: s,
-                                        lang: f,
+                                    (k = yt(h ? de : Yt, {
+                                        t: m,
+                                        config: f,
+                                        manager: p,
+                                        lang: d,
                                     }));
-                                var g = yt(
+                                var x = yt(
                                     'div',
                                     { className: 'cm-modal cm-klaro' },
                                     yt(
@@ -7491,8 +7552,8 @@
                                             'h1',
                                             { className: 'title' },
                                             yt(Ct, {
-                                                config: u,
-                                                text: p([
+                                                config: f,
+                                                text: m([
                                                     'consentModal',
                                                     'title',
                                                 ]),
@@ -7502,23 +7563,23 @@
                                             'p',
                                             null,
                                             yt(Ct, {
-                                                config: u,
+                                                config: f,
                                                 text: [
-                                                    p([
+                                                    m([
                                                         'consentModal',
                                                         'description',
                                                     ]),
                                                 ].concat(
-                                                    (h &&
+                                                    (g &&
                                                         [' '].concat(
-                                                            p(
+                                                            m(
                                                                 [
                                                                     'privacyPolicy',
                                                                     'text',
                                                                 ],
                                                                 {
                                                                     privacyPolicy:
-                                                                        h,
+                                                                        g,
                                                                 }
                                                             )
                                                         )) ||
@@ -7527,7 +7588,7 @@
                                             })
                                         )
                                     ),
-                                    yt('div', { className: 'cm-body' }, y),
+                                    yt('div', { className: 'cm-body' }, k),
                                     yt(
                                         'div',
                                         { className: 'cm-footer' },
@@ -7535,10 +7596,11 @@
                                             'div',
                                             { className: 'cm-footer-buttons' },
                                             e,
-                                            b,
+                                            y,
+                                            _,
                                             n
                                         ),
-                                        !u.disablePoweredBy &&
+                                        !f.disablePoweredBy &&
                                             yt(
                                                 'p',
                                                 { className: 'cm-powered-by' },
@@ -7547,32 +7609,36 @@
                                                     {
                                                         target: '_blank',
                                                         href:
-                                                            u.poweredBy ||
+                                                            f.poweredBy ||
                                                             'https://kiprotect.com/klaro',
                                                         rel: 'noopener',
                                                     },
-                                                    p(['poweredBy'])
+                                                    m(['poweredBy'])
                                                 )
                                             )
                                     )
                                 );
-                                return d
+                                return v
                                     ? yt(
                                           'div',
                                           {
+                                              id: 'cookieScreen',
                                               className:
                                                   'cookie-modal cm-embedded',
                                           },
-                                          g
+                                          x
                                       )
                                     : yt(
                                           'div',
-                                          { className: 'cookie-modal' },
+                                          {
+                                              id: 'cookieScreen',
+                                              className: 'cookie-modal',
+                                          },
                                           yt('div', {
                                               className: 'cm-bg',
-                                              onClick: r,
+                                              onClick: i,
                                           }),
-                                          g
+                                          x
                                       );
                             },
                         },
@@ -7581,7 +7647,7 @@
                     i
                 );
             })(gt);
-            n(129);
+            n(128);
             function xe(t) {
                 return (xe =
                     'function' == typeof Symbol &&
@@ -7667,7 +7733,7 @@
                 for (var n = 0, o = new Array(e); n < e; n++) o[n] = t[n];
                 return o;
             }
-            function Ee(t, e) {
+            function Ae(t, e) {
                 for (var n = 0; n < e.length; n++) {
                     var o = e[n];
                     (o.enumerable = o.enumerable || !1),
@@ -7676,8 +7742,8 @@
                         Object.defineProperty(t, o.key, o);
                 }
             }
-            function Ae(t, e) {
-                return (Ae =
+            function Ee(t, e) {
+                return (Ee =
                     Object.setPrototypeOf ||
                     function (t, e) {
                         return (t.__proto__ = e), t;
@@ -7755,7 +7821,7 @@
                             configurable: !0,
                         },
                     })),
-                        e && Ae(t, e);
+                        e && Ee(t, e);
                 })(i, t);
                 var e,
                     n,
@@ -7773,34 +7839,46 @@
                         Ne(
                             Re((e = r.call(this, t))),
                             'executeButtonClicked',
-                            function (t, n, o) {
-                                var r = e.state.modal,
-                                    i = 0;
-                                t && (i = e.props.manager.changeAll(n));
-                                var c = e.props.manager.confirmed;
+                            function (t) {
+                                var n =
+                                        arguments.length > 1 &&
+                                        void 0 !== arguments[1]
+                                            ? arguments[1]
+                                            : 0,
+                                    o = e.state.modal,
+                                    r = e.props.manager.confirmed;
                                 if (
-                                    (e.props.manager.saveAndApplyConsents(o),
-                                    t &&
-                                        !c &&
-                                        (r || e.props.config.mustConsent))
+                                    (e.props.manager.saveAndApplyConsents(t),
+                                    n > 0 &&
+                                        !r &&
+                                        (o || e.props.config.mustConsent))
                                 ) {
-                                    var a = function () {
+                                    var i = function () {
                                         e.setState({ confirming: !1 }),
                                             e.props.hide();
                                     };
                                     e.setState({ confirming: !0 }),
-                                        0 === i ? a() : setTimeout(a, 800);
+                                        0 === n ? i() : setTimeout(i, 800);
                                 } else e.props.hide();
                             }
                         ),
                         Ne(Re(e), 'saveAndHide', function () {
-                            e.executeButtonClicked(!1, !1, 'save');
+                            e.executeButtonClicked('save');
                         }),
                         Ne(Re(e), 'acceptAndHide', function () {
-                            e.executeButtonClicked(!0, !0, 'accept');
+                            var t = e.props.manager.changeAll(!0);
+                            e.executeButtonClicked('accept', t);
+                        }),
+                        Ne(Re(e), 'acceptLocalOnlyAndHide', function () {
+                            var t = e.props.manager.changeAllWithTag(
+                                !0,
+                                'non-eu'
+                            );
+                            e.executeButtonClicked('acceptLocalOnly', t);
                         }),
                         Ne(Re(e), 'declineAndHide', function () {
-                            e.executeButtonClicked(!0, !1, 'decline');
+                            var t = e.props.manager.changeAll(!1);
+                            e.executeButtonClicked('decline', t);
                         }),
                         (e.state = { modal: t.modal, confirming: !1 }),
                         e
@@ -7813,7 +7891,8 @@
                             key: 'componentDidUpdate',
                             value: function (t) {
                                 t.modal !== this.props.modal &&
-                                    this.setState({ modal: this.props.modal });
+                                    this.setState({ modal: this.props.modal }),
+                                    this.noticeRef && this.noticeRef.focus();
                             },
                         },
                         {
@@ -7946,7 +8025,18 @@
                                               },
                                               l(['ok'])
                                           ),
-                                    S = function () {
+                                    S = yt(
+                                        'button',
+                                        {
+                                            className:
+                                                'cm-btn cm-btn-danger cm-btn-local-only',
+                                            type: 'button',
+                                            onClick:
+                                                this.acceptLocalOnlyAndHide,
+                                        },
+                                        l(['acceptLocalOnly'])
+                                    ),
+                                    O = function () {
                                         return d
                                             ? yt(
                                                   'button',
@@ -7996,19 +8086,32 @@
                                             (r.mustConsent && !r.acceptAll) ||
                                                 (c.confirmed && !a
                                                     ? e.props.hide()
-                                                    : e.setState({
-                                                          modal: !1,
-                                                      }));
+                                                    : e.setState({ modal: !1 }),
+                                                setTimeout(function () {
+                                                    e.noticeRef &&
+                                                        e.noticeRef.focus();
+                                                }, 1));
                                         },
                                         confirming: s,
                                         declineAndHide: this.declineAndHide,
                                         saveAndHide: this.saveAndHide,
                                         acceptAndHide: this.acceptAndHide,
+                                        acceptLocalAndHide:
+                                            this.acceptLocalOnlyAndHide,
                                         manager: c,
                                     });
-                                var O = yt(
+                                var j = yt(
                                     'div',
                                     {
+                                        role: 'dialog',
+                                        'aria-describedby': 'id-cookie-notice',
+                                        'aria-labelledby': 'id-cookie-title',
+                                        id: 'klaro-cookie-notice',
+                                        tabIndex: '0',
+                                        autoFocus: !0,
+                                        ref: function (t) {
+                                            e.noticeRef = t;
+                                        },
                                         className: 'cookie-notice '
                                             .concat(
                                                 _ || a
@@ -8025,9 +8128,15 @@
                                     yt(
                                         'div',
                                         { className: 'cn-body' },
+                                        l(['!', 'consentNotice', 'title']) &&
+                                            yt(
+                                                'h2',
+                                                { id: 'id-cookie-title' },
+                                                l(['consentNotice', 'title'])
+                                            ),
                                         yt(
                                             'p',
-                                            null,
+                                            { id: 'id-cookie-notice' },
                                             yt(Ct, {
                                                 config: r,
                                                 text: l(
@@ -8042,7 +8151,7 @@
                                                             y
                                                         ),
                                                         privacyPolicy: k,
-                                                        learnMoreLink: S(),
+                                                        learnMoreLink: O(),
                                                     }
                                                 ),
                                             })
@@ -8057,11 +8166,12 @@
                                         yt(
                                             'div',
                                             { className: 'cn-ok' },
-                                            !m && S(),
+                                            !m && O(),
                                             yt(
                                                 'div',
                                                 { className: 'cn-buttons' },
                                                 x,
+                                                S,
                                                 w
                                             )
                                         )
@@ -8070,15 +8180,18 @@
                                 return d
                                     ? yt(
                                           'div',
-                                          { className: 'cookie-modal' },
+                                          {
+                                              id: 'cookieScreen',
+                                              className: 'cookie-modal',
+                                          },
                                           yt('div', { className: 'cm-bg' }),
-                                          O
+                                          j
                                       )
-                                    : O;
+                                    : j;
                             },
                         },
-                    ]) && Ee(e.prototype, n),
-                    o && Ee(e, o),
+                    ]) && Ae(e.prototype, n),
+                    o && Ae(e, o),
                     i
                 );
             })(gt);
@@ -8133,9 +8246,9 @@
                 })();
                 return function () {
                     var n,
-                        o = We(t);
+                        o = Fe(t);
                     if (e) {
-                        var r = We(this).constructor;
+                        var r = Fe(this).constructor;
                         n = Reflect.construct(o, arguments, r);
                     } else n = o.apply(this, arguments);
                     return qe(this, n);
@@ -8143,18 +8256,18 @@
             }
             function qe(t, e) {
                 return !e || ('object' !== De(e) && 'function' != typeof e)
-                    ? Fe(t)
+                    ? We(t)
                     : e;
             }
-            function Fe(t) {
+            function We(t) {
                 if (void 0 === t)
                     throw new ReferenceError(
                         "this hasn't been initialised - super() hasn't been called"
                     );
                 return t;
             }
-            function We(t) {
-                return (We = Object.setPrototypeOf
+            function Fe(t) {
+                return (Fe = Object.setPrototypeOf
                     ? Object.getPrototypeOf
                     : function (t) {
                           return t.__proto__ || Object.getPrototypeOf(t);
@@ -8189,7 +8302,7 @@
                                 );
                         })(this, i),
                         (e = r.call(this, t)),
-                        t.manager.watch(Fe(e)),
+                        t.manager.watch(We(e)),
                         (e.state = {
                             show: t.show > 0 || !t.manager.confirmed,
                         }),
@@ -8459,7 +8572,7 @@
                     )
                 );
             };
-            n(97), n(130), n(98);
+            n(150), n(94), n(129), n(95);
             function Ge() {
                 for (
                     var t = document.cookie.split(';'),
@@ -8483,7 +8596,7 @@
                     void 0 !== n &&
                         ((o += ' domain=' + n + ';'), (document.cookie = o));
             }
-            n(153), n(154);
+            n(152), n(153);
             function Ke(t, e) {
                 return (
                     (function (t) {
@@ -8517,7 +8630,7 @@
                         }
                         return n;
                     })(t, e) ||
-                    Xe(t, e) ||
+                    Ye(t, e) ||
                     (function () {
                         throw new TypeError(
                             'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
@@ -8525,9 +8638,9 @@
                     })()
                 );
             }
-            function Xe(t, e) {
+            function Ye(t, e) {
                 if (t) {
-                    if ('string' == typeof t) return Ye(t, e);
+                    if ('string' == typeof t) return Je(t, e);
                     var n = Object.prototype.toString.call(t).slice(8, -1);
                     return (
                         'Object' === n &&
@@ -8537,17 +8650,17 @@
                             ? Array.from(t)
                             : 'Arguments' === n ||
                               /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
-                            ? Ye(t, e)
+                            ? Je(t, e)
                             : void 0
                     );
                 }
             }
-            function Ye(t, e) {
+            function Je(t, e) {
                 (null == e || e > t.length) && (e = t.length);
                 for (var n = 0, o = new Array(e); n < e; n++) o[n] = t[n];
                 return o;
             }
-            function Je(t) {
+            function Xe(t) {
                 for (var e = {}, n = 0; n < t.attributes.length; n++) {
                     var o = t.attributes[n];
                     o.name.startsWith('data-') &&
@@ -8572,7 +8685,7 @@
                         ) {
                             if (
                                 Array.isArray(t) ||
-                                (n = Xe(t)) ||
+                                (n = Ye(t)) ||
                                 (e && t && 'number' == typeof t.length)
                             ) {
                                 n && (t = n);
@@ -9191,13 +9304,41 @@
                                             return !t.contextualConsentOnly;
                                         })
                                         .map(function (o) {
-                                            o.required || e.config.required || t
+                                            var r =
+                                                'function' == typeof t
+                                                    ? t(o)
+                                                    : t;
+                                            o.required || e.config.required || r
                                                 ? e.updateConsent(o.name, !0) &&
                                                   n++
                                                 : e.updateConsent(o.name, !1) &&
                                                   n++;
                                         }),
                                     n
+                                );
+                            },
+                        },
+                        {
+                            key: 'changeAllWithTag',
+                            value: function (t, e) {
+                                var n = this;
+                                return this.changeAll(function (o) {
+                                    return n.hasTag(o, e) ? !t : t;
+                                });
+                            },
+                        },
+                        {
+                            key: 'hasTag',
+                            value: function (t, e) {
+                                var n;
+                                return (
+                                    -1 !==
+                                    (null !== (n = t.tags) && void 0 !== n
+                                        ? n
+                                        : []
+                                    ).findIndex(function (t) {
+                                        return t === e;
+                                    })
                                 );
                             },
                         },
@@ -9391,7 +9532,7 @@
                                 ) {
                                     var r = n[o],
                                         i = r.parentElement,
-                                        c = Je(r),
+                                        c = Xe(r),
                                         a = c.type,
                                         l = c.src,
                                         u = c.href,
@@ -9782,7 +9923,7 @@
                     t
                 );
             })();
-            n(155);
+            n(154);
             function On(t, e) {
                 var n = Object.keys(t);
                 if (Object.getOwnPropertySymbols) {
@@ -9803,7 +9944,7 @@
                     var n = null != arguments[e] ? arguments[e] : {};
                     e % 2
                         ? On(Object(n), !0).forEach(function (e) {
-                              En(t, e, n[e]);
+                              An(t, e, n[e]);
                           })
                         : Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(
@@ -9820,7 +9961,7 @@
                 }
                 return t;
             }
-            function En(t, e, n) {
+            function An(t, e, n) {
                 return (
                     e in t
                         ? Object.defineProperty(t, e, {
@@ -9833,7 +9974,7 @@
                     t
                 );
             }
-            function An(t, e) {
+            function En(t, e) {
                 for (var n = 0; n < e.length; n++) {
                     var o = e[n];
                     (o.enumerable = o.enumerable || !1),
@@ -10039,8 +10180,8 @@
                                 );
                             },
                         },
-                    ]) && An(e.prototype, n),
-                    o && An(e, o),
+                    ]) && En(e.prototype, n),
+                    o && En(e, o),
                     t
                 );
             })();
@@ -10365,7 +10506,7 @@
                         green3: '#f00',
                     },
                 };
-            n(161);
+            n(160);
             function qn(t, e) {
                 var n = Object.keys(t);
                 if (Object.getOwnPropertySymbols) {
@@ -10381,12 +10522,12 @@
                 }
                 return n;
             }
-            function Fn(t) {
+            function Wn(t) {
                 for (var e = 1; e < arguments.length; e++) {
                     var n = null != arguments[e] ? arguments[e] : {};
                     e % 2
                         ? qn(Object(n), !0).forEach(function (e) {
-                              Wn(t, e, n[e]);
+                              Fn(t, e, n[e]);
                           })
                         : Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(
@@ -10403,7 +10544,7 @@
                 }
                 return t;
             }
-            function Wn(t, e, n) {
+            function Fn(t, e, n) {
                 return (
                     e in t
                         ? Object.defineProperty(t, e, {
@@ -10515,11 +10656,11 @@
             var Gn = new Map([]),
                 Vn = {},
                 Kn = {};
-            function Xn(t, e) {
+            function Yn(t, e) {
                 return (t.elementID || 'klaro') + (e ? '-ide' : '');
             }
-            function Yn(t, e) {
-                var n = Xn(t, e),
+            function Jn(t, e) {
+                var n = Yn(t, e),
                     o = document.getElementById(n);
                 return (
                     null === o &&
@@ -10528,7 +10669,7 @@
                     o
                 );
             }
-            function Jn(t, e) {
+            function Xn(t, e) {
                 if (
                     (void 0 === Vn[t] ? (Vn[t] = [e]) : Vn[t].push(e),
                     void 0 !== Kn[t])
@@ -10606,10 +10747,10 @@
                     (e = e || {}), Qn('render', (t = ro(t)), e);
                     var n = 0;
                     e.show && (n = to++);
-                    var o = Yn(t),
+                    var o = Jn(t),
                         r = uo(t);
                     void 0 !== e.api && r.watch(e.api), Nn(t, Un, o);
-                    var i = Et(t),
+                    var i = At(t),
                         c = Zn(t),
                         a = function () {
                             for (
@@ -10658,7 +10799,7 @@
                         try {
                             for (f.s(); !(l = f.n()).done; ) {
                                 var p = l.value,
-                                    d = Je(p);
+                                    d = Xe(p);
                                 if (
                                     'placeholder' !== d.type &&
                                     ('IFRAME' === p.tagName ||
@@ -10666,7 +10807,7 @@
                                 ) {
                                     var m = p.previousElementSibling;
                                     if (null !== m) {
-                                        var v = Je(m);
+                                        var v = Xe(m);
                                         ('placeholder' === v.type &&
                                             v.name === u.name) ||
                                             (m = null);
@@ -10732,7 +10873,7 @@
                     : window.addEventListener('DOMContentLoaded', t);
             }
             function ro(t) {
-                var e = Fn({}, t);
+                var e = Wn({}, t);
                 return (
                     2 === e.version ||
                         (void 0 !== e.apps &&
@@ -10784,7 +10925,7 @@
                         ),
                         o = n.get('klaro-testing'),
                         r = function (t) {
-                            var e = Fn(Fn({}, t), {}, { testing: o });
+                            var e = Wn(Wn({}, t), {}, { testing: o });
                             Ln.noAutoLoad ||
                                 (Ln.testing && !e.testing) ||
                                 eo(Ln, e);
@@ -10905,7 +11046,7 @@
                 return void 0 === ao[e] && (ao[e] = new Sn(ro(t))), ao[e];
             }
             function so() {
-                return 'v' === 'v0.7.18'[0] ? 'v0.7.18'.slice(1) : 'v0.7.18';
+                return 'v' === 'unknown'[0] ? 'unknown'.slice(1) : 'unknown';
             }
             io();
         },
