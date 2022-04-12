@@ -1,9 +1,8 @@
 {
-  "author": "involve marketing GmbH",
+  "private": true,
   "browserslist": [
     "> 0.25%"
   ],
-  "description": "A simple but powerful consent manager (Forked from kiprotect/klaro)",
   "devDependencies": {
     "@babel/cli": "7.10.4",
     "@babel/core": "7.10.4",
@@ -53,20 +52,9 @@
     "src/**/*.tsx",
     "src/**/*.yml"
   ],
-  "homepage": "https://involve.at/",
-  "keywords": [
-    "cookie",
-    "consent",
-    "gdpr",
-    "compliance"
-  ],
   "license": "BSD-3-Clause",
   "main": "dist/klaro.js",
   "name": "klaro",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/involve-gmbh/klaro.git"
-  },
   "scripts": {
     "lint": "eslint ./src --quiet",
     "lint-fix": "eslint ./src --fix",
