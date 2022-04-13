@@ -209,6 +209,14 @@
                     display: flex;
                     flex-flow: row;
                     justify-content: space-between;
+
+                    @media (max-width: $cm-tablet) {
+                        flex-direction: column;
+                    }
+
+                    button {
+                        margin-top: 0.5em;
+                    }
                 }
 
                 .cm-powered-by {
@@ -386,15 +394,17 @@
                 display: inline-block;
                 margin-top: -0.5em;
 
-                @media (max-width: $cm-mobile) {
+                @media (max-width: $cm-tablet) {
                     width: 100%;
+                    display: flex;
+                    flex-direction: column;
                 }
 
                 button.cm-btn {
                     margin-top: 0.5em;
 
-                    @media (max-width: $cm-mobile) {
-                        width: calc(50% - #{$btn-margin-right});
+                    @media (max-width: $cm-tablet) {
+                        width: 100%
                     }
                 }
             }
