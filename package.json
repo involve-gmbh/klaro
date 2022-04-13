@@ -67,7 +67,7 @@
     "make-watch": "cross-env APP_ENV=dev cross-env APP_DEV_MODE=watch webpack --watch --config webpack.config.js",
     "prepare": "husky install"
   },
-  "version": "0.8.0",
+  "version": "0.8.1",
   "lint-staged": {
     "src/**/*.{css,scss,js,jsx,yml,html}|dist/**/*.{css,scss,js,jsx,yml,html}": [
       "prettier --write"
