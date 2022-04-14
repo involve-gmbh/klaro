@@ -157,17 +157,17 @@ If you have an environment where `make` is available, you can also run
 
 ## Maintainers
 
+To create a new release run `docker compose run --rm make release [RT=patch|minor|major]`. This will:
+
+* Install a clean version of all npm dependencies
+* Update the `releases.yaml` file
+* Create a production build
+* Commit the updated build
+* Tag the new release
+
 To publish a new version of Klaro to NPM, simply run
 
     make publish
-
-To generate a new tagged release, simply run
-
-    make release [RT=patch|minor|major]
-
-If no argument is given, a 'patch' release will be created. The release mechanism will not run if
-the working directory isn't clean. If it is, a Python script will increase the version number in
-the `package.json` file, rebuild the `dist` files, create a new commit and tag it with the version.
 
 ## Contributing
 
