@@ -113,5 +113,4 @@ if __name__ == '__main__':
     subprocess.check_output(["git", "commit", "-m", f"v{v}"], cwd=wd)
     subprocess.check_output(["git", "tag", "-a", f"v{v}", "-m", f"v{v}"], cwd=wd)
     if push:
-        subprocess.check_output(["git", "push", "origin", "master", "--tags"], cwd=wd)
-        subprocess.check_output(["git", "push", "geordi", "master", "--tags"], cwd=wd)
+        subprocess.check_output(["git", "push", "origin", "main", "--tags"], cwd=wd)
