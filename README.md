@@ -140,6 +140,7 @@ to see a complete example.
 
 -   `docker compose up npm`
 -   `docker compose up -d`
+-   Open localhost:8080
 
 ### Natively
 
