@@ -1,4 +1,34 @@
 - changelog:
+    de: '- Cookie Consent Text einklappbar machen
+
+      '
+    en: '- Make cookie consent text collapsable
+
+      '
+  date: '2022-06-15'
+  files:
+  - name: cm.js
+    sha384: /Jufn8Li1lNLQ09t9wbX7QLkYUoyHBQoGK5fW/YcihzUHtF3aa/RPUa0plY7QFV8
+  - name: ide.js
+    sha384: hyN6DTkXwcOPB4U1mFvdxjMxzMFG/k1Pq1rbWzdC5xNzs4n0/byWHVKP3vcEBFEp
+  - name: klaro-no-css.js
+    sha384: E5KAp9dT/fHhaKbKbfZ1BFhLHciDfQLJww5i2KL0rbAcpZyVziNrVXcXbB8MXlIe
+  - name: klaro-no-translations-no-css.js
+    sha384: LimG07mLTDc0fsJlYOt+BhNKiorN786FiVw+PKdyQle+ucZzHsB73z3oK6hlbF2e
+  - name: klaro-no-translations.js
+    sha384: h/pr8hu9jBFIXuaXnchdNpQh00Xy8OXAs9hGU+KBPKkKqljwG6iHpLk0tiqlKER5
+  - name: klaro.css
+    sha384: 7D1qKR4+8WjzYNqfNlz0eU/V815sUY5FbPwVqyh5I1uG3Jkjo9k+3R5OnGKVF9Xw
+  - name: klaro.js
+    sha384: Q35Wz28e2RMRrRy8KuOgLbnV1ukh+wH2ossF/3ZcNi098b+gNmsdPEMaH3YuYPxn
+  - name: klaro.min.css
+    sha384: uNc1ZSvMlJ6bcxPpX5At/+b/Fw/QGFUnmgjCucgXgVs+1t4nLZhCsl9V91oIFTbM
+  - name: translations.js
+    sha384: z5lW/0jF+ajZ2SqsvugFch1KGL4BumTNH4XeWLGx+oq1A5fXtNA3RtD0y0f7VEJh
+  tags:
+  - improvements
+  version: 0.8.3
+- changelog:
     de: |
       - Hinzufügen von tschechischen Übersetzungen und Verbessern der portugiesischen Übersetzungen.
       - Entfernen der '...' Platzhalter in der Einwilligungsnotiz, um eine Anpassung der Texte zu vereinfachen.
