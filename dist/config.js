@@ -80,6 +80,10 @@ var klaroConfig = {
     // show cookie notice as modal
     noticeAsModal: false,
 
+    // If set to true, the text in de cookie consent can be collapsed by setting
+    // 'collapsedDescription' at the consentModal. Useful for long texts.
+    collapseConsent: true,
+
     // You can also remove the 'Realized with Klaro!' text in the consent modal.
     // Please don't do this! We provide Klaro as a free open source tool.
     // Placing a link to our website helps us spread the word about it,
@@ -116,6 +120,7 @@ var klaroConfig = {
             consentModal: {
                 description:
                     'Hier können Sie einsehen und anpassen, welche Information wir über Sie sammeln. Einträge die als "Beispiel" gekennzeichnet sind dienen lediglich zu Demonstrationszwecken und werden nicht wirklich verwendet.',
+                collapsedDescription: 'Hier steht noch eine zusätzliche Information',
             },
             inlineTracker: {
                 description: 'Beispiel für ein Inline-Tracking Skript',

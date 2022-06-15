@@ -10,6 +10,8 @@ consentNotice:
   changeDescription: There were changes since your last visit, please renew your consent.
   description: 'Hi! Could we please enable some additional services for {purposes}? You can always change or withdraw your consent later.'
   learnMore|capitalize: Let me choose
+  readMore|capitalize: Read more
+  collapsedDescription: Cookies are used to ensure the functionality of this website, to analyze the use of the website and to provide personalized content and advertisements.
 purposes:
   functional:
     title|capitalize: Service Provision

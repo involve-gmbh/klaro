@@ -390,6 +390,25 @@
                 flex-grow: 1;
             }
 
+            .cn-read-more {
+                color: grey;
+                position: relative;
+            }
+
+            .cn-read-more::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent;
+                border-top: 7px solid grey;
+                clear: both;
+                top: 0;
+                bottom: 0;
+                margin: auto 8px;
+            }
+
             .cn-buttons {
                 display: inline-block;
                 margin-top: -0.5em;

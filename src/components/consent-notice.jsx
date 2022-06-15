@@ -10,6 +10,7 @@ export default class ConsentNotice extends React.Component {
         this.state = {
             modal: props.modal,
             confirming: false,
+            collapsedDesc: false
         };
     }
 
@@ -71,9 +72,13 @@ export default class ConsentNotice extends React.Component {
         this.executeButtonClicked('decline', changedServices);
     };
 
+    showCollapsedDesc =() => {
+        this.state.collapsedDesc ? this.setState({collapsedDesc:false}) : this.setState({collapsedDesc:true});
+    }
+
     render() {
         const { lang, config, show, manager, testing, t } = this.props;
-        const { confirming, modal } = this.state;
+        const { confirming, modal, collapsedDesc } = this.state;
         const { embedded, noticeAsModal, hideLearnMore } = config;
 
         // we exclude functional services from this list, as they are always required and
@@ -184,6 +189,17 @@ export default class ConsentNotice extends React.Component {
             </button>
         );
 
+        const readMoreLink = config.collapseConsent && !collapsedDesc ? (
+            <a
+                className="cn-read-more"
+                onClick={this.showCollapsedDesc}
+            >
+                {t(['consentNotice', 'readMore'])}
+            </a>
+        ) : (
+            ' '
+        );
+
         const learnMoreLink = () =>
             noticeAsModal ? (
                 <button
@@ -268,6 +284,18 @@ export default class ConsentNotice extends React.Component {
                                 learnMoreLink: learnMoreLink(),
                             })}
                         />
+                        <span> </span>
+                        {collapsedDesc ? <Text
+                            config={config}
+                            text={t(['consentNotice', 'collapsedDescription'], {
+                                purposes: (
+                                    <strong key="strong">{purposesText}</strong>
+                                ),
+                                privacyPolicy: ppLink,
+                                learnMoreLink: learnMoreLink(),
+                            })}
+                        /> : '' }
+                        <br/> {readMoreLink} <br/>
                     </p>
                     {testing && <p>{t(['consentNotice', 'testing'])}</p>}
                     {changesText}

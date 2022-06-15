@@ -20,6 +20,8 @@ consentNotice:
   description:
     Hallo! Könnten wir bitte einige zusätzliche Dienste für {purposes}
     aktivieren? Sie können Ihre Zustimmung später jederzeit ändern oder zurückziehen.
+  readMore: Mehr lesen
+  collapsedDescription: Cookies dienen dazu, die Funktionalität dieser Webseite zu gewährleisten, die Nutzung der Website zu analysieren sowie personalisierte Inhalte und Anzeigen bereitzustellen.
   imprint:
     name: Impressum
   learnMore: Lassen Sie mich wählen

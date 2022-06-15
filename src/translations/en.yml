@@ -14,6 +14,8 @@ consentNotice:
   description:
     Hi! Could we please enable some additional services for {purposes}?
     You can always change or withdraw your consent later.
+  readMore: Read more
+  collapsedDescription: Cookies are used to ensure the functionality of this website, to analyze the use of the website and to provide personalized content and advertisements.
   learnMore: Let me choose
   testing: Testing mode!
 contextualConsent:
