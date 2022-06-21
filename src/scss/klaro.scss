@@ -377,6 +377,19 @@
             padding: 1em;
             padding-top: 0;
 
+            @media (max-width: $cm-mobile) {
+                max-height: 85vh;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #id-cookie-notice {
+                @media (max-width: $cm-mobile) {
+                    overflow-y: scroll;
+                }
+            }
+
             p {
                 margin-bottom: 0.5em;
             }
