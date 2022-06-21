@@ -172,7 +172,8 @@ To create a new release,
       - improvements
   version: 0.9.0
 ```
-* and run `docker compose run --rm make release [RT=patch|minor|major]`
+* and run `docker compose run --rm make release [RT=patch|minor|major] --push`
+  * e.g. `docker compose run --rm make release RT=patch --push` will create a patch release
 
 This will:
 
@@ -181,10 +182,6 @@ This will:
 * Create a production build
 * Commit the updated build
 * Tag the new release
-
-To publish a new version of Klaro to NPM, simply run
-
-    make publish
 
 ## Contributing
 
