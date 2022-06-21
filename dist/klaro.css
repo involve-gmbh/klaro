@@ -743,6 +743,21 @@ to create a white background.
   padding-top: 0;
 }
 
+@media (max-width: 384px) {
+  .klaro .cookie-notice:not(.cookie-modal-notice) .cn-body {
+    max-height: 85vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 384px) {
+  .klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cookie-notice-text {
+    overflow-y: scroll;
+  }
+}
+
 .klaro .cookie-notice:not(.cookie-modal-notice) .cn-body p {
   margin-bottom: 0.5em;
 }

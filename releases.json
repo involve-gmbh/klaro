@@ -1,6 +1,55 @@
 [
   {
     "changelog": {
+      "de": "- CSS f\u00fcr Scrolling auf mobile Ger\u00e4te hinzuf\u00fcgen\n",
+      "en": "- Add CSS for scrolling on mobile devices\n"
+    },
+    "date": "2022-06-21",
+    "files": [
+      {
+        "name": "cm.js",
+        "sha384": "/Jufn8Li1lNLQ09t9wbX7QLkYUoyHBQoGK5fW/YcihzUHtF3aa/RPUa0plY7QFV8"
+      },
+      {
+        "name": "ide.js",
+        "sha384": "wNevcIyaQqANR6GkOa4iF7QcbaVc+xw+8lZ7mCR7imz0WzTSXodj/I3yFyYPUX+C"
+      },
+      {
+        "name": "klaro-no-css.js",
+        "sha384": "FARyezioAXJRHak0F/29SVGS6K8MiQ7Q8qL2997+Ppiv6FwEvP159EJP3aLj1sgo"
+      },
+      {
+        "name": "klaro-no-translations-no-css.js",
+        "sha384": "GKBFS5AEllfKodbZRM+2+8Cddydl0FzaWlb3sTi2HIjO6JS4I1zqaBuYQfGuPCNj"
+      },
+      {
+        "name": "klaro-no-translations.js",
+        "sha384": "pIiK1oBvT6I9TdBYH7DhjxVCDjl4g41FmMeWkOqrKOLJhwKaQ77zWGlEdxNqdBhl"
+      },
+      {
+        "name": "klaro.css",
+        "sha384": "QOfcdWQbMyO0VOuTRCHdO/u0yToP/jMVY9QAwtrU1AlfSedvUPVE8rk8eQYfQxdY"
+      },
+      {
+        "name": "klaro.js",
+        "sha384": "rSvDqVJJ9Q6SowG+iGFyh1leh8XGxOdhVq64kSi+YV3gbMeijfSbhkup7hO1J6Wk"
+      },
+      {
+        "name": "klaro.min.css",
+        "sha384": "qymWksvqveHVU81+tyDfr9xOhjIJoaKlToYjbMn53JmsLapekOa8R6WfzyBlhQDx"
+      },
+      {
+        "name": "translations.js",
+        "sha384": "z5lW/0jF+ajZ2SqsvugFch1KGL4BumTNH4XeWLGx+oq1A5fXtNA3RtD0y0f7VEJh"
+      }
+    ],
+    "tags": [
+      "improvements"
+    ],
+    "version": "0.9.2"
+  },
+  {
+    "changelog": {
       "de": "- npm-Skript \"prepare\" auf \"setup-hook\" umbenennen. Der vorherige Name hat zu Problemen beim Installieren gef\u00fchrt.\n",
       "en": "- Rename prepare script to setup-hook. The previous name causes problems when trying to install the package somewhere: The script name is part of npm's life cycle scripts and will cause npm to try to install all dependencies and dev dependencies if the package is installed via git. See more here: https://docs.npmjs.com/cli/v6/using-npm/scripts\\#life-cycle-scripts\n"
     },
