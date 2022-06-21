@@ -2,6 +2,7 @@
   "browserslist": [
     "> 0.25%"
   ],
+  "description": "A simple but powerful consent manager.",
   "devDependencies": {
     "@babel/cli": "7.10.4",
     "@babel/core": "7.10.4",
@@ -49,9 +50,7 @@
     "src/**/*.ts",
     "src/**/*.jsx",
     "src/**/*.tsx",
-    "src/**/*.yml",
-    "dist/**/*.css",
-    "dist/**/*.js"
+    "src/**/*.yml"
   ],
   "license": "BSD-3-Clause",
   "lint-staged": {
@@ -61,7 +60,11 @@
   },
   "main": "dist/klaro.js",
   "name": "klaro",
-  "private": true,
+  "private": "true",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/involve-gmbh/klaro.git"
+  },
   "scripts": {
     "lint": "eslint ./src --quiet",
     "lint-fix": "eslint ./src --fix",
