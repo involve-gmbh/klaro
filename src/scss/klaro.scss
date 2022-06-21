@@ -384,7 +384,7 @@
                 flex-direction: column;
             }
 
-            #id-cookie-notice {
+            .cookie-notice-text {
                 @media (max-width: $cm-mobile) {
                     overflow-y: scroll;
                 }

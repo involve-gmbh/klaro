@@ -10,7 +10,7 @@ export default class ConsentNotice extends React.Component {
         this.state = {
             modal: props.modal,
             confirming: false,
-            collapsedDesc: false
+            collapsedDesc: false,
         };
     }
 
@@ -62,7 +62,7 @@ export default class ConsentNotice extends React.Component {
     acceptLocalOnlyAndHide = () => {
         const changedServices = this.props.manager.changeAllWithTag(
             true,
-            'non-eu',
+            'non-eu'
         );
         this.executeButtonClicked('acceptLocalOnly', changedServices);
     };
@@ -72,9 +72,11 @@ export default class ConsentNotice extends React.Component {
         this.executeButtonClicked('decline', changedServices);
     };
 
-    showCollapsedDesc =() => {
-        this.state.collapsedDesc ? this.setState({collapsedDesc:false}) : this.setState({collapsedDesc:true});
-    }
+    showCollapsedDesc = () => {
+        this.state.collapsedDesc
+            ? this.setState({ collapsedDesc: false })
+            : this.setState({ collapsedDesc: true });
+    };
 
     render() {
         const { lang, config, show, manager, testing, t } = this.props;
@@ -189,16 +191,14 @@ export default class ConsentNotice extends React.Component {
             </button>
         );
 
-        const readMoreLink = config.collapseConsent && !collapsedDesc ? (
-            <a
-                className="cn-read-more"
-                onClick={this.showCollapsedDesc}
-            >
-                {t(['consentNotice', 'readMore'])}
-            </a>
-        ) : (
-            ' '
-        );
+        const readMoreLink =
+            config.collapseConsent && !collapsedDesc ? (
+                <a className="cn-read-more" onClick={this.showCollapsedDesc}>
+                    {t(['consentNotice', 'readMore'])}
+                </a>
+            ) : (
+                ' '
+            );
 
         const learnMoreLink = () =>
             noticeAsModal ? (
@@ -273,7 +273,7 @@ export default class ConsentNotice extends React.Component {
                             {t(['consentNotice', 'title'])}
                         </h2>
                     )}
-                    <p id="id-cookie-notice">
+                    <p id="id-cookie-notice" class="cookie-notice-text">
                         <Text
                             config={config}
                             text={t(['consentNotice', 'description'], {
@@ -285,17 +285,26 @@ export default class ConsentNotice extends React.Component {
                             })}
                         />
                         <span> </span>
-                        {collapsedDesc ? <Text
-                            config={config}
-                            text={t(['consentNotice', 'collapsedDescription'], {
-                                purposes: (
-                                    <strong key="strong">{purposesText}</strong>
-                                ),
-                                privacyPolicy: ppLink,
-                                learnMoreLink: learnMoreLink(),
-                            })}
-                        /> : '' }
-                        <br/> {readMoreLink} <br/>
+                        {collapsedDesc ? (
+                            <Text
+                                config={config}
+                                text={t(
+                                    ['consentNotice', 'collapsedDescription'],
+                                    {
+                                        purposes: (
+                                            <strong key="strong">
+                                                {purposesText}
+                                            </strong>
+                                        ),
+                                        privacyPolicy: ppLink,
+                                        learnMoreLink: learnMoreLink(),
+                                    }
+                                )}
+                            />
+                        ) : (
+                            ''
+                        )}
+                        <br /> {readMoreLink} <br />
                     </p>
                     {testing && <p>{t(['consentNotice', 'testing'])}</p>}
                     {changesText}
