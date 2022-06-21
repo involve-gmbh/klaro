@@ -1,6 +1,55 @@
 [
   {
     "changelog": {
+      "de": "- npm-Skript \"prepare\" auf \"setup-hook\" umbenennen. Der vorherige Name hat zu Problemen beim Installieren gef\u00fchrt.\n",
+      "en": "- Rename prepare script to setup-hook. The previous name causes problems when trying to install the package somewhere: The script name is part of npm's life cycle scripts and will cause npm to try to install all dependencies and dev dependencies if the package is installed via git. See more here: https://docs.npmjs.com/cli/v6/using-npm/scripts\\#life-cycle-scripts\n"
+    },
+    "date": "2022-06-21",
+    "files": [
+      {
+        "name": "cm.js",
+        "sha384": "/Jufn8Li1lNLQ09t9wbX7QLkYUoyHBQoGK5fW/YcihzUHtF3aa/RPUa0plY7QFV8"
+      },
+      {
+        "name": "ide.js",
+        "sha384": "Gnu154MXpmqxqhw2gUxrlw3gZuvsKAAQX91YOroAn8eKQVIwcPNX1vPBGSYfVw1j"
+      },
+      {
+        "name": "klaro-no-css.js",
+        "sha384": "QDA6N08EjczTPUpe0AGW0hV60KSm2pVPxtwE0pZOCAmKWCIhqB83kn4WVfz+t2Di"
+      },
+      {
+        "name": "klaro-no-translations-no-css.js",
+        "sha384": "FaDCvi+0y6uD6/PiDAwmXGQDH3vOEmQtykUvJP8ViFzrAPBBvZ56Csy1EWWLW6g9"
+      },
+      {
+        "name": "klaro-no-translations.js",
+        "sha384": "V2mfEPShfQSuqf9hexmuZGxKcR9rxclkvGppCS2RB5kZOQ2QxeO7O4vqcq3oHD7k"
+      },
+      {
+        "name": "klaro.css",
+        "sha384": "7D1qKR4+8WjzYNqfNlz0eU/V815sUY5FbPwVqyh5I1uG3Jkjo9k+3R5OnGKVF9Xw"
+      },
+      {
+        "name": "klaro.js",
+        "sha384": "T58JS4e2lKK1mh/zZyt7ouVkmlz6/bCjVxT6cKn+GUi7SujMXBfldfTVONMILOz9"
+      },
+      {
+        "name": "klaro.min.css",
+        "sha384": "uNc1ZSvMlJ6bcxPpX5At/+b/Fw/QGFUnmgjCucgXgVs+1t4nLZhCsl9V91oIFTbM"
+      },
+      {
+        "name": "translations.js",
+        "sha384": "z5lW/0jF+ajZ2SqsvugFch1KGL4BumTNH4XeWLGx+oq1A5fXtNA3RtD0y0f7VEJh"
+      }
+    ],
+    "tags": [
+      "bugfixes"
+    ],
+    "version": "0.9.1"
+  },
+  {
+    "changelog": {
       "de": "- Cookie consent optional einklappbar machen\n",
       "en": "- Make cookie consent optionally collapsible\n"
     },
