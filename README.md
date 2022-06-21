@@ -158,7 +158,23 @@ If you have an environment where `make` is available, you can also run
 
 ## Maintainers
 
-To create a new release run `docker compose run --rm make release [RT=patch|minor|major]`. This will:
+To create a new release,
+
+* Add a new changelog entry on top to `releases.yaml` with the changelog text, version, date and appropriate tags, e.g.
+```yaml
+- changelog:
+      de: |
+          - Cookie consent optional einklappbar machen
+      en: |
+          - Make cookie consent optionally collapsible
+  date: '2022-06-21'
+  tags:
+      - improvements
+  version: 0.9.0
+```
+* and run `docker compose run --rm make release [RT=patch|minor|major]`
+
+This will:
 
 * Install a clean version of all npm dependencies
 * Update the `releases.yaml` file
