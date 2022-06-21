@@ -70,7 +70,7 @@
     "make": "cross-env APP_ENV=production cross-env cross-env webpack --config webpack.config.js",
     "make-dev": "cross-env APP_ENV=dev cross-env APP_DEV_MODE=server webpack-dev-server --host 0.0.0.0 --config webpack.config.js --history-api-fallback",
     "make-watch": "cross-env APP_ENV=dev cross-env APP_DEV_MODE=watch webpack --watch --config webpack.config.js",
-    "prepare": "husky install"
+    "setup-hook": "husky install"
   },
   "version": "0.9.0"
 }

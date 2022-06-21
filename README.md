@@ -158,7 +158,11 @@ If you have an environment where `make` is available, you can also run
 
 ## Maintainers
 
-To create a new release,
+### Commit hook for linting
+
+To install the git hook, run `npm run setup-hook`. This will make sure all commits are properly formatted.
+
+### Create new release
 
 * Add a new changelog entry on top to `releases.yaml` with the changelog text, version, date and appropriate tags, e.g.
 ```yaml
