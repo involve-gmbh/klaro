@@ -110,7 +110,7 @@ if __name__ == '__main__':
         json.dump(config, output_file, indent=2, sort_keys=True)
 
     subprocess.check_output(["git", "add", "."], cwd=wd)
-    subprocess.check_output(["git", "commit", "-m", f"v{v}"], cwd=wd)
+    subprocess.check_output(["git", "commit", "--no-verify", "-m", f"v{v}"], cwd=wd)
     subprocess.check_output(["git", "tag", "-a", f"v{v}", "-m", f"v{v}"], cwd=wd)
     if push:
         subprocess.check_output(["git", "push", "origin", "main", "--tags"], cwd=wd)
