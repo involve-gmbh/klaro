@@ -30,6 +30,8 @@ export default class ConsentNotice extends React.Component {
 
         this.props.manager.saveAndApplyConsents(eventType);
 
+        document.body.classList.remove('overflow');
+
         if (
             changedServices > 0 &&
             !confirmed &&
@@ -145,6 +147,10 @@ export default class ConsentNotice extends React.Component {
         // testing mode is enabled (testing=true) or if there's a confirmation
         // process/animation going on (confirming=true)
         if (!show && !testing && !confirming) return <div />;
+
+        if (show) {
+            document.body.classList.add('overflow');
+        }
 
         const noticeIsVisible =
             (!config.mustConsent || noticeAsModal) &&

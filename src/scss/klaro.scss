@@ -1,6 +1,12 @@
 @import './modal';
 @import './vars';
 
+.overflow {
+    @media (max-width: $cm-mobile) {
+        overflow: hidden;
+    }
+}
+
 .klaro {
     $btn-margin-right: 0.5em;
 
@@ -339,6 +345,17 @@
         bottom: 0;
         right: 0;
 
+        @media (max-width: $cm-mobile) {
+            position: fixed;
+            width: 95%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 80vh;
+            height: min-content;
+            padding: 0;
+        }
+
         @media (min-width: $cm-desktop) {
             @include var(border-radius, border-radius);
             @include var(position, notice-position);
@@ -353,6 +370,10 @@
         @media (max-width: ($cm-desktop - 1)) {
             border-style: none;
             border-radius: 0;
+        }
+
+        &:focus-visible {
+            outline: none;
         }
 
         &.cn-embedded {
@@ -378,16 +399,21 @@
             padding-top: 0;
 
             @media (max-width: $cm-mobile) {
-                max-height: 85vh;
+                max-height: 80vh;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
+                padding: 10px;
             }
 
             .cookie-notice-text {
                 @media (max-width: $cm-mobile) {
                     overflow-y: scroll;
                 }
+            }
+
+            &:focus-visible {
+                outline: none;
             }
 
             p {
@@ -406,6 +432,7 @@
             .cn-read-more {
                 color: #808080;
                 position: relative;
+                cursor: pointer;
             }
 
             .cn-read-more::after {
