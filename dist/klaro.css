@@ -22,6 +22,12 @@ to create a white background.
 */
 /* Spacing */
 /* Breakpoints */
+@media (max-width: 640px) {
+  .overflow {
+    overflow: hidden;
+  }
+}
+
 .klaro {
   font-family: inherit;
   font-family: var(--font-family, inherit);
@@ -694,6 +700,21 @@ to create a white background.
   right: 0;
 }
 
+@media (max-width: 640px) {
+  .klaro .cookie-notice:not(.cookie-modal-notice) {
+    position: fixed;
+    width: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 80vh;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    padding: 0;
+  }
+}
+
 @media (min-width: 1024px) {
   .klaro .cookie-notice:not(.cookie-modal-notice) {
     border-radius: 4px;
@@ -721,6 +742,10 @@ to create a white background.
   }
 }
 
+.klaro .cookie-notice:not(.cookie-modal-notice):focus-visible {
+  outline: none;
+}
+
 .klaro .cookie-notice:not(.cookie-modal-notice).cn-embedded {
   position: relative;
   height: inherit;
@@ -743,19 +768,24 @@ to create a white background.
   padding-top: 0;
 }
 
-@media (max-width: 384px) {
+@media (max-width: 640px) {
   .klaro .cookie-notice:not(.cookie-modal-notice) .cn-body {
-    max-height: 85vh;
+    max-height: 80vh;
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding: 10px;
   }
 }
 
-@media (max-width: 384px) {
+@media (max-width: 640px) {
   .klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cookie-notice-text {
     overflow-y: scroll;
   }
+}
+
+.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body:focus-visible {
+  outline: none;
 }
 
 .klaro .cookie-notice:not(.cookie-modal-notice) .cn-body p {
@@ -774,6 +804,7 @@ to create a white background.
 .klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-read-more {
   color: #808080;
   position: relative;
+  cursor: pointer;
 }
 
 .klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-read-more::after {
