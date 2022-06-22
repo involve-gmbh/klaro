@@ -178,6 +178,8 @@ To install the git hook, run `npm run setup-hook`. This will make sure all commi
 ```
 * and run `docker compose run --rm make release [RT=patch|minor|major]`
   * e.g. `docker compose run --rm make release RT=patch` will create a patch release
+* Run `npm i` to update package.lock file
+* Run `git commit --amend` to add the package.lock file to the previous commit including the version number
 * Run `git push` 
 * Run `git push --tags` to push the newly created tag.
 
