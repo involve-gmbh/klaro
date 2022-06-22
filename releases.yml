@@ -1,4 +1,34 @@
 - changelog:
+    de: '- Mobiles Styling verbessern
+
+      '
+    en: '- Improve responsive styling
+
+      '
+  date: '2022-06-22'
+  files:
+  - name: cm.js
+    sha384: /Jufn8Li1lNLQ09t9wbX7QLkYUoyHBQoGK5fW/YcihzUHtF3aa/RPUa0plY7QFV8
+  - name: ide.js
+    sha384: +lJcBfJiAz8dPyOeJjc37ohqBEJ8g3JmUCIDEumYV2x785kZRg/6+zpRfDCNqnnF
+  - name: klaro-no-css.js
+    sha384: aIj44Ebm3tvWdxrOwEhxyszAM+LFAqe0K2RKo6TR2aUDIXBcwb2gC/THQFbq/OnI
+  - name: klaro-no-translations-no-css.js
+    sha384: dbaAXp/bXzu9PgkOJ7Qkfge8sKTZnnXa0yqYganfQtmeippc4xoC9eNhYtCvWUEZ
+  - name: klaro-no-translations.js
+    sha384: 6/D99aDRU5QuX7I0r4j+Q2twJRJFUesyudsF/7WwW79RGQ+RO4lQfU5i4Lx2+8En
+  - name: klaro.css
+    sha384: J88FHvVLpVqvU5TurBqWYtI3epgeGzzSnEV8P5YnlCfONrtmid2zDHbhlTIIJmHk
+  - name: klaro.js
+    sha384: G/zSE7QSIdqSoPrIKRFE7i3StA7meIRonoZpX/aTAvmuS3w6KzBe+4UBOSVMC6wT
+  - name: klaro.min.css
+    sha384: vRFGQvBnd8+MW91V8AD2n8sy8+QveAfYcbR5ch4fn3bQ5WCVSzpR90tS2fv9hqyB
+  - name: translations.js
+    sha384: z5lW/0jF+ajZ2SqsvugFch1KGL4BumTNH4XeWLGx+oq1A5fXtNA3RtD0y0f7VEJh
+  tags:
+  - improvements
+  version: 0.9.3
+- changelog:
     de: '- CSS für Scrolling auf mobile Geräte hinzufügen
 
       '
