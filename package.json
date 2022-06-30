@@ -72,5 +72,5 @@
     "make-watch": "cross-env APP_ENV=dev cross-env APP_DEV_MODE=watch webpack --watch --config webpack.config.js",
     "setup-hook": "husky install"
   },
-  "version": "0.9.3"
+  "version": "0.9.4"
 }
