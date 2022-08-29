@@ -80,8 +80,6 @@ To manage third-party scripts and ensure they only run if the user consents with
 
 ```html
 <script
-    type="text/plain"
-    data-type="text/javascript"
     data-name="optimizely"
     data-src="https://cdn.optimizely.com/js/10196010078.js"
 ></script>
@@ -90,7 +88,11 @@ To manage third-party scripts and ensure they only run if the user consents with
 ### Inline Javascript
 
 ```html
-<script type="text/plain" data-type="application/javascript" data-name="inlineTracker">
+<script
+    data-name="inlineTracker"
+    data-type="application/javascript"
+    type="text/plain"
+>
     console.debug('This is an example of an inline tracking script.')
 
     function setCookie (name, value, days) {
