@@ -76,6 +76,8 @@ Calling `klaro.show(undefined, true)` will force the modal to open, even if the 
 
 To manage third-party scripts and ensure they only run if the user consents with their use, you simply replace the `src` attribute with `data-src`, change the `type` attribute to `text/plain` and add a `data-type` attribute with the original type, and add a `data-name` field that matches the name of the app as given in your config file. Example:
 
+### External Javascript
+
 ```html
 <script
     type="text/plain"
@@ -83,6 +85,47 @@ To manage third-party scripts and ensure they only run if the user consents with
     data-name="optimizely"
     data-src="https://cdn.optimizely.com/js/10196010078.js"
 ></script>
+```
+
+### Inline Javascript
+
+```html
+<script type="text/plain" data-type="application/javascript" data-name="inlineTracker">
+    console.debug('This is an example of an inline tracking script.')
+
+    function setCookie (name, value, days) {
+        var expires = ''
+        if (days) {
+            var date = new Date()
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000))
+            expires = '; expires=' + date.toUTCString()
+        }
+        document.cookie = name + '=' + (value || '') + expires + '; path=/'
+    }
+
+    //we set a tracking cookie as an example
+    setCookie('inline-tracker', 'foo', 120)
+</script>
+```
+
+### Other elements (iframe, div, etc.)
+
+**⚠️ If the element contains scripts themself, be sure to include data-src there as well**
+
+```html
+<div class="snap-center my-8" data-name="tiktok">
+    <iframe
+        data-name="tiktok"
+        data-src="https://www.tiktok.com/embed/v2/7125706996543769861?lang=de"
+        style="width: 100%; height: 751px; display: block; visibility: unset; max-height: 751px;"
+        sandbox="allow-popups allow-popups-to-escape-sandbox allow-scripts allow-top-navigation allow-same-origin"
+    ></iframe>
+    <script
+        data-src="https://www.tiktok.com/embed.js"
+        data-name="tiktok"
+        src="https://www.tiktok.com/embed.js"
+    ></script>
+</div>
 ```
 
 Klaro will then take care of executing the scripts if consent was given (you can chose to execute them before getting explicit consent as well).
