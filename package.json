@@ -31,5 +31,8 @@
     "build": "vite build",
     "dev": "vite serve"
   },
-  "version": "0.9.4"
+  "version": "0.9.4",
+  "dependencies": {
+    "prop-types": "^15.8.1"
+  }
 }
