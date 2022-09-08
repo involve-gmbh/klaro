@@ -1,8 +1,11 @@
-build
-.tmp
+# Build files
+/dist
+
+# Dependencies
+/node_modules
+
+# Caches
 __pycache__
-node_modules
-yarn.lock
 
 # IDEs
 /.vscode

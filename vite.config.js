@@ -8,6 +8,14 @@ export default defineConfig({
     host: true,
     port: 8000,
   },
+  build: {
+    outDir: '../dist',
+    emptyOutDir: true,
+    lib: {
+      entry: 'klaro.js',
+      name: 'Klaro',
+    },
+  },
   plugins: [
     yaml(),
     preact(),
