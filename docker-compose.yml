@@ -1,27 +1,16 @@
 version: '3.5'
 services:
-  npm-watch:
+  serve:
     build: docker/npm
     working_dir: /app
-    command: run-script make-dev
+    command: run dev
     ports:
-      - 8080:8080
+      - "8000:8000"
     volumes:
       - .:/app
   npm:
     build: docker/npm
     working_dir: /app
     command: i
-    volumes:
-      - .:/app
-  lint-staged:
-    build: docker/lint
-    command: lint-staged
-    volumes:
-      - .:/app
-    depends_on:
-      - npm
-  make:
-    build: docker/make
     volumes:
       - .:/app
