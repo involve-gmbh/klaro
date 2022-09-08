@@ -1,8 +1,13 @@
+import './bulma'
+import './prism'
+
+import * as Klaro from '../klaro.js'
+
 // By default, Klaro will load the config from  a global "klaroConfig" variable.
 // You can change this by specifying the "data-config" attribute on your
 // script take, e.g. like this:
 // <script src="klaro.js" data-config="myConfigVariableName" />
-var klaroConfig = {
+const klaroConfig = {
     // With the 0.7.0 release we introduce a 'version' paramter that will make
     // it easier for us to keep configuration files backwards-compatible in the future.
     version: 1,
@@ -264,9 +269,9 @@ var klaroConfig = {
                 // This is an example callback function.
                 console.log(
                     'User consent for service ' +
-                        service.name +
-                        ': consent=' +
-                        consent
+                    service.name +
+                    ': consent=' +
+                    consent
                 );
                 // To be used in conjunction with Matomo 'requireCookieConsent' Feature, Matomo 3.14.0 or newer
                 // For further Information see https://matomo.org/faq/new-to-piwik/how-can-i-still-track-a-visitor-without-cookies-even-if-they-decline-the-cookie-consent/
@@ -347,3 +352,7 @@ var klaroConfig = {
         },
     ],
 };
+
+window.klaro = Klaro
+
+window.klaro.setup(klaroConfig)
