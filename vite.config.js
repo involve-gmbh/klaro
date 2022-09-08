@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import yaml from '@rollup/plugin-yaml';
+import { preact } from '@preact/preset-vite';
 
 export default defineConfig({
   root: 'src',
@@ -9,5 +10,6 @@ export default defineConfig({
   },
   plugins: [
     yaml(),
+    preact(),
   ],
 });
