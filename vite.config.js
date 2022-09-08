@@ -20,4 +20,8 @@ export default defineConfig({
     yaml(),
     preact(),
   ],
+  esbuild: {
+    // See github.com/vitejs/vite/issues/8644
+    logOverride: { 'this-is-undefined-in-esm': 'silent' },
+  },
 });
