@@ -19,10 +19,6 @@ const defaultTranslations = new Map([]);
 const eventHandlers = {};
 const events = {};
 
-// When webpack's hot loading is enabled, enable Preact's support for the
-// React Dev Tools browser extension.
-if (module.hot) require('preact/debug');
-
 export function getElementID(config, ide) {
     return (config.elementID || 'klaro') + (ide ? '-ide' : '');
 }
