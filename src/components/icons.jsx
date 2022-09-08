@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 export const Close = ({ t }) => {
     return (
@@ -16,8 +15,4 @@ export const Close = ({ t }) => {
             <line x1="1" y1="1" x2="11" y2="11" strokeWidth="1" />
         </svg>
     );
-};
-
-Close.propTypes = {
-    t: PropTypes.func,
 };
