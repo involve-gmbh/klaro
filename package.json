@@ -3,7 +3,8 @@
   "devDependencies": {
     "classnames": "^2.2.6",
     "core-js": "^3.6.5",
-    "preact": "^10.4.7"
+    "preact": "^10.4.7",
+    "vite": "^3.1.0"
   },
   "files": [
     "*.js",
@@ -24,6 +25,8 @@
   "name": "klaro",
   "private": true,
   "scripts": {
+    "build": "vite build",
+    "dev": "vite serve"
   },
   "version": "0.9.4"
 }
