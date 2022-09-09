@@ -1,0 +1,16 @@
+{
+  "name": "klaro-and-vite",
+  "version": "0.2.0",
+  "description": "An example showing how to import Klaro as a npm module and bundle it with Vite.",
+  "main": "index.js",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite dev"
+  },
+  "author": "KIProtect GmbH",
+  "license": "BSD-3",
+  "devDependencies": {
+    "klaro": "../..",
+    "vite": "~3"
+  }
+}
