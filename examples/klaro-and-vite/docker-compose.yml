@@ -1,0 +1,18 @@
+version: '3.5'
+services:
+  serve:
+    image: node:${NODE_VERSION}-alpine
+    entrypoint: npm
+    working_dir: /app/examples/klaro-and-vite
+    command: run dev
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./../..:/app
+  npm:
+    image: node:${NODE_VERSION}-alpine
+    entrypoint: npm
+    working_dir: /app/examples/klaro-and-vite
+    command: i
+    volumes:
+      - ./../..:/app
