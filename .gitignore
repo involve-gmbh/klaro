@@ -8,5 +8,5 @@
 __pycache__
 
 # IDEs
-/.vscode
-/.idea
+.vscode
+.idea
