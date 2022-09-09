@@ -1,4 +1,7 @@
+import { defaultTranslations } from './lib';
 import translations from './translations/index';
-export { update as updateConfig } from './utils/config';
+import { convertToMap, update } from './utils/maps';
 
-export default translations;
+const convertedTranslations = convertToMap(translations);
+// we add the default translations
+update(defaultTranslations, convertedTranslations);
